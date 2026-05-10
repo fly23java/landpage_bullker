@@ -1,0 +1,3149 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f8f7f4">
+<title>بولكر | BŬLKER — منصة الشحن واللوجستيات في السعودية</title>
+<meta name="description" content="بولكر — منصة لوجستيات متكاملة في المملكة العربية السعودية. شحن بضائع، تخزين، تخليص جمركي، شحن بحري وجوي، شحن بين الأفراد. BŬLKER – Saudi Arabia's integrated logistics platform.">
+<meta name="keywords" content="بولكر,لوجستيات السعودية,شحن بضائع,تخزين,تخليص جمركي,شحن بحري,شحن جوي,C2C,BULKER,Saudi logistics,freight,warehousing,customs clearance,3PL,LTL,shipping Saudi Arabia,bulker.sa">
+<meta name="author" content="BŬLKER — Bulker Company">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+<link rel="canonical" href="https://bulker.sa">
+<meta name="geo.region" content="SA">
+<link rel="alternate" hreflang="ar" href="https://bulker.sa">
+<link rel="alternate" hreflang="en" href="https://bulker.sa">
+<link rel="alternate" hreflang="x-default" href="https://bulker.sa">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://bulker.sa">
+<meta property="og:title" content="BŬLKER — منصة لوجستيات السعودية">
+<meta property="og:description" content="شحن · تخزين · جمارك · بحري · جوي · أفراد — كل خدمات الشحن في منصة واحدة">
+<meta property="og:image" content="https://bulker.sa/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"BŬLKER","alternateName":"بولكر","url":"https://bulker.sa","description":"منصة لوجستية متكاملة في المملكة العربية السعودية","address":{"@type":"PostalAddress","addressLocality":"Riyadh","addressCountry":"SA"},"contactPoint":{"@type":"ContactPoint","email":"info@bulker.sa","availableLanguage":["Arabic","English"]},"areaServed":{"@type":"Country","name":"Saudi Arabia"}}
+</script>
+
+<!-- APP STORE LINKS — EDIT BELOW WHEN LIVE -->
+<script>
+var APP_LINKS={
+  ios:     "https://apps.apple.com/app/bulker/id000000000",
+  android: "https://play.google.com/store/apps/details?id=sa.bulker.app",
+  huawei:  "https://appgallery.huawei.com/#/app/C000000000",
+  web:     "https://app.bulker.sa"
+};
+</script>
+
+<!-- IBM Plex Sans Arabic — elegant, readable, Saudi-market friendly -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+/* ─── RESET ──────────────────────────────────────────────── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+/* ─── DESIGN TOKENS ──────────────────────────────────────── */
+:root{
+  --paper:#f8f7f4;
+  --ink:#18160f;
+  --ink2:#3e3b32;
+  --ink3:#4a4740;
+  --ink4:#7a7770;
+  --line:rgba(24,22,15,.1);
+  --line2:rgba(24,22,15,.06);
+  --surface:#f0ede7;
+  --surface2:#e8e4dc;
+
+  --arabic:'IBM Plex Sans Arabic',system-ui,sans-serif;
+  --mono:'IBM Plex Mono',monospace;
+
+  --nav-h:62px;
+  --max:1080px;
+  --radius:6px;
+
+  /* Pencil sketch variables */
+  --pencil-opacity:.07;
+  --pencil-stroke:rgba(24,22,15,.55);
+}
+
+/* Dark mode */
+@media(prefers-color-scheme:dark){
+  :root{
+    --paper:#111009;--ink:#f0ede4;--ink2:#c4c1b4;--ink3:#8a8780;--ink4:#5a5850;
+    --line:rgba(240,237,228,.09);--line2:rgba(240,237,228,.04);
+    --surface:#1a1814;--surface2:#221f19;
+    --pencil-stroke:rgba(240,237,228,.5);
+  }
+}
+
+html{scroll-behavior:smooth;-webkit-tap-highlight-color:transparent}
+
+body{
+  background-color:var(--paper);
+  color:var(--ink);
+  font-family:var(--arabic);
+  font-size:15px;
+  line-height:1.75;
+  font-weight:400;
+  overflow-x:hidden;
+  min-height:100vh;
+}
+
+/* Paper grain texture — subtle */
+body::before{
+  content:'';
+  position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23n)' opacity='.028'/%3E%3C/svg%3E");
+  opacity:1;
+}
+
+/* ─── NAV ────────────────────────────────────────────────── */
+nav{
+  position:sticky;top:0;z-index:200;
+  height:var(--nav-h);
+  background:var(--paper);
+  border-bottom:1px solid var(--line);
+  display:flex;align-items:center;
+  padding:0 clamp(1.25rem,4vw,3rem);
+  gap:1rem;
+  backdrop-filter:blur(8px);
+  -webkit-backdrop-filter:blur(8px);
+}
+
+/* Logo */
+.logo{
+  flex:1;text-decoration:none;
+  font-family:var(--mono);font-weight:500;
+  font-size:1.15rem;color:var(--ink);
+  font-size:1.25rem;letter-spacing:-.02em;display:flex;align-items:center;gap:0;
+  font-weight:600;
+}
+
+
+/* Nav controls */
+.nav-controls{display:flex;align-items:center;gap:.5rem}
+
+/* App button — prominent */
+.btn-app{
+  display:inline-flex;align-items:center;gap:.45rem;
+  background:var(--ink);color:var(--paper);
+  font-family:var(--mono);font-size:.72rem;font-weight:500;
+  letter-spacing:.04em;
+  padding:.48rem 1.1rem;
+  border-radius:var(--radius);
+  border:none;cursor:pointer;text-decoration:none;
+  white-space:nowrap;
+  transition:opacity .18s;
+  position:relative;overflow:hidden;
+}
+.btn-app::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(255,255,255,.07) 0%,transparent 60%);
+  pointer-events:none;
+}
+.btn-app:hover{opacity:.82}
+.btn-app svg{flex-shrink:0}
+
+/* Lang button — elegant toggle */
+.btn-lang{
+  display:inline-flex;align-items:center;gap:.3rem;
+  background:none;
+  border:1px solid var(--ink4);
+  color:var(--ink2);
+  font-family:var(--mono);font-size:.7rem;font-weight:500;
+  letter-spacing:.06em;
+  padding:.42rem .85rem;
+  border-radius:100px;
+  cursor:pointer;
+  transition:border-color .18s,color .18s;
+  white-space:nowrap;
+}
+.btn-lang:hover{border-color:var(--ink);color:var(--ink)}
+
+/* ─── SECTION WRAPPER ────────────────────────────────────── */
+.wrap{max-width:var(--max);margin:0 auto;padding:0 clamp(1.25rem,4vw,3rem)}
+
+/* ─── SECTION LABEL ─────────────────────────────────────── */
+.slabel{
+  font-family:var(--mono);font-size:.72rem;
+  color:var(--ink3);letter-spacing:.18em;
+  text-transform:uppercase;
+  display:flex;align-items:center;gap:.75rem;
+  margin-bottom:.75rem;
+}
+.slabel::after{content:'';flex:1;height:1px;background:var(--line)}
+
+/* ─── HERO ───────────────────────────────────────────────── */
+.hero{
+  position:relative;overflow:hidden;
+  padding:clamp(5rem,11vw,9rem) 0 clamp(3rem,6vw,5rem);
+}
+
+/* Geometric pencil BG — large faint circles + grid */
+.hero-bg{
+  position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:0;
+}
+.hero-bg svg{position:absolute;inset:0;width:100%;height:100%}
+
+.hero-inner{
+  position:relative;z-index:1;
+}
+
+.hero-layout{
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:2rem;align-items:center;
+}
+@media(max-width:680px){.hero-layout{grid-template-columns:1fr}}
+
+.hero-text{}
+
+.hero-eyebrow{
+  font-family:var(--mono);font-size:.73rem;
+  color:var(--ink3);letter-spacing:.16em;
+  text-transform:uppercase;
+  margin-bottom:1.5rem;
+  display:flex;align-items:center;gap:.6rem;
+}
+.hero-eyebrow::before{
+  content:'';width:20px;height:1px;
+  background:var(--ink3);flex-shrink:0;
+}
+[dir="ltr"] .hero-eyebrow::before{margin-left:0;margin-right:0}
+
+.hero h1{
+  font-size:clamp(2.6rem,6.5vw,5.2rem);
+  font-weight:600;
+  line-height:1.08;
+  letter-spacing:-.025em;
+  margin-bottom:1.5rem;
+  color:var(--ink);
+}
+/* Underline accent on key word */
+.hero-accent{
+  display:inline-block;position:relative;
+}
+.hero-accent::after{
+  content:'';
+  position:absolute;bottom:-2px;
+  inset-inline-start:0;inset-inline-end:0;
+  height:2px;background:var(--ink);border-radius:1px;
+  transform-origin:inline-start;
+  animation:underlineGrow 1s 1s both cubic-bezier(.4,0,.2,1);
+}
+@keyframes underlineGrow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+
+.hero-p{
+  font-size:clamp(.92rem,2vw,1.05rem);
+  color:var(--ink2);
+  max-width:480px;
+  line-height:1.85;
+  margin-bottom:2.5rem;
+  font-weight:300;
+}
+
+.hero-cta{display:flex;gap:.65rem;flex-wrap:wrap;align-items:center}
+
+.cta-primary{
+  display:inline-flex;align-items:center;gap:.45rem;
+  background:var(--ink);color:var(--paper);
+  font-family:var(--arabic);font-size:.88rem;font-weight:500;
+  padding:.65rem 1.6rem;border-radius:var(--radius);
+  text-decoration:none;cursor:pointer;border:none;
+  transition:opacity .18s;
+}
+.cta-primary:hover{opacity:.8}
+.cta-ghost{
+  display:inline-flex;align-items:center;gap:.45rem;
+  background:none;color:var(--ink);
+  font-family:var(--arabic);font-size:.88rem;font-weight:400;
+  padding:.65rem 1.4rem;border-radius:var(--radius);
+  text-decoration:none;cursor:pointer;
+  border:1px solid var(--ink4);
+  transition:border-color .18s,color .18s;
+}
+.cta-ghost:hover{border-color:var(--ink)}
+
+/* Hero truck illustration */
+.hero-truck{
+  width:clamp(200px,32vw,340px);
+  flex-shrink:0;
+  opacity:.9;
+}
+@media(max-width:680px){.hero-truck{display:none}}
+
+/* Truck animation */
+@keyframes truckRoll{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-5px)}
+}
+.hero-truck svg{animation:truckRoll 4s ease-in-out infinite}
+
+/* ─── STATS ──────────────────────────────────────────────── */
+.stats-row{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+.stat{padding:1.75rem 1rem;text-align:center;position:relative}
+.stat+.stat::before{
+  content:'';position:absolute;
+  inset-block:20%;inset-inline-start:0;
+  width:1px;background:var(--line);
+}
+.stat-n{
+  display:block;
+  font-family:var(--mono);font-size:1.85rem;font-weight:500;
+  letter-spacing:-.03em;line-height:1;color:var(--ink);
+}
+.stat-l{font-size:.80rem;color:var(--ink2);margin-top:.3rem;letter-spacing:.02em;font-weight:400}
+
+/* ─── SERVICES ───────────────────────────────────────────── */
+.section-services{padding:clamp(3.5rem,7vw,6rem) 0}
+
+.srv-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  border:1px solid var(--line);
+  border-radius:8px;overflow:hidden;
+  margin-top:2rem;
+}
+.srv{
+  padding:2rem 1.75rem;
+  border-bottom:1px solid var(--line);
+  border-inline-end:1px solid var(--line);
+  position:relative;
+  transition:background .22s;
+  cursor:default;
+}
+.srv:hover{background:var(--surface)}
+.srv:last-child{border-inline-end:none}
+
+/* Pencil sketch icon */
+.srv-icon{
+  width:52px;height:52px;
+  margin-bottom:1.25rem;
+}
+.srv-icon svg{
+  width:100%;height:100%;
+  overflow:visible;
+}
+/* Pencil stroke style */
+.ps{fill:none;stroke:var(--pencil-stroke);stroke-width:1.3;stroke-linecap:round;stroke-linejoin:round}
+.pf{fill:var(--surface2);stroke:var(--pencil-stroke);stroke-width:1.3;stroke-linecap:round;stroke-linejoin:round}
+
+/* Service icon hover wobble */
+.srv:hover .srv-icon svg{animation:iconWobble .35s ease}
+@keyframes iconWobble{0%,100%{transform:rotate(0)}30%{transform:rotate(-3deg)}70%{transform:rotate(3deg)}}
+
+.srv h3{
+  font-size:.97rem;font-weight:600;
+  margin-bottom:.4rem;letter-spacing:-.005em;color:var(--ink);
+}
+.srv p{font-size:.8rem;color:var(--ink2);line-height:1.85;font-weight:300}
+.srv-tag{
+  display:inline-block;margin-top:.85rem;
+  font-family:var(--mono);font-size:.72rem;
+  color:var(--ink3);letter-spacing:.08em;
+  border:1px solid var(--line);
+  padding:.18rem .6rem;border-radius:3px;
+}
+
+/* ─── HOW ────────────────────────────────────────────────── */
+.section-how{padding:clamp(3rem,6vw,5rem) 0}
+
+.how-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:0;position:relative;margin-top:2rem;
+}
+/* Dashed connector */
+.how-grid::before{
+  content:'';position:absolute;
+  top:30px;inset-inline-start:60px;inset-inline-end:60px;height:1px;
+  background:repeating-linear-gradient(to right,var(--ink3) 0,var(--ink3) 5px,transparent 5px,transparent 12px);
+  pointer-events:none;z-index:0;
+}
+@media(max-width:600px){.how-grid::before{display:none}}
+
+.how-step{
+  padding:1.5rem;text-align:center;position:relative;z-index:1;
+  transition:transform .2s;
+}
+.how-step:hover{transform:translateY(-4px)}
+.step-dot{
+  width:60px;height:60px;border-radius:50%;
+  border:1.5px solid var(--ink);
+  background:var(--paper);
+  display:flex;align-items:center;justify-content:center;
+  margin:0 auto 1rem;
+  font-family:var(--mono);font-size:1.1rem;font-weight:500;
+  color:var(--ink);
+  transition:background .2s,color .2s;
+}
+.how-step:hover .step-dot{background:var(--ink);color:var(--paper)}
+.how-step h3{font-size:.92rem;font-weight:600;margin-bottom:.35rem;color:var(--ink)}
+.how-step p{font-size:.76rem;color:var(--ink2);line-height:1.85;font-weight:300}
+
+/* ─── PENCIL BG SECTIONS ─────────────────────────────────── */
+.pencil-bg{
+  position:relative;overflow:hidden;
+}
+.pencil-bg-svg{
+  position:absolute;inset:0;width:100%;height:100%;
+  pointer-events:none;z-index:0;opacity:var(--pencil-opacity);
+}
+.pencil-inner{position:relative;z-index:1}
+
+/* ─── CTA BAND ───────────────────────────────────────────── */
+.cta-band{
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  padding:clamp(4rem,8vw,7rem) 0;
+  text-align:center;
+}
+.cta-band h2{
+  font-size:clamp(2rem,5.5vw,4.5rem);
+  font-weight:600;letter-spacing:-.025em;
+  line-height:1.05;margin-bottom:1rem;
+}
+.cta-band p{
+  font-size:.92rem;color:var(--ink2);font-weight:300;
+  margin-bottom:2rem;max-width:380px;margin-inline:auto;
+}
+.cta-row{display:flex;gap:.65rem;justify-content:center;flex-wrap:wrap}
+
+/* ─── FOOTER ─────────────────────────────────────────────── */
+footer{
+  padding:1.75rem clamp(1.25rem,4vw,3rem);
+  display:flex;align-items:center;justify-content:space-between;
+  flex-wrap:wrap;gap:.75rem;
+  max-width:var(--max);margin:0 auto;
+  border-top:1px solid var(--line2);
+}
+.foot-l{font-family:var(--mono);font-size:.75rem;color:var(--ink2);letter-spacing:.04em}
+.foot-links{display:flex;gap:1.25rem;flex-wrap:wrap}
+.foot-links a{font-family:var(--mono);font-size:.75rem;color:var(--ink2);text-decoration:none;letter-spacing:.04em;transition:color .15s}
+.foot-links a:hover{color:var(--ink)}
+
+/* ─── MAP STAT ───────────────────────────────────────────── */
+.stat-map{padding:0 !important}
+.gcc-map-wrap{
+  width:100%;display:flex;align-items:center;justify-content:center;
+  padding:.5rem 0 .2rem;
+}
+.gcc-map{
+  width:clamp(80px,14vw,130px);height:auto;
+  opacity:.75;
+  transition:opacity .2s;
+}
+.stat-map:hover .gcc-map{opacity:1}
+.stat-map .stat-l{padding-bottom:.6rem;font-size:.73rem}
+
+/* ─── HOVER TOOLTIP / POPOVER ────────────────────────────── */
+#srv-tooltip{
+  position:fixed;
+  z-index:9999;
+  pointer-events:none;
+  opacity:0;
+  transform:translate(-50%,-100%) scale(.94);
+  transition:opacity .18s ease,transform .18s ease;
+  will-change:transform,opacity;
+}
+#srv-tooltip.visible{
+  opacity:1;
+  transform:translate(-50%,-100%) scale(1);
+}
+.tooltip-card{
+  width:220px;
+  background:var(--paper);
+  border:1.5px solid var(--ink);
+  border-radius:8px;
+  padding:1.1rem 1rem 1rem;
+  box-shadow:4px 6px 0 rgba(24,22,15,.09);
+  position:relative;
+}
+/* Little caret at bottom */
+.tooltip-card::after{
+  content:'';
+  position:absolute;
+  bottom:-8px;left:50%;
+  transform:translateX(-50%);
+  width:14px;height:8px;
+  background:var(--paper);
+  clip-path:polygon(0 0,100% 0,50% 100%);
+  border-inline:1px solid var(--ink);
+}
+.tooltip-logo{
+  font-family:var(--mono);font-size:.58rem;font-weight:500;
+  letter-spacing:.12em;color:var(--ink3);
+  margin-bottom:.65rem;display:flex;align-items:center;gap:.4rem;
+}
+.tooltip-logo::before{
+  content:'';display:inline-block;
+  width:14px;height:14px;
+  border:1px solid var(--ink);border-radius:3px;
+  background:var(--ink);
+  font-size:.5rem;color:var(--paper);
+  line-height:14px;text-align:center;
+  /* B letter via box */
+}
+.tooltip-art{
+  width:100%;height:110px;
+  margin-bottom:.75rem;
+  display:flex;align-items:center;justify-content:center;
+}
+.tooltip-art svg{
+  width:100%;height:100%;overflow:visible;
+}
+.tooltip-title{
+  font-size:.82rem;font-weight:600;
+  color:var(--ink);margin-bottom:.2rem;letter-spacing:-.005em;
+}
+.tooltip-desc{
+  font-size:.7rem;color:var(--ink2);line-height:1.75;font-weight:300;
+}
+
+/* ─── REVEAL ANIMATION ───────────────────────────────────── */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease}
+.reveal.in{opacity:1;transform:none}
+.reveal-d1{transition-delay:.08s}
+.reveal-d2{transition-delay:.16s}
+.reveal-d3{transition-delay:.24s}
+
+/* ─── HERO ANIMATIONS ────────────────────────────────────── */
+@keyframes fadeSlide{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.hero-eyebrow{animation:fadeSlide .6s .05s both}
+.hero h1{animation:fadeSlide .7s .15s both}
+.hero-p{animation:fadeSlide .65s .28s both}
+.hero-cta{animation:fadeSlide .6s .4s both}
+.hero-truck{animation:fadeSlide .8s .5s both}
+
+/* ─── RESPONSIVE ─────────────────────────────────────────── */
+@media(max-width:580px){
+  .stat+.stat::before{display:none}
+  footer{flex-direction:column;align-items:flex-start}
+  .srv{border-inline-end:none}
+}
+
+/* ════════════════════════════════════════════════════════
+   PSYCHOLOGICAL COMFORT ENHANCEMENTS
+   Golden ratio spacing · Micro-interactions · Reading flow
+   Depth layers · Sensory feedback · Visual hierarchy
+════════════════════════════════════════════════════════ */
+
+/* ── CUSTOM SELECTION ─────────────────────────────────── */
+::selection{background:rgba(24,22,15,.12);color:var(--ink)}
+::-moz-selection{background:rgba(24,22,15,.12);color:var(--ink)}
+
+/* ── SMOOTH FOCUS RINGS — accessibility + beauty ─────── */
+:focus-visible{
+  outline:2px solid var(--ink);
+  outline-offset:3px;
+  border-radius:4px;
+}
+
+/* ── NAV ENHANCEMENTS ─────────────────────────────────── */
+/* Progress bar — reading indicator */
+#read-progress{
+  position:fixed;top:0;left:0;z-index:300;
+  height:2px;width:0%;
+  background:var(--ink);
+  transition:width .08s linear;
+  pointer-events:none;
+}
+
+/* Nav scrolled state */
+nav.scrolled{
+  border-bottom-color:var(--line);
+}
+nav::after{
+  content:'';position:absolute;bottom:-1px;left:0;right:0;
+  height:1px;background:linear-gradient(to right,transparent,var(--line),transparent);
+  pointer-events:none;
+}
+
+/* Logo hover — subtle lift */
+.logo{transition:opacity .18s}
+.logo:hover{opacity:.72}
+
+/* Logo mark pulse on load */
+@keyframes logoPulse{
+  0%{transform:scale(1)}
+  50%{transform:scale(1.06)}
+  100%{transform:scale(1)}
+}
+
+
+/* ── HERO ENHANCEMENTS ────────────────────────────────── */
+/* Breathing room — golden ratio vertical rhythm */
+.hero{padding-block:clamp(5rem,11vw,9rem) clamp(3.5rem,7vw,6rem)}
+
+/* H1 word-by-word stagger */
+.hero h1 .word{
+  display:inline-block;
+  animation:wordFade .55s both;
+}
+@keyframes wordFade{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+
+/* Cursor blink on tagline */
+.hero-eyebrow::after{
+  content:'|';
+  animation:blink 1.1s step-end infinite;
+  color:var(--ink3);margin-inline-start:.2em;font-size:.9em;
+}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+
+/* CTA button — magnetic hover effect */
+.cta-primary{
+  position:relative;overflow:hidden;
+  transition:opacity .18s,transform .18s;
+}
+.cta-primary::before{
+  content:'';position:absolute;inset:0;
+  background:rgba(255,255,255,.06);
+  transform:translateX(-110%) skewX(-15deg);
+  transition:transform .45s ease;
+}
+.cta-primary:hover::before{transform:translateX(110%) skewX(-15deg)}
+.cta-primary:hover{transform:translateY(-1px)}
+.cta-primary:active{transform:translateY(0) scale(.98)}
+
+.cta-ghost:hover{transform:translateY(-1px)}
+.cta-ghost:active{transform:translateY(0) scale(.98)}
+
+/* ── STATS ENHANCEMENTS ───────────────────────────────── */
+.stats-row{position:relative}
+/* Gradient fade edges */
+.stats-row::before,.stats-row::after{
+  content:'';position:absolute;top:0;bottom:0;width:2rem;
+  pointer-events:none;z-index:1;
+}
+.stats-row::before{left:0;background:linear-gradient(to right,var(--paper),transparent)}
+.stats-row::after{right:0;background:linear-gradient(to left,var(--paper),transparent)}
+
+/* Number counter animation */
+.stat-n{
+  transition:transform .3s;
+}
+.stat:hover .stat-n{transform:scale(1.06)}
+
+/* ── SERVICE CARD ENHANCEMENTS ────────────────────────── */
+
+/* Card hover — layered depth without shadow */
+.srv{
+  transition:background .22s,transform .22s;
+  transform-origin:center;
+}
+.srv:hover{
+  background:var(--surface);
+  transform:translateY(-2px);
+  z-index:2;
+}
+.srv:active{transform:translateY(0)}
+
+/* Service icon — draw-in animation on hover */
+.srv:hover .srv-icon svg *{
+  stroke-dashoffset:0 !important;
+}
+
+/* Staggered card entrance */
+.srv:nth-child(1){animation-delay:.05s}
+.srv:nth-child(2){animation-delay:.10s}
+.srv:nth-child(3){animation-delay:.15s}
+.srv:nth-child(4){animation-delay:.20s}
+.srv:nth-child(5){animation-delay:.25s}
+.srv:nth-child(6){animation-delay:.30s}
+.srv:nth-child(7){animation-delay:.35s}
+.srv:nth-child(8){animation-delay:.40s}
+
+/* Service tag — subtle pulse on hover */
+.srv-tag{transition:border-color .2s,color .2s}
+.srv:hover .srv-tag{border-color:var(--ink3);color:var(--ink2)}
+
+/* ── HOW-STEPS ENHANCEMENTS ───────────────────────────── */
+/* Numbered step — number grows on hover */
+.step-dot{transition:background .2s,color .2s,transform .2s}
+.how-step:hover .step-dot{
+  background:var(--ink);color:var(--paper);
+  transform:scale(1.1);
+}
+
+/* Connector line — animated dash flow */
+@keyframes dashFlow{
+  to{stroke-dashoffset:-18}
+}
+.how-grid::before{
+  animation:none;
+  /* will be activated by JS once in view */
+}
+.how-grid.animated::before{
+  /* CSS-only trick: apply animation via bg-pos */
+  background-size:18px 1px;
+  background-image:repeating-linear-gradient(to right,var(--ink3) 0,var(--ink3) 5px,transparent 5px,transparent 12px);
+  animation:dashScroll 1.2s linear infinite;
+}
+[dir="rtl"] .how-grid.animated::before{animation-direction:reverse}
+@keyframes dashScroll{
+  from{background-position:0 0}
+  to{background-position:18px 0}
+}
+
+/* ── TOOLTIP REFINEMENTS ──────────────────────────────── */
+#srv-tooltip{
+  will-change:transform,opacity;
+  /* Slight tilt for personality */
+}
+.tooltip-card{
+  position:relative;
+  /* Margin bottom for caret */
+  margin-bottom:8px;
+}
+
+/* ── CTA BAND ENHANCEMENTS ────────────────────────────── */
+.cta-band{
+  position:relative;
+  overflow:hidden;
+}
+/* Animated grain overlay — kinetic energy */
+.cta-band::after{
+  content:'';
+  position:absolute;inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='.018'/%3E%3C/svg%3E");
+  pointer-events:none;z-index:0;
+  animation:grainShift 8s steps(2) infinite;
+}
+@keyframes grainShift{
+  0%{transform:translate(0,0)}
+  25%{transform:translate(-2px,1px)}
+  50%{transform:translate(1px,-1px)}
+  75%{transform:translate(-1px,2px)}
+  100%{transform:translate(0,0)}
+}
+.cta-band .wrap{position:relative;z-index:1}
+
+/* CTA h2 — character-level reveal */
+.cta-band h2{
+  overflow:hidden;
+}
+
+/* ── FOOTER ENHANCEMENTS ──────────────────────────────── */
+footer{
+  position:relative;
+  transition:background .3s;
+}
+/* Subtle footer-enter line animation */
+footer::before{
+  content:'';position:absolute;top:0;inset-inline-start:0;inset-inline-end:100%;
+  height:1px;background:var(--ink3);
+  transition:inset-inline-end 1.2s .3s ease;
+}
+footer.in-view::before{inset-inline-end:0}
+
+.foot-links a{
+  position:relative;
+}
+.foot-links a::after{
+  content:'';position:absolute;
+  bottom:-1px;inset-inline-start:0;inset-inline-end:100%;
+  height:1px;background:var(--ink);
+  transition:inset-inline-end .22s ease;
+}
+.foot-links a:hover::after{inset-inline-end:0}
+
+/* ── SCROLL-TRIGGERED COUNTER ─────────────────────────── */
+/* Handled by JS — .stat-n gets class .counting during animation */
+.stat-n.counting{
+  font-variant-numeric:tabular-nums;
+}
+
+/* ── ACCESSIBILITY MOTION OVERRIDE ───────────────────────*/
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{
+    animation-duration:.01ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:.01ms !important;
+  }
+  .hero h1 .word{animation:none;opacity:1;transform:none}
+}
+
+/* ── PRINT ─────────────────────────────────────────────── */
+@media print{
+  nav,#srv-tooltip,#read-progress,.pencil-bg-svg{display:none}
+  body{font-size:12pt;color:#000}
+  .hero h1{font-size:28pt}
+  .srv-grid{grid-template-columns:1fr 1fr;break-inside:avoid}
+}
+
+/* ── VIEWPORT HEIGHT UNITS — mobile safe ──────────────── */
+.hero{min-height:calc(var(--vh,1vh)*55)}
+
+/* ── MICRO DETAIL: service grid inner border fix ─────── */
+.srv-grid{
+  /* Prevent double borders at grid edges */
+  --border-collapse-fix: calc(-1 * 1px);
+}
+
+/* ── SECTION TITLE — reading anchor ──────────────────── */
+.section-title-anchor{
+  display:block;
+  margin-bottom:.25rem;
+  height:0;overflow:hidden;
+  /* skip-link target offset */
+  margin-top:calc(-1 * var(--nav-h));
+  padding-top:var(--nav-h);
+}
+
+/* ── SMOOTH IMAGE RENDERING ───────────────────────────── */
+svg{shape-rendering:geometricPrecision}
+
+/* ── INTERACTIVE CURSOR HINT ──────────────────────────── */
+.srv[data-tip]{cursor:crosshair}
+.srv[data-tip]:hover{cursor:none}
+
+/* ── TRUST BADGE STRIP ────────────────────────────────── */
+.trust-strip{
+  display:flex;align-items:center;justify-content:center;
+  gap:clamp(1.5rem,4vw,3rem);flex-wrap:wrap;
+  padding:1.5rem clamp(1.25rem,4vw,3rem);
+  border-bottom:1px solid var(--line2);
+  max-width:var(--max);margin:0 auto;
+}
+.trust-item{
+  display:flex;align-items:center;gap:.45rem;
+  font-family:var(--mono);font-size:.73rem;letter-spacing:.06em;
+  color:var(--ink3);white-space:nowrap;
+}
+.trust-dot{
+  width:5px;height:5px;border-radius:50%;
+  background:var(--ink3);flex-shrink:0;
+}
+
+/* ── BACK TO TOP ──────────────────────────────────────── */
+#back-top{
+  position:fixed;bottom:1.5rem;inset-inline-end:1.5rem;
+  z-index:150;
+  width:40px;height:40px;
+  border-radius:50%;
+  background:var(--paper);
+  border:1.5px solid var(--ink);
+  display:flex;align-items:center;justify-content:center;
+  cursor:pointer;
+  opacity:0;transform:translateY(12px);
+  transition:opacity .25s,transform .25s;
+  pointer-events:none;
+}
+#back-top.show{opacity:1;transform:none;pointer-events:auto}
+#back-top:hover{background:var(--ink)}
+#back-top:hover svg{stroke:var(--paper)}
+#back-top svg{stroke:var(--ink);transition:stroke .2s}
+
+/* ── APP BADGE — bottom of hero ───────────────────────── */
+.store-badges{
+  display:flex;align-items:center;gap:.6rem;flex-wrap:wrap;
+  margin-top:1.25rem;
+}
+.store-badge{
+  display:inline-flex;align-items:center;gap:.4rem;
+  border:1px solid var(--line);
+  border-radius:5px;padding:.35rem .75rem;
+  font-family:var(--mono);font-size:.72rem;color:var(--ink3);
+  text-decoration:none;transition:border-color .18s,color .18s;
+  letter-spacing:.04em;cursor:pointer;
+  background:none;
+}
+.store-badge:hover{border-color:var(--ink);color:var(--ink)}
+.store-badge svg{flex-shrink:0;opacity:.7}
+
+/* ── WHATSAPP FLOAT ───────────────────────────────────── */
+#wa-btn{
+  position:fixed;bottom:1.5rem;inset-inline-start:1.5rem;
+  z-index:150;
+  display:flex;align-items:center;gap:.5rem;
+  background:var(--paper);border:1.5px solid var(--line);
+  border-radius:100px;
+  padding:.4rem .9rem .4rem .55rem;
+  font-family:var(--mono);font-size:.73rem;color:var(--ink2);
+  text-decoration:none;
+  cursor:pointer;letter-spacing:.04em;
+  transition:border-color .2s,color .2s;
+  opacity:0;transform:translateY(8px);
+  transition:opacity .3s,transform .3s,border-color .2s;
+  pointer-events:none;
+}
+#wa-btn.show{opacity:1;transform:none;pointer-events:auto}
+#wa-btn:hover{border-color:var(--ink);color:var(--ink)}
+
+/* ── KEYBOARD NAV SKIP LINK ───────────────────────────── */
+.skip-link{
+  position:absolute;top:-40px;inset-inline-start:0;
+  background:var(--ink);color:var(--paper);
+  font-family:var(--mono);font-size:.75rem;
+  padding:.5rem 1rem;border-radius:0 0 6px 6px;
+  z-index:999;text-decoration:none;
+  transition:top .2s;
+}
+.skip-link:focus{top:0}
+
+
+/* ─── RTL LETTER-SPACING FIX ──────────────────────────── */
+[dir="rtl"] .slabel,
+[dir="rtl"] .hero-eyebrow,
+[dir="rtl"] .stat-l,
+[dir="rtl"] .trust-item,
+[dir="rtl"] .srv-tag,
+[dir="rtl"] .foot-l,
+[dir="rtl"] .foot-links a{
+  letter-spacing: 0;
+}
+[dir="rtl"] .hero-eyebrow{
+  letter-spacing: .02em;
+}
+
+/* ── NAV BUTTONS — Sign In / Sign Up ─────────────────── */
+.btn-signin,.btn-signup{
+  display:inline-flex;align-items:center;gap:.38rem;
+  font-family:var(--mono);font-size:.7rem;font-weight:500;
+  letter-spacing:.04em;padding:.42rem .9rem;
+  border-radius:var(--radius);text-decoration:none;
+  white-space:nowrap;transition:opacity .18s,transform .18s;
+  cursor:pointer;
+}
+.btn-signin{
+  background:none;color:var(--ink);
+  border:1.5px solid var(--ink4);
+}
+.btn-signin:hover{border-color:var(--ink);transform:translateY(-1px)}
+.btn-signup{
+  background:var(--ink);color:var(--paper);
+  border:1.5px solid var(--ink);
+}
+.btn-signup:hover{opacity:.82;transform:translateY(-1px)}
+.btn-signup::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(255,255,255,.07) 0%,transparent 60%);
+  pointer-events:none;border-radius:inherit;
+}
+.btn-signin,.btn-signup{position:relative;overflow:hidden}
+
+/* ── LINKEDIN NAV BUTTON ────────────────────────────── */
+.btn-linkedin{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:32px;height:32px;border-radius:var(--radius);
+  color:var(--ink2);text-decoration:none;
+  border:1px solid var(--line);
+  transition:border-color .18s,color .18s,transform .18s;
+}
+.btn-linkedin:hover{border-color:var(--ink);color:var(--ink);transform:translateY(-1px)}
+
+/* ── NAV MENU ───────────────────────────────────────── */
+nav-menu{
+  display:flex;align-items:center;
+  gap:.05rem;
+  flex:1;justify-content:center;
+  direction:ltr;
+}
+[dir="rtl"] nav-menu{direction:ltr}
+nav-menu a.nav-link{
+  font-family:var(--mono);font-size:.72rem;font-weight:600;
+  color:var(--ink2);text-decoration:none;
+  padding:.38rem .7rem;border-radius:6px;
+  letter-spacing:.04em;
+  transition:color .2s,background .2s,transform .18s;
+  white-space:nowrap;
+  display:flex;align-items:center;gap:.35rem;
+  position:relative;
+}
+nav-menu a.nav-link::after{
+  content:'';position:absolute;
+  bottom:2px;left:50%;right:50%;
+  height:1.5px;background:var(--ink);
+  transition:left .22s,right .22s;
+  border-radius:2px;
+}
+nav-menu a.nav-link:hover::after{left:10%;right:10%}
+nav-menu a.nav-link:hover{
+  color:var(--ink);background:var(--surface2);
+  transform:translateY(-1px);
+}
+.nl-icon{
+  display:flex;align-items:center;opacity:.7;
+  flex-shrink:0;
+  transition:opacity .18s,transform .18s;
+}
+nav-menu a.nav-link:hover .nl-icon{opacity:1;transform:scale(1.1)}
+@media(max-width:860px){nav-menu{display:none}}
+
+/* ── STAT — GCC label bilingual ────────────────────── */
+.stat-l-en{
+  display:block;font-family:var(--mono);font-size:.65rem;
+  color:var(--ink3);margin-top:.1rem;letter-spacing:.04em;
+}
+
+/* ── BOTTOM APP SECTION ─────────────────────────────── */
+.bottom-app-section{
+  border-top:1.5px solid var(--ink);
+  padding:clamp(3rem,5vw,4.5rem) 0;
+  background:var(--surface2);
+  position:relative;overflow:hidden;
+}
+.bottom-app-inner{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:2.5rem;align-items:center;
+}
+@media(max-width:680px){
+  .bottom-app-inner{grid-template-columns:1fr}
+}
+.bottom-app-h{
+  font-size:clamp(1.4rem,3vw,2rem);
+  font-weight:600;letter-spacing:-.02em;
+  margin:.5rem 0 .75rem;
+}
+.bottom-app-p{
+  font-size:.82rem;color:var(--ink2);font-weight:300;
+  line-height:1.8;max-width:360px;
+}
+.bottom-badges{
+  display:flex;flex-direction:column;gap:.75rem;
+  align-items:flex-start;
+}
+[dir="ltr"] .bottom-badges{align-items:flex-start}
+[dir="rtl"] .bottom-badges{align-items:flex-end}
+.bottom-badge{
+  display:inline-flex;align-items:center;gap:.75rem;
+  border:1.5px solid var(--ink);border-radius:10px;
+  padding:.65rem 1.25rem;text-decoration:none;
+  color:var(--ink);background:var(--paper);
+  min-width:200px;
+  transition:background .18s,transform .18s;
+  cursor:pointer;
+}
+.bottom-badge:hover{background:var(--surface);transform:translateX(-3px)}
+[dir="ltr"] .bottom-badge:hover{transform:translateX(3px)}
+.bb-web{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.bb-web:hover{background:var(--ink2) !important}
+.bb-sub{font-family:var(--mono);font-size:.6rem;color:var(--ink3);letter-spacing:.05em}
+.bb-web .bb-sub{color:var(--ink4)}
+.bb-name{font-family:var(--mono);font-size:.82rem;font-weight:500;letter-spacing:.02em}
+
+
+/* ── CONTACT POPUP — redesigned ─────────────────────── */
+#contact-popup{
+  position:fixed;inset:0;z-index:9999;
+  display:flex;align-items:center;justify-content:center;
+  padding:1rem;
+  opacity:0;pointer-events:none;
+  transition:opacity .28s ease;
+}
+#contact-popup.open{opacity:1;pointer-events:auto}
+#cp-overlay{
+  position:fixed;inset:0;
+  background:rgba(10,10,20,.52);
+  backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px);
+  cursor:pointer;z-index:0;
+}
+#cp-card{
+  position:relative;z-index:1;
+  background:var(--paper);
+  border:1.5px solid var(--ink);
+  border-radius:16px;
+  width:100%;max-width:400px;
+  overflow:hidden;
+  transform:translateY(24px) scale(.95);
+  transition:transform .35s cubic-bezier(.34,1.45,.64,1);
+  box-shadow:0 0 0 0 transparent;
+}
+#contact-popup.open #cp-card{transform:translateY(0) scale(1)}
+.cp-art{
+  position:relative;height:90px;
+  background:var(--surface);
+  border-bottom:1px solid var(--line);
+  overflow:hidden;
+  display:flex;align-items:center;justify-content:center;
+}
+.cp-art svg{width:100%;height:100%;position:absolute;inset:0}
+.cp-logo{
+  position:relative;z-index:1;
+  font-family:var(--mono);font-size:1.1rem;font-weight:500;
+  letter-spacing:.06em;color:var(--ink);opacity:.55;
+}
+.cp-body{padding:1.5rem 1.5rem 1rem}
+.cp-head{
+  display:flex;align-items:flex-start;justify-content:space-between;
+  margin-bottom:1.25rem;
+}
+.cp-title{
+  font-size:1.1rem;font-weight:600;
+  letter-spacing:-.015em;color:var(--ink);
+  margin-bottom:.2rem;
+}
+.cp-sub{font-size:.75rem;color:var(--ink3);font-weight:300}
+.cp-close{
+  background:none;border:1px solid var(--line);
+  border-radius:50%;width:28px;height:28px;flex-shrink:0;
+  cursor:pointer;font-size:1rem;line-height:28px;text-align:center;
+  color:var(--ink3);transition:all .18s;
+}
+.cp-close:hover{border-color:var(--ink);color:var(--ink);transform:rotate(90deg)}
+.cp-opts{display:flex;flex-direction:column;gap:.55rem}
+.cp-opt{
+  display:flex;align-items:center;gap:.85rem;
+  text-decoration:none;color:var(--ink);
+  padding:.85rem 1rem;
+  border:1.5px solid var(--line);
+  border-radius:10px;
+  transition:border-color .18s,background .18s,transform .2s;
+  cursor:pointer;position:relative;overflow:hidden;
+}
+.cp-opt::before{
+  content:'';position:absolute;inset:0;
+  background:var(--surface);opacity:0;
+  transition:opacity .18s;
+}
+.cp-opt:hover{border-color:var(--ink3)}
+.cp-opt:hover::before{opacity:1}
+.cp-opt:hover{transform:translateX(-3px)}
+[dir="ltr"] .cp-opt:hover{transform:translateX(3px)}
+.cp-opt-icon{
+  position:relative;z-index:1;
+  width:38px;height:38px;border-radius:9px;
+  border:1px solid var(--line);
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+  transition:background .18s,border-color .18s;
+}
+.cp-opt:hover .cp-opt-icon{background:var(--ink);border-color:var(--ink)}
+.cp-opt:hover .cp-opt-icon svg{stroke:var(--paper)}
+.cp-opt:hover .cp-opt-icon svg[fill="currentColor"]{fill:var(--paper);stroke:none}
+.cp-opt-icon svg{transition:stroke .18s}
+.cp-opt-txt{position:relative;z-index:1}
+.cp-opt-lbl{font-family:var(--mono);font-size:.62rem;letter-spacing:.08em;color:var(--ink3);margin-bottom:.1rem}
+.cp-opt-val{font-size:.88rem;font-weight:500;color:var(--ink)}
+.cp-footer{
+  text-align:center;padding:.75rem 1.5rem 1.25rem;
+  font-family:var(--mono);font-size:.62rem;
+  color:var(--ink4);letter-spacing:.04em;
+  border-top:1px solid var(--line2);margin-top:.5rem;
+}
+/* ── WHATSAPP PULSE ON LOAD ─────────────────────────── */
+@keyframes waPulse{
+  0%{transform:scale(1) translateY(0)}
+  30%{transform:scale(1.18) translateY(-2px)}
+  60%{transform:scale(1.12) translateY(-1px)}
+  100%{transform:scale(1) translateY(0)}
+}
+#wa-btn.pulse{
+  animation:waPulse .6s ease forwards;
+  font-weight:700;
+}
+</style>
+</head>
+<body>
+
+<!-- ════════════════════ NAV ════════════════════ -->
+<a class="skip-link" href="#main-content">تخطى للمحتوى</a>
+<div id="read-progress" aria-hidden="true"></div>
+
+<!-- Back to top -->
+<button id="back-top" aria-label="العودة للأعلى" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 15l7-7 7 7"/></svg>
+</button>
+
+<!-- WhatsApp float -->
+<a id="wa-btn" href="https://wa.me/966500000000" target="_blank" rel="noopener" aria-label="تواصل عبر واتساب">
+  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/>
+  </svg>
+  <span id="wa-label">واتساب</span>
+</a>
+
+<main id="main-content">
+<nav>
+  <a href="/" class="logo" aria-label="بولكر — الرئيسية">
+    <span>BŬLKER</span>
+  </a>
+
+  <nav-menu role="navigation" aria-label="قائمة الأقسام">
+    <a href="#sec-stats" class="nav-link" id="nm1">
+      <span class="nl-icon" aria-hidden="true">
+        <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round">
+          <rect x="2" y="12" width="4" height="6" rx="1"/>
+          <rect x="8" y="8" width="4" height="10" rx="1"/>
+          <rect x="14" y="4" width="4" height="14" rx="1"/>
+          <path d="M2 5 Q6 3 10 5 Q14 7 18 4" stroke-dasharray="2 2" opacity=".5"/>
+        </svg>
+      </span>
+      <span id="nm1-t">الأرقام</span>
+    </a>
+    <a href="#sec-services" class="nav-link" id="nm2">
+      <span class="nl-icon" aria-hidden="true">
+        <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round">
+          <rect x="2" y="5" width="7" height="6" rx="1"/>
+          <rect x="11" y="5" width="7" height="6" rx="1"/>
+          <rect x="2" y="13" width="7" height="4" rx="1"/>
+          <rect x="11" y="13" width="7" height="4" rx="1"/>
+          <path d="M5 5 L5 2 M15 5 L15 2" opacity=".4" stroke-dasharray="1 1"/>
+        </svg>
+      </span>
+      <span id="nm2-t">الخدمات</span>
+    </a>
+    <a href="#sec-how" class="nav-link" id="nm3">
+      <span class="nl-icon" aria-hidden="true">
+        <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round">
+          <circle cx="4" cy="10" r="2.5"/>
+          <circle cx="10" cy="10" r="2.5"/>
+          <circle cx="16" cy="10" r="2.5"/>
+          <path d="M6.5 10 L7.5 10" stroke-width="1"/>
+          <path d="M12.5 10 L13.5 10" stroke-width="1"/>
+          <path d="M4 7 L4 4 M10 7 L10 4 M16 7 L16 4" opacity=".3"/>
+        </svg>
+      </span>
+      <span id="nm3-t">كيف يعمل</span>
+    </a>
+    <a href="#sec-download" class="nav-link" id="nm4">
+      <span class="nl-icon" aria-hidden="true">
+        <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round">
+          <rect x="5" y="2" width="10" height="14" rx="1.5"/>
+          <line x1="10" y1="8" x2="10" y2="12"/>
+          <path d="M7.5 10 L10 12.5 L12.5 10"/>
+          <line x1="7" y1="14" x2="13" y2="14" opacity=".4"/>
+          <circle cx="10" cy="5" r="1" opacity=".4"/>
+        </svg>
+      </span>
+      <span id="nm4-t">ابدأ الآن</span>
+    </a>
+  </nav-menu>
+
+  <div class="nav-controls">
+    <!-- LinkedIn -->
+    <a href="https://www.linkedin.com/company/bulker-cjsc" target="_blank" rel="noopener" class="btn-linkedin" aria-label="LinkedIn">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
+        <circle cx="4" cy="4" r="2"/>
+      </svg>
+    </a>
+    <!-- Language toggle -->
+    <button class="btn-lang" onclick="toggleLang()" id="lang-btn" aria-label="تغيير اللغة">
+      <svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true">
+        <circle cx="8" cy="8" r="7"/>
+        <path d="M8 1c-2 3-2 9 0 14M8 1c2 3 2 9 0 14M1 8h14"/>
+      </svg>
+      <span id="lang-label">EN</span>
+    </button>
+    <!-- Sign In -->
+    <a class="btn-signin" href="https://app.bulker.sa/" id="btn-signin" aria-label="Sign In">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <!-- Pencil sketch: key entering door -->
+        <path d="M15 3h4a2 2 0 012 2v14a2 2 0 01-2 2h-4"/>
+        <polyline points="10 17 15 12 10 7"/>
+        <line x1="15" y1="12" x2="3" y2="12"/>
+      </svg>
+      <span id="signin-label">تسجيل الدخول</span>
+    </a>
+    <!-- Sign Up -->
+    <a class="btn-signup" href="https://app.bulker.sa/client/register" id="btn-signup" aria-label="Sign Up">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <!-- Pencil sketch: pen writing / register -->
+        <path d="M12 20h9"/>
+        <path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/>
+      </svg>
+      <span id="signup-label">إنشاء حساب</span>
+    </a>
+  </div>
+</nav>
+
+<!-- ════════════════════ HERO ════════════════════ -->
+<section class="hero pencil-bg">
+
+  <!-- Geometric pencil background — concentric circles + grid -->
+  <svg class="pencil-bg-svg" viewBox="0 0 1080 520" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <defs>
+      <style>
+        .gb{fill:none;stroke:var(--pencil-stroke);stroke-width:.6;stroke-dasharray:4 8}
+        .gc{fill:none;stroke:var(--pencil-stroke);stroke-width:.5}
+      </style>
+    </defs>
+    <!-- Grid lines horizontal -->
+    <line class="gb" x1="0" y1="104" x2="1080" y2="104"/>
+    <line class="gb" x1="0" y1="208" x2="1080" y2="208"/>
+    <line class="gb" x1="0" y1="312" x2="1080" y2="312"/>
+    <line class="gb" x1="0" y1="416" x2="1080" y2="416"/>
+    <!-- Grid lines vertical -->
+    <line class="gb" x1="216" y1="0" x2="216" y2="520"/>
+    <line class="gb" x1="432" y1="0" x2="432" y2="520"/>
+    <line class="gb" x1="648" y1="0" x2="648" y2="520"/>
+    <line class="gb" x1="864" y1="0" x2="864" y2="520"/>
+    <!-- Concentric circles — upper right -->
+    <circle class="gc" cx="920" cy="80" r="60"/>
+    <circle class="gc" cx="920" cy="80" r="110"/>
+    <circle class="gc" cx="920" cy="80" r="165"/>
+    <!-- Small circles — lower left -->
+    <circle class="gc" cx="100" cy="440" r="40"/>
+    <circle class="gc" cx="100" cy="440" r="80"/>
+    <!-- Diagonal rule lines -->
+    <line class="gc" x1="0" y1="0" x2="540" y2="520" stroke-dasharray="3 14"/>
+    <line class="gc" x1="1080" y1="0" x2="540" y2="520" stroke-dasharray="3 14"/>
+  </svg>
+
+  <div class="wrap hero-inner">
+    <div class="hero-layout">
+      <div class="hero-text">
+        <p class="hero-eyebrow" id="hero-eyebrow">حلول لوجستية متكاملة من الألف إلى الياء</p>
+        <h1 id="hero-h1">
+          شحنتك توصل بثقة<br>
+          <span class="hero-accent" id="hero-accent">في الوقت المحدد</span>
+        </h1>
+        <p class="hero-p" id="hero-p">
+          نقل وتخزين وتخليص جمركي وشحن بحري وجوي وخدمات شحن بين الأفراد — جميع حلولك اللوجستية في مكانها.
+        </p>
+        <div class="hero-cta">
+          <a class="cta-primary" onclick="openApp(event)" href="#" id="hero-cta-app">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 2L12 16M12 2l-4 4M12 2l4 4"/>
+              <rect x="3" y="16" width="18" height="6" rx="2"/>
+            </svg>
+            <span id="cta-app-label">انضم إلينا</span>
+          </a>
+          <a class="cta-ghost" href="#" onclick="openContact(event)" id="hero-cta-contact">تواصل معنا</a>
+
+        <div class="store-badges" id="store-badges-wrap">
+          <a class="store-badge store-badge-web" href="https://app.bulker.sa" target="_blank" rel="noopener" id="badge-web">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+            <span id="badge-web-l">Web App</span>
+          </a>
+          <a class="store-badge" onclick="openApp(event,'ios')" href="#" id="badge-ios">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            <span id="badge-ios-l">App Store</span>
+          </a>
+          <a class="store-badge" onclick="openApp(event,'android')" href="#" id="badge-and">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M5 3l14 9-14 9V3z"/></svg>
+            <span id="badge-and-l">Google Play</span>
+          </a>
+          <a class="store-badge" onclick="openApp(event,'huawei')" href="#" id="badge-hw">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            <span id="badge-hw-l">AppGallery</span>
+          </a>
+        </div>
+        </div>
+      </div>
+
+      <!-- Truck Illustration with BŬLKER brand -->
+      <div class="hero-truck" aria-hidden="true">
+        <svg viewBox="0 0 340 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <style>
+              .ts{fill:none;stroke:var(--pencil-stroke);stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+              .tf{fill:var(--surface2);stroke:var(--pencil-stroke);stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+              .tt{fill:var(--surface2);stroke:var(--pencil-stroke);stroke-width:1;stroke-linecap:round;stroke-linejoin:round}
+              .logo-t{fill:var(--pencil-stroke);font-family:'IBM Plex Mono',monospace;font-size:9px;font-weight:500;letter-spacing:.04em}
+            </style>
+          </defs>
+
+          <!-- Trailer box -->
+          <rect class="tf" x="20" y="60" width="200" height="110" rx="3"/>
+          <!-- Trailer door lines -->
+          <line class="ts" x1="120" y1="60" x2="120" y2="170" stroke-dasharray="4 3" opacity=".4"/>
+          <line class="ts" x1="20" y1="115" x2="220" y2="115" opacity=".25"/>
+          <!-- Trailer ribs -->
+          <line class="ts" x1="60" y1="60" x2="60" y2="170" opacity=".15"/>
+          <line class="ts" x1="100" y1="60" x2="100" y2="170" opacity=".15"/>
+          <line class="ts" x1="140" y1="60" x2="140" y2="170" opacity=".15"/>
+          <line class="ts" x1="180" y1="60" x2="180" y2="170" opacity=".15"/>
+          <!-- BŬLKER logo on trailer -->
+          <rect class="tt" x="40" y="80" width="160" height="32" rx="2" opacity=".6"/>
+          <text x="120" y="101" text-anchor="middle" class="logo-t">BŬLKER</text>
+
+          <!-- Cab -->
+          <path class="tf" d="M220 90 L220 170 L300 170 L300 130 Q300 110 288 100 L260 90 Z"/>
+          <!-- Cab window -->
+          <path class="tf" d="M226 96 L256 96 L268 110 L268 130 L226 130 Z" opacity=".5"/>
+          <!-- Window frame inner -->
+          <path class="ts" d="M230 100 L253 100 L264 113 L264 127 L230 127 Z" opacity=".5"/>
+          <!-- Cab door line -->
+          <line class="ts" x1="260" y1="130" x2="260" y2="170" opacity=".3"/>
+          <!-- Exhaust stack -->
+          <rect class="tf" x="282" y="68" width="7" height="24" rx="2"/>
+          <path class="ts" d="M285 66 Q290 60 295 58" opacity=".5"/>
+
+          <!-- Front bumper -->
+          <rect class="tf" x="295" y="155" width="15" height="14" rx="2"/>
+
+          <!-- Wheels — trailer -->
+          <circle class="tf" cx="60" cy="175" r="18"/>
+          <circle class="ts" cx="60" cy="175" r="11"/>
+          <circle class="tf" cx="60" cy="175" r="5"/>
+          <circle class="tf" cx="100" cy="175" r="18"/>
+          <circle class="ts" cx="100" cy="175" r="11"/>
+          <circle class="tf" cx="100" cy="175" r="5"/>
+          <circle class="tf" cx="150" cy="175" r="18"/>
+          <circle class="ts" cx="150" cy="175" r="11"/>
+          <circle class="tf" cx="150" cy="175" r="5"/>
+          <!-- Wheel — cab -->
+          <circle class="tf" cx="255" cy="175" r="18"/>
+          <circle class="ts" cx="255" cy="175" r="11"/>
+          <circle class="tf" cx="255" cy="175" r="5"/>
+          <circle class="tf" cx="295" cy="175" r="18"/>
+          <circle class="ts" cx="295" cy="175" r="11"/>
+          <circle class="tf" cx="295" cy="175" r="5"/>
+
+          <!-- Chassis / axles -->
+          <line class="ts" x1="20" y1="170" x2="310" y2="170"/>
+          <line class="ts" x1="40" y1="170" x2="40" y2="176" opacity=".4"/>
+          <line class="ts" x1="220" y1="170" x2="220" y2="176" opacity=".4"/>
+
+          <!-- Speed lines — atmosphere -->
+          <line class="ts" x1="0" y1="130" x2="18" y2="130" opacity=".3"/>
+          <line class="ts" x1="0" y1="120" x2="12" y2="120" opacity=".2"/>
+          <line class="ts" x1="0" y1="140" x2="10" y2="140" opacity=".15"/>
+          <line class="ts" x1="2" y1="110" x2="16" y2="110" opacity=".12"/>
+
+          <!-- Ground shadow — hatching -->
+          <line class="ts" x1="20" y1="196" x2="320" y2="196" opacity=".12"/>
+          <line class="ts" x1="25" y1="200" x2="315" y2="200" opacity=".07"/>
+          <line class="ts" x1="30" y1="204" x2="310" y2="204" opacity=".04"/>
+        </svg>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════ ARCADE GAME ════════════════════ -->
+<section id="sec-game" style="padding:2.5rem 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--surface2)">
+  <div style="max-width:680px;margin:0 auto;padding:0 clamp(1.25rem,4vw,2rem)">
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem">
+      <div>
+        <div style="font-family:var(--mono);font-size:.72rem;color:var(--ink3);letter-spacing:.16em;text-transform:uppercase;margin-bottom:.3rem">BŬLKER · ARCADE</div>
+        <div style="font-size:clamp(1rem,2.5vw,1.3rem);font-weight:600;letter-spacing:-.02em">Road Run</div>
+      </div>
+      <div style="font-family:var(--mono);font-size:.65rem;color:var(--ink3);text-align:end">
+        <div>SPACE / TAP = JUMP</div>
+        <div style="margin-top:.15rem;opacity:.6">Avoid obstacles · Survive</div>
+      </div>
+    </div>
+    <div id="game-shell" style="width:100%;border:1.5px solid var(--ink);border-radius:10px;overflow:hidden;background:#f8f7f4;min-height:56px;cursor:pointer" role="button" aria-label="Click to load and play BŬLKER Road Run game" tabindex="0">
+      <div id="game-placeholder" style="display:flex;align-items:center;justify-content:center;padding:1rem 1.5rem;gap:1.25rem">
+        <svg width="56" height="36" viewBox="0 0 72 38" fill="none" style="flex-shrink:0" aria-hidden="true">
+          <rect x="1" y="6" width="48" height="26" rx="2" fill="#ede9e0" stroke="#18160f" stroke-width="1.2"/>
+          <path d="M49 8 L49 32 L70 32 L70 20 L62 8 Z" fill="#ddd9d0" stroke="#18160f" stroke-width="1.2"/>
+          <path d="M51 10 L59 8 L68 18 L68 24 L51 24 Z" fill="#c8ccd4" stroke="#18160f" stroke-width=".9"/>
+          <rect x="5" y="13" width="38" height="12" rx="1" fill="#f8f7f4" stroke="#18160f" stroke-width=".8"/>
+          <text x="24" y="21" text-anchor="middle" fill="#18160f" font-family="IBM Plex Mono,monospace" font-size="6" font-weight="500">BŬLKER</text>
+          <circle cx="12" cy="34" r="5" fill="#2a2820" stroke="#18160f" stroke-width="1"/>
+          <circle cx="12" cy="34" r="2.2" fill="#888"/>
+          <circle cx="36" cy="34" r="5" fill="#2a2820" stroke="#18160f" stroke-width="1"/>
+          <circle cx="36" cy="34" r="2.2" fill="#888"/>
+          <circle cx="61" cy="34" r="5" fill="#2a2820" stroke="#18160f" stroke-width="1"/>
+          <circle cx="61" cy="34" r="2.2" fill="#888"/>
+        </svg>
+        <div>
+          <div style="font-family:var(--mono);font-size:.8rem;font-weight:600;color:#18160f;margin-bottom:.25rem">▶ انقر لتشغيل اللعبة</div>
+          <div style="font-family:var(--mono);font-size:.65rem;color:#7c796e">Loads on click · Lightweight</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════ STATS + MAP ════════════════════ -->
+<div class="stats-row reveal" id="sec-stats">
+  <div class="stat">
+    <span class="stat-n" id="s1">25,000</span>
+    <div class="stat-l" id="sl1">قدرة تخزينية</div>
+  </div>
+  <div class="stat">
+    <span class="stat-n" id="s2">13,830</span>
+    <div class="stat-l" id="sl2">مساحة تخزينية</div>
+  </div>
+  <div class="stat">
+    <span class="stat-n" id="s3">5,400</span>
+    <div class="stat-l" id="sl3">طبلية تم شحنها</div>
+  </div>
+  <!-- GCC Map stat -->
+  <div class="stat stat-map">
+    <div class="gcc-map-wrap">
+      <svg class="gcc-map" viewBox="0 0 220 230" aria-label="خريطة المملكة العربية السعودية ودول الخليج" role="img">
+<title>GCC Map</title>
+<defs>
+  <style>
+    .dp{fill:var(--pencil-stroke)}
+    .dl{fill:var(--pencil-stroke);opacity:.3}
+    .dv{fill:var(--pencil-stroke);opacity:.55}
+  </style>
+</defs>
+<!-- Saudi Arabia dot-matrix — traced from uploaded image
+     Coordinate system: 220×230 viewBox
+     Shape: wide at top (Kuwait border), narrows at Red Sea SW,
+     extends to Oman/UAE NE, Yemen coast bottom -->
+<g opacity="0.72">
+<!-- Row 1 — northern border ~y=20 -->
+<circle class="dv" cx="55" cy="20" r="2.1"/><circle class="dv" cx="63" cy="20" r="2.1"/><circle class="dv" cx="71" cy="20" r="2.1"/><circle class="dv" cx="79" cy="20" r="2.1"/><circle class="dv" cx="87" cy="20" r="2.1"/><circle class="dv" cx="95" cy="20" r="2.1"/><circle class="dv" cx="103" cy="20" r="2.1"/><circle class="dv" cx="111" cy="20" r="2.1"/><circle class="dv" cx="119" cy="20" r="2.1"/><circle class="dv" cx="127" cy="20" r="2.1"/><circle class="dv" cx="135" cy="20" r="2.1"/>
+<!-- Row 2 y=28 -->
+<circle class="dv" cx="51" cy="28" r="2.1"/><circle class="dv" cx="59" cy="28" r="2.1"/><circle class="dv" cx="67" cy="28" r="2.1"/><circle class="dv" cx="75" cy="28" r="2.1"/><circle class="dv" cx="83" cy="28" r="2.1"/><circle class="dv" cx="91" cy="28" r="2.1"/><circle class="dv" cx="99" cy="28" r="2.1"/><circle class="dv" cx="107" cy="28" r="2.1"/><circle class="dv" cx="115" cy="28" r="2.1"/><circle class="dv" cx="123" cy="28" r="2.1"/><circle class="dv" cx="131" cy="28" r="2.1"/><circle class="dv" cx="139" cy="28" r="2.1"/><circle class="dv" cx="147" cy="28" r="2.1"/>
+<!-- Row 3 y=36 — Kuwait notch NE top -->
+<circle class="dv" cx="47" cy="36" r="2.1"/><circle class="dv" cx="55" cy="36" r="2.1"/><circle class="dv" cx="63" cy="36" r="2.1"/><circle class="dv" cx="71" cy="36" r="2.1"/><circle class="dv" cx="79" cy="36" r="2.1"/><circle class="dv" cx="87" cy="36" r="2.1"/><circle class="dv" cx="95" cy="36" r="2.1"/><circle class="dv" cx="103" cy="36" r="2.1"/><circle class="dv" cx="111" cy="36" r="2.1"/><circle class="dv" cx="119" cy="36" r="2.1"/><circle class="dv" cx="127" cy="36" r="2.1"/><circle class="dv" cx="135" cy="36" r="2.1"/><circle class="dv" cx="143" cy="36" r="2.1"/><circle class="dv" cx="151" cy="36" r="2.1"/>
+<!-- Row 4 y=44 -->
+<circle class="dv" cx="43" cy="44" r="2.1"/><circle class="dv" cx="51" cy="44" r="2.1"/><circle class="dv" cx="59" cy="44" r="2.1"/><circle class="dv" cx="67" cy="44" r="2.1"/><circle class="dv" cx="75" cy="44" r="2.1"/><circle class="dv" cx="83" cy="44" r="2.1"/><circle class="dv" cx="91" cy="44" r="2.1"/><circle class="dv" cx="99" cy="44" r="2.1"/><circle class="dv" cx="107" cy="44" r="2.1"/><circle class="dv" cx="115" cy="44" r="2.1"/><circle class="dv" cx="123" cy="44" r="2.1"/><circle class="dv" cx="131" cy="44" r="2.1"/><circle class="dv" cx="139" cy="44" r="2.1"/><circle class="dv" cx="147" cy="44" r="2.1"/><circle class="dv" cx="155" cy="44" r="2.1"/>
+<!-- Row 5 y=52 — Arabian Gulf coast right side -->
+<circle class="dv" cx="39" cy="52" r="2.1"/><circle class="dv" cx="47" cy="52" r="2.1"/><circle class="dv" cx="55" cy="52" r="2.1"/><circle class="dv" cx="63" cy="52" r="2.1"/><circle class="dv" cx="71" cy="52" r="2.1"/><circle class="dv" cx="79" cy="52" r="2.1"/><circle class="dv" cx="87" cy="52" r="2.1"/><circle class="dv" cx="95" cy="52" r="2.1"/><circle class="dv" cx="103" cy="52" r="2.1"/><circle class="dv" cx="111" cy="52" r="2.1"/><circle class="dv" cx="119" cy="52" r="2.1"/><circle class="dv" cx="127" cy="52" r="2.1"/><circle class="dv" cx="135" cy="52" r="2.1"/><circle class="dv" cx="143" cy="52" r="2.1"/><circle class="dv" cx="151" cy="52" r="2.1"/><circle class="dv" cx="159" cy="52" r="2.1"/>
+<!-- Row 6 y=60 -->
+<circle class="dv" cx="37" cy="60" r="2.1"/><circle class="dv" cx="45" cy="60" r="2.1"/><circle class="dv" cx="53" cy="60" r="2.1"/><circle class="dv" cx="61" cy="60" r="2.1"/><circle class="dv" cx="69" cy="60" r="2.1"/><circle class="dv" cx="77" cy="60" r="2.1"/><circle class="dv" cx="85" cy="60" r="2.1"/><circle class="dv" cx="93" cy="60" r="2.1"/><circle class="dv" cx="101" cy="60" r="2.1"/><circle class="dv" cx="109" cy="60" r="2.1"/><circle class="dv" cx="117" cy="60" r="2.1"/><circle class="dv" cx="125" cy="60" r="2.1"/><circle class="dv" cx="133" cy="60" r="2.1"/><circle class="dv" cx="141" cy="60" r="2.1"/><circle class="dv" cx="149" cy="60" r="2.1"/><circle class="dv" cx="157" cy="60" r="2.1"/>
+<!-- Row 7 y=68 — Qatar peninsula stub right -->
+<circle class="dv" cx="35" cy="68" r="2.1"/><circle class="dv" cx="43" cy="68" r="2.1"/><circle class="dv" cx="51" cy="68" r="2.1"/><circle class="dv" cx="59" cy="68" r="2.1"/><circle class="dv" cx="67" cy="68" r="2.1"/><circle class="dv" cx="75" cy="68" r="2.1"/><circle class="dv" cx="83" cy="68" r="2.1"/><circle class="dv" cx="91" cy="68" r="2.1"/><circle class="dv" cx="99" cy="68" r="2.1"/><circle class="dv" cx="107" cy="68" r="2.1"/><circle class="dv" cx="115" cy="68" r="2.1"/><circle class="dv" cx="123" cy="68" r="2.1"/><circle class="dv" cx="131" cy="68" r="2.1"/><circle class="dv" cx="139" cy="68" r="2.1"/><circle class="dv" cx="147" cy="68" r="2.1"/><circle class="dv" cx="155" cy="68" r="2.1"/>
+<!-- Qatar peninsula — small stub at top right -->
+<circle class="dl" cx="163" cy="52" r="1.8"/><circle class="dl" cx="163" cy="60" r="1.8"/><circle class="dl" cx="167" cy="56" r="1.8"/>
+<!-- Row 8 y=76 -->
+<circle class="dv" cx="33" cy="76" r="2.1"/><circle class="dv" cx="41" cy="76" r="2.1"/><circle class="dv" cx="49" cy="76" r="2.1"/><circle class="dv" cx="57" cy="76" r="2.1"/><circle class="dv" cx="65" cy="76" r="2.1"/><circle class="dv" cx="73" cy="76" r="2.1"/><circle class="dv" cx="81" cy="76" r="2.1"/><circle class="dv" cx="89" cy="76" r="2.1"/><circle class="dv" cx="97" cy="76" r="2.1"/><circle class="dv" cx="105" cy="76" r="2.1"/><circle class="dv" cx="113" cy="76" r="2.1"/><circle class="dv" cx="121" cy="76" r="2.1"/><circle class="dv" cx="129" cy="76" r="2.1"/><circle class="dv" cx="137" cy="76" r="2.1"/><circle class="dv" cx="145" cy="76" r="2.1"/><circle class="dv" cx="153" cy="76" r="2.1"/>
+<!-- Row 9 y=84 -->
+<circle class="dv" cx="31" cy="84" r="2.1"/><circle class="dv" cx="39" cy="84" r="2.1"/><circle class="dv" cx="47" cy="84" r="2.1"/><circle class="dv" cx="55" cy="84" r="2.1"/><circle class="dv" cx="63" cy="84" r="2.1"/><circle class="dv" cx="71" cy="84" r="2.1"/><circle class="dv" cx="79" cy="84" r="2.1"/><circle class="dv" cx="87" cy="84" r="2.1"/><circle class="dv" cx="95" cy="84" r="2.1"/><circle class="dv" cx="103" cy="84" r="2.1"/><circle class="dv" cx="111" cy="84" r="2.1"/><circle class="dv" cx="119" cy="84" r="2.1"/><circle class="dv" cx="127" cy="84" r="2.1"/><circle class="dv" cx="135" cy="84" r="2.1"/><circle class="dv" cx="143" cy="84" r="2.1"/><circle class="dv" cx="151" cy="84" r="2.1"/>
+<!-- Row 10 y=92 — UAE corner -->
+<circle class="dv" cx="31" cy="92" r="2.1"/><circle class="dv" cx="39" cy="92" r="2.1"/><circle class="dv" cx="47" cy="92" r="2.1"/><circle class="dv" cx="55" cy="92" r="2.1"/><circle class="dv" cx="63" cy="92" r="2.1"/><circle class="dv" cx="71" cy="92" r="2.1"/><circle class="dv" cx="79" cy="92" r="2.1"/><circle class="dv" cx="87" cy="92" r="2.1"/><circle class="dv" cx="95" cy="92" r="2.1"/><circle class="dv" cx="103" cy="92" r="2.1"/><circle class="dv" cx="111" cy="92" r="2.1"/><circle class="dv" cx="119" cy="92" r="2.1"/><circle class="dv" cx="127" cy="92" r="2.1"/><circle class="dv" cx="135" cy="92" r="2.1"/><circle class="dv" cx="143" cy="92" r="2.1"/><circle class="dv" cx="151" cy="92" r="2.1"/>
+<!-- Row 11 y=100 -->
+<circle class="dv" cx="31" cy="100" r="2.1"/><circle class="dv" cx="39" cy="100" r="2.1"/><circle class="dv" cx="47" cy="100" r="2.1"/><circle class="dv" cx="55" cy="100" r="2.1"/><circle class="dv" cx="63" cy="100" r="2.1"/><circle class="dv" cx="71" cy="100" r="2.1"/><circle class="dv" cx="79" cy="100" r="2.1"/><circle class="dv" cx="87" cy="100" r="2.1"/><circle class="dv" cx="95" cy="100" r="2.1"/><circle class="dv" cx="103" cy="100" r="2.1"/><circle class="dv" cx="111" cy="100" r="2.1"/><circle class="dv" cx="119" cy="100" r="2.1"/><circle class="dv" cx="127" cy="100" r="2.1"/><circle class="dv" cx="135" cy="100" r="2.1"/><circle class="dv" cx="143" cy="100" r="2.1"/><circle class="dv" cx="151" cy="100" r="2.1"/>
+<!-- Row 12 y=108 — body narrows right (Oman) -->
+<circle class="dv" cx="33" cy="108" r="2.1"/><circle class="dv" cx="41" cy="108" r="2.1"/><circle class="dv" cx="49" cy="108" r="2.1"/><circle class="dv" cx="57" cy="108" r="2.1"/><circle class="dv" cx="65" cy="108" r="2.1"/><circle class="dv" cx="73" cy="108" r="2.1"/><circle class="dv" cx="81" cy="108" r="2.1"/><circle class="dv" cx="89" cy="108" r="2.1"/><circle class="dv" cx="97" cy="108" r="2.1"/><circle class="dv" cx="105" cy="108" r="2.1"/><circle class="dv" cx="113" cy="108" r="2.1"/><circle class="dv" cx="121" cy="108" r="2.1"/><circle class="dv" cx="129" cy="108" r="2.1"/><circle class="dv" cx="137" cy="108" r="2.1"/><circle class="dv" cx="145" cy="108" r="2.1"/>
+<!-- Row 13 y=116 -->
+<circle class="dv" cx="35" cy="116" r="2.1"/><circle class="dv" cx="43" cy="116" r="2.1"/><circle class="dv" cx="51" cy="116" r="2.1"/><circle class="dv" cx="59" cy="116" r="2.1"/><circle class="dv" cx="67" cy="116" r="2.1"/><circle class="dv" cx="75" cy="116" r="2.1"/><circle class="dv" cx="83" cy="116" r="2.1"/><circle class="dv" cx="91" cy="116" r="2.1"/><circle class="dv" cx="99" cy="116" r="2.1"/><circle class="dv" cx="107" cy="116" r="2.1"/><circle class="dv" cx="115" cy="116" r="2.1"/><circle class="dv" cx="123" cy="116" r="2.1"/><circle class="dv" cx="131" cy="116" r="2.1"/><circle class="dv" cx="139" cy="116" r="2.1"/>
+<!-- Row 14 y=124 -->
+<circle class="dv" cx="37" cy="124" r="2.1"/><circle class="dv" cx="45" cy="124" r="2.1"/><circle class="dv" cx="53" cy="124" r="2.1"/><circle class="dv" cx="61" cy="124" r="2.1"/><circle class="dv" cx="69" cy="124" r="2.1"/><circle class="dv" cx="77" cy="124" r="2.1"/><circle class="dv" cx="85" cy="124" r="2.1"/><circle class="dv" cx="93" cy="124" r="2.1"/><circle class="dv" cx="101" cy="124" r="2.1"/><circle class="dv" cx="109" cy="124" r="2.1"/><circle class="dv" cx="117" cy="124" r="2.1"/><circle class="dv" cx="125" cy="124" r="2.1"/><circle class="dv" cx="133" cy="124" r="2.1"/>
+<!-- Row 15 y=132 -->
+<circle class="dv" cx="39" cy="132" r="2.1"/><circle class="dv" cx="47" cy="132" r="2.1"/><circle class="dv" cx="55" cy="132" r="2.1"/><circle class="dv" cx="63" cy="132" r="2.1"/><circle class="dv" cx="71" cy="132" r="2.1"/><circle class="dv" cx="79" cy="132" r="2.1"/><circle class="dv" cx="87" cy="132" r="2.1"/><circle class="dv" cx="95" cy="132" r="2.1"/><circle class="dv" cx="103" cy="132" r="2.1"/><circle class="dv" cx="111" cy="132" r="2.1"/><circle class="dv" cx="119" cy="132" r="2.1"/><circle class="dv" cx="127" cy="132" r="2.1"/>
+<!-- Row 16 y=140 — body narrows further SW -->
+<circle class="dv" cx="41" cy="140" r="2.1"/><circle class="dv" cx="49" cy="140" r="2.1"/><circle class="dv" cx="57" cy="140" r="2.1"/><circle class="dv" cx="65" cy="140" r="2.1"/><circle class="dv" cx="73" cy="140" r="2.1"/><circle class="dv" cx="81" cy="140" r="2.1"/><circle class="dv" cx="89" cy="140" r="2.1"/><circle class="dv" cx="97" cy="140" r="2.1"/><circle class="dv" cx="105" cy="140" r="2.1"/><circle class="dv" cx="113" cy="140" r="2.1"/><circle class="dv" cx="121" cy="140" r="2.1"/>
+<!-- Row 17 y=148 -->
+<circle class="dv" cx="44" cy="148" r="2.1"/><circle class="dv" cx="52" cy="148" r="2.1"/><circle class="dv" cx="60" cy="148" r="2.1"/><circle class="dv" cx="68" cy="148" r="2.1"/><circle class="dv" cx="76" cy="148" r="2.1"/><circle class="dv" cx="84" cy="148" r="2.1"/><circle class="dv" cx="92" cy="148" r="2.1"/><circle class="dv" cx="100" cy="148" r="2.1"/><circle class="dv" cx="108" cy="148" r="2.1"/><circle class="dv" cx="116" cy="148" r="2.1"/>
+<!-- Row 18 y=156 — Yemen border, narrows left now -->
+<circle class="dv" cx="47" cy="156" r="2.1"/><circle class="dv" cx="55" cy="156" r="2.1"/><circle class="dv" cx="63" cy="156" r="2.1"/><circle class="dv" cx="71" cy="156" r="2.1"/><circle class="dv" cx="79" cy="156" r="2.1"/><circle class="dv" cx="87" cy="156" r="2.1"/><circle class="dv" cx="95" cy="156" r="2.1"/><circle class="dv" cx="103" cy="156" r="2.1"/><circle class="dv" cx="111" cy="156" r="2.1"/>
+<!-- Row 19 y=164 -->
+<circle class="dv" cx="51" cy="164" r="2.1"/><circle class="dv" cx="59" cy="164" r="2.1"/><circle class="dv" cx="67" cy="164" r="2.1"/><circle class="dv" cx="75" cy="164" r="2.1"/><circle class="dv" cx="83" cy="164" r="2.1"/><circle class="dv" cx="91" cy="164" r="2.1"/><circle class="dv" cx="99" cy="164" r="2.1"/><circle class="dv" cx="107" cy="164" r="2.1"/>
+<!-- Row 20 y=172 -->
+<circle class="dv" cx="56" cy="172" r="2.1"/><circle class="dv" cx="64" cy="172" r="2.1"/><circle class="dv" cx="72" cy="172" r="2.1"/><circle class="dv" cx="80" cy="172" r="2.1"/><circle class="dv" cx="88" cy="172" r="2.1"/><circle class="dv" cx="96" cy="172" r="2.1"/><circle class="dv" cx="104" cy="172" r="2.1"/>
+<!-- Row 21 y=180 — approaching SW tip -->
+<circle class="dv" cx="61" cy="180" r="2.1"/><circle class="dv" cx="69" cy="180" r="2.1"/><circle class="dv" cx="77" cy="180" r="2.1"/><circle class="dv" cx="85" cy="180" r="2.1"/><circle class="dv" cx="93" cy="180" r="2.1"/><circle class="dv" cx="101" cy="180" r="2.1"/>
+<!-- Row 22 y=188 -->
+<circle class="dl" cx="67" cy="188" r="1.9"/><circle class="dv" cx="75" cy="188" r="1.9"/><circle class="dv" cx="83" cy="188" r="1.9"/><circle class="dv" cx="91" cy="188" r="1.9"/><circle class="dl" cx="99" cy="188" r="1.9"/>
+<!-- Row 23 y=196 — SW tip Red Sea coast -->
+<circle class="dl" cx="73" cy="196" r="1.8"/><circle class="dl" cx="81" cy="196" r="1.8"/><circle class="dl" cx="89" cy="196" r="1.8"/>
+<!-- Row 24 — tip -->
+<circle class="dl" cx="79" cy="204" r="1.7"/><circle class="dl" cx="87" cy="204" r="1.7"/>
+</g>
+</svg>
+    </div>
+    <div class="stat-l" id="sl4">تغطية دول الخليج<br><span class="stat-l-en">GCC Coverage</span></div>
+  </div>
+</div>
+
+<!-- ═══ TRUST STRIP ═══ -->
+<div class="trust-strip reveal">
+  <div class="trust-item"><div class="trust-dot"></div><span id="tr1">مرخص من الهيئة العامة للنقل</span></div>
+  <div class="trust-item"><div class="trust-dot"></div><span id="tr2">مسجل لدى هيئة الزكاة والضريبة والجمارك</span></div>
+  <div class="trust-item"><div class="trust-dot"></div><span id="tr3">خدمة 24/7</span></div>
+  <div class="trust-item"><div class="trust-dot"></div><span id="tr4">تتبع مباشر للشحنات</span></div>
+</div>
+
+<!-- ════════════════════ SERVICES ════════════════════ -->
+<section class="section-services pencil-bg" id="sec-services">
+
+  <!-- Subtle geometric bg for services -->
+  <svg class="pencil-bg-svg" viewBox="0 0 1080 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true" style="opacity:.04">
+    <defs><style>.bg2{fill:none;stroke:var(--pencil-stroke);stroke-width:.7}</style></defs>
+    <!-- Large triangle -->
+    <polygon class="bg2" points="540,50 950,520 130,520"/>
+    <!-- Rectangle frame -->
+    <rect class="bg2" x="80" y="80" width="920" height="460" rx="4"/>
+    <!-- Cross -->
+    <line class="bg2" x1="540" y1="50" x2="540" y2="520"/>
+    <line class="bg2" x1="80" y1="285" x2="1000" y2="285"/>
+  </svg>
+
+  <div class="wrap">
+    <div class="slabel reveal" id="srv-label">الخدمات</div>
+    <h2 class="reveal" style="font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:600;letter-spacing:-.02em;margin-bottom:0" id="srv-title">ماذا نوفر لك</h2>
+
+    <div class="srv-grid reveal reveal-d1">
+
+      <!-- LTL — Pallet -->
+      <div class="srv" data-tip="ltl">
+        <div class="srv-icon">
+          <svg viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg">
+            <!-- Pallet boards base -->
+            <rect class="pf" x="7" y="34" width="38" height="7" rx="1.5"/>
+            <!-- Board gaps -->
+            <line class="ps" x1="19" y1="34" x2="19" y2="41"/>
+            <line class="ps" x1="33" y1="34" x2="33" y2="41"/>
+            <!-- Pallet feet -->
+            <rect class="pf" x="7" y="40" width="10" height="5" rx="1"/>
+            <rect class="pf" x="21" y="40" width="10" height="5" rx="1"/>
+            <rect class="pf" x="35" y="40" width="10" height="5" rx="1"/>
+            <!-- Deck board -->
+            <rect class="pf" x="7" y="27" width="38" height="8" rx="1.5"/>
+            <line class="ps" x1="26" y1="27" x2="26" y2="35" opacity=".3"/>
+            <!-- Box 1 -->
+            <rect class="pf" x="9" y="12" width="16" height="16" rx="1.5"/>
+            <!-- Box 2 -->
+            <rect class="pf" x="27" y="12" width="16" height="16" rx="1.5"/>
+            <!-- Box 3 top center -->
+            <rect class="pf" x="18" y="4" width="16" height="9" rx="1.5"/>
+            <!-- Box lines (tape) -->
+            <line class="ps" x1="9" y1="20" x2="25" y2="20" opacity=".4"/>
+            <line class="ps" x1="17" y1="12" x2="17" y2="28" opacity=".4"/>
+            <line class="ps" x1="27" y1="20" x2="43" y2="20" opacity=".4"/>
+            <line class="ps" x1="35" y1="12" x2="35" y2="28" opacity=".4"/>
+          </svg>
+        </div>
+        <h3 id="ltl-h">النقل الجزئي LTL</h3>
+        <p id="ltl-p">شحن طبلية واحدة أو أكثر ضمن شحنات مجمعة بين المدن، دون الحاجة إلى حجز شاحنة كاملة — حل اقتصادي للشحنات الصغيرة والمتوسطة.</p>
+      </div>
+
+      <!-- 3PL — Warehouse -->
+      <div class="srv" data-tip="wh">
+        <div class="srv-icon">
+          <svg viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg">
+            <!-- Building outline -->
+            <path class="pf" d="M5 46 L5 22 L26 8 L47 22 L47 46 Z"/>
+            <!-- Roof ridge -->
+            <line class="ps" x1="26" y1="8" x2="26" y2="22" opacity=".4"/>
+            <!-- Left window -->
+            <rect class="pf" x="9" y="28" width="9" height="8" rx="1"/>
+            <line class="ps" x1="13.5" y1="28" x2="13.5" y2="36" opacity=".5"/>
+            <!-- Right window -->
+            <rect class="pf" x="34" y="28" width="9" height="8" rx="1"/>
+            <line class="ps" x1="38.5" y1="28" x2="38.5" y2="36" opacity=".5"/>
+            <!-- Door -->
+            <rect class="pf" x="19" y="34" width="14" height="12" rx="1.5"/>
+            <line class="ps" x1="26" y1="34" x2="26" y2="46" opacity=".5"/>
+            <!-- Door handle -->
+            <line class="ps" x1="22" y1="40.5" x2="24" y2="40.5"/>
+            <!-- Racks hint inside -->
+            <line class="ps" x1="8" y1="38" x2="17" y2="38" opacity=".25"/>
+            <line class="ps" x1="35" y1="38" x2="44" y2="38" opacity=".25"/>
+          </svg>
+        </div>
+        <h3 id="wh-h">التخزين 3PL</h3>
+        <p id="wh-p">25,000 موقع طبلية في مستودعاتنا — إدارة مخزون احترافية مع نظام تتبع لحظي وتحكم كامل في العمليات اللوجستية.</p>
+      </div>
+
+      <!-- SME Factory — Forklift -->
+      <div class="srv" data-tip="sme">
+        <div class="srv-icon">
+          <svg viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg">
+            <!-- Mast vertical -->
+            <rect class="pf" x="8" y="8" width="6" height="34" rx="1"/>
+            <!-- Forks -->
+            <rect class="pf" x="3" y="38" width="11" height="2.5" rx="1"/>
+            <rect class="pf" x="3" y="43" width="11" height="2.5" rx="1"/>
+            <!-- Box on forks -->
+            <rect class="pf" x="3" y="22" width="11" height="17" rx="1.5"/>
+            <line class="ps" x1="3" y1="30" x2="14" y2="30" opacity=".4"/>
+            <line class="ps" x1="8.5" y1="22" x2="8.5" y2="39" opacity=".4"/>
+            <!-- Forklift body -->
+            <path class="pf" d="M14 26 L36 26 L36 42 L14 42 Z"/>
+            <!-- Cab -->
+            <rect class="pf" x="28" y="14" width="10" height="14" rx="1.5"/>
+            <!-- Cab window -->
+            <rect class="pf" x="30" y="16" width="7" height="8" rx="1" opacity=".5"/>
+            <!-- Wheels -->
+            <circle class="pf" cx="20" cy="44" r="6"/>
+            <circle class="ps" cx="20" cy="44" r="3"/>
+            <circle class="pf" cx="33" cy="44" r="6"/>
+            <circle class="ps" cx="33" cy="44" r="3"/>
+          </svg>
+        </div>
+        <h3 id="sme-h">لوجستيات المصانع SME</h3>
+        <p id="sme-p">دمج شحنات المصانع الصغيرة والمتوسطة في شحنات موحدة لتقليل التكلفة وتحسين كفاءة النقل.</p>
+      </div>
+
+      <!-- Ocean — Ship -->
+      <div class="srv" data-tip="sea">
+        <div class="srv-icon">
+          <svg viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg">
+            <!-- Hull -->
+            <path class="pf" d="M5 36 Q7 45 26 47 Q45 45 47 36 L41 27 L11 27 Z"/>
+            <!-- Deck structure -->
+            <rect class="pf" x="14" y="17" width="24" height="11" rx="1"/>
+            <!-- Bridge -->
+            <rect class="pf" x="19" y="9" width="14" height="9" rx="1"/>
+            <!-- Funnel -->
+            <rect class="pf" x="23" y="3" width="6" height="7" rx="1"/>
+            <!-- Smoke wisps -->
+            <path class="ps" d="M24 3 Q22 0 25 -1" opacity=".3"/>
+            <path class="ps" d="M28 3 Q30 0 27 -1" opacity=".2"/>
+            <!-- Containers on deck -->
+            <rect class="pf" x="7" y="24" width="9" height="5" rx="1"/>
+            <rect class="pf" x="36" y="24" width="9" height="5" rx="1"/>
+            <!-- Container lines -->
+            <line class="ps" x1="11.5" y1="24" x2="11.5" y2="29" opacity=".4"/>
+            <line class="ps" x1="40.5" y1="24" x2="40.5" y2="29" opacity=".4"/>
+            <!-- Waves -->
+            <path class="ps" d="M2 44 Q7 41 12 44 Q17 47 22 44 Q27 41 32 44 Q37 47 42 44 Q46 42 50 44" opacity=".5"/>
+          </svg>
+        </div>
+        <h3 id="sea-h">الشحن البحري</h3>
+        <p id="sea-p">شحن LCL (جزئي) وFCL (كامل الحاوية) إلى جميع الموانئ المحلية والعالمية عبر شبكات شحن معتمدة.</p>
+      </div>
+
+      <!-- Air — Plane -->
+      <div class="srv" data-tip="air">
+        <div class="srv-icon">
+          <svg viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg">
+            <!-- Fuselage -->
+            <ellipse class="pf" cx="26" cy="26" rx="20" ry="5.5" transform="rotate(-35 26 26)"/>
+            <!-- Main wing -->
+            <path class="pf" d="M18 31 L5 47 L16 43 L26 29 Z"/>
+            <!-- Small rear wing -->
+            <path class="pf" d="M36 19 L43 8 L47 12 L38 22 Z"/>
+            <!-- Engine pod -->
+            <ellipse class="pf" cx="20" cy="33" rx="5" ry="3" transform="rotate(-35 20 33)"/>
+            <!-- Engine nacelle line -->
+            <line class="ps" x1="18" y1="36" x2="22" y2="30" opacity=".4"/>
+            <!-- Speed lines -->
+            <line class="ps" x1="5" y1="24" x2="13" y2="24" opacity=".3"/>
+            <line class="ps" x1="3" y1="20" x2="9" y2="20" opacity=".2"/>
+            <line class="ps" x1="6" y1="28" x2="11" y2="28" opacity=".15"/>
+            <!-- Cloud hint -->
+            <path class="ps" d="M38 42 Q40 38 44 40 Q46 36 50 38 Q52 36 52 40" opacity=".2"/>
+          </svg>
+        </div>
+        <h3 id="air-h">الشحن الجوي</h3>
+        <p id="air-p">خدمات شحن جوي سريعة وموثوقة تناسب الشحنات العاجلة بجميع الأحجام والأوزان.</p>
+      </div>
+
+      <!-- Customs — Document stamp -->
+      <div class="srv" data-tip="cus">
+        <div class="srv-icon">
+          <svg viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg">
+            <!-- Document page -->
+            <path class="pf" d="M10 5 L10 47 L42 47 L42 13 L34 5 Z"/>
+            <!-- Folded corner -->
+            <path class="pf" d="M34 5 L34 13 L42 13"/>
+            <!-- Text lines -->
+            <line class="ps" x1="15" y1="21" x2="37" y2="21" opacity=".45"/>
+            <line class="ps" x1="15" y1="27" x2="33" y2="27" opacity=".45"/>
+            <line class="ps" x1="15" y1="33" x2="37" y2="33" opacity=".45"/>
+            <!-- Approval stamp circle -->
+            <circle class="pf" cx="31" cy="37" r="10"/>
+            <circle class="ps" cx="31" cy="37" r="7" opacity=".4" stroke-dasharray="3 2"/>
+            <!-- Check mark -->
+            <path class="ps" d="M27 37 L30 41 L36 32" stroke-width="1.6"/>
+          </svg>
+        </div>
+        <h3 id="cus-h">التخليص الجمركي</h3>
+        <p id="cus-p">إدارة وإنهاء جميع الإجراءات الجمركية عبر منافذ المملكة بسرعة وامتثال كامل للأنظمة.</p>
+      </div>
+
+      <!-- C2C — Person to Person package -->
+      <div class="srv" data-tip="c2c">
+        <div class="srv-icon">
+          <svg viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg">
+            <!-- Person A -->
+            <circle class="pf" cx="9" cy="11" r="5.5"/>
+            <path class="pf" d="M3 27 Q3 19 9 19 Q15 19 15 27"/>
+            <!-- Person B -->
+            <circle class="pf" cx="43" cy="11" r="5.5"/>
+            <path class="pf" d="M37 27 Q37 19 43 19 Q49 19 49 27"/>
+            <!-- Package center -->
+            <rect class="pf" x="19" y="22" width="14" height="13" rx="2"/>
+            <!-- Tape line -->
+            <line class="ps" x1="19" y1="28" x2="33" y2="28" opacity=".5"/>
+            <line class="ps" x1="26" y1="22" x2="26" y2="35" opacity=".5"/>
+            <!-- Arrow right -->
+            <path class="ps" d="M33 24 L36 27 L33 30" opacity=".7"/>
+            <!-- Arrow left -->
+            <path class="ps" d="M19 24 L16 27 L19 30" opacity=".7"/>
+            <!-- Route dots -->
+            <circle cx="16.5" cy="27" r="1.5" style="fill:var(--pencil-stroke)" opacity=".5"/>
+            <circle cx="35.5" cy="27" r="1.5" style="fill:var(--pencil-stroke)" opacity=".5"/>
+          </svg>
+        </div>
+        <h3 id="c2c-h">الشحن بين الأفراد C2C</h3>
+        <p id="c2c-p">خدمة شحن طرود شخصية من باب إلى باب بين أي مدينتين داخل المملكة مع تتبع كامل وأمان عالي.</p>
+      </div>
+
+      <!-- VAS — Open box extras -->
+      <div class="srv" data-tip="vas">
+        <div class="srv-icon">
+          <svg viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg">
+            <!-- Box body -->
+            <rect class="pf" x="10" y="20" width="32" height="26" rx="2"/>
+            <!-- Open flaps -->
+            <path class="pf" d="M10 20 L18 10 L34 10 L42 20"/>
+            <!-- Center tape -->
+            <path class="pf" d="M10 32 L42 32 L42 37 L10 37 Z" opacity=".55"/>
+            <!-- Flap center gap -->
+            <line class="ps" x1="26" y1="10" x2="26" y2="20" opacity=".4"/>
+            <!-- Stars/sparkle extras -->
+            <line class="ps" x1="22" y1="40" x2="22" y2="45" opacity=".4"/>
+            <line class="ps" x1="19.5" y1="42.5" x2="24.5" y2="42.5" opacity=".4"/>
+            <line class="ps" x1="33" y1="40" x2="33" y2="45" opacity=".4"/>
+            <line class="ps" x1="30.5" y1="42.5" x2="35.5" y2="42.5" opacity=".4"/>
+            <!-- Box content hint -->
+            <rect class="ps" x="15" y="23" width="8" height="7" rx="1" opacity=".3"/>
+            <rect class="ps" x="29" y="23" width="8" height="7" rx="1" opacity=".3"/>
+          </svg>
+        </div>
+        <h3 id="vas-h">خدمات القيمة المضافة</h3>
+        <p id="vas-p">تغليف احترافي، تجهيز طلبات، إدارة المرتجعات، وخدمة الدفع عند الاستلام COD — حلول تشغيلية متكاملة.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════ HOW IT WORKS ════════════════════ -->
+<section class="section-how pencil-bg" id="sec-how">
+
+  <svg class="pencil-bg-svg" viewBox="0 0 1080 280" preserveAspectRatio="xMidYMid slice" aria-hidden="true" style="opacity:.035">
+    <defs><style>.hb{fill:none;stroke:var(--pencil-stroke);stroke-width:.7;stroke-dasharray:6 10}</style></defs>
+    <ellipse class="hb" cx="180" cy="140" rx="100" ry="80"/>
+    <ellipse class="hb" cx="540" cy="140" rx="100" ry="80"/>
+    <ellipse class="hb" cx="900" cy="140" rx="100" ry="80"/>
+    <line class="hb" x1="0" y1="140" x2="1080" y2="140"/>
+  </svg>
+
+  <div class="wrap">
+    <div class="slabel reveal" id="how-label">آلية العمل</div>
+    <h2 class="reveal" style="font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:600;letter-spacing:-.02em;margin-bottom:0" id="how-title">أربع خطوات بسيطة</h2>
+
+    <div class="how-grid">
+      <div class="how-step reveal">
+        <div class="step-dot">1</div>
+        <h3 id="st1-h">سجّل واطلب</h3>
+        <p id="st1-p">أنشئ حسابك وأدخل تفاصيل الشحنة خلال أقل من دقيقة.</p>
+      </div>
+      <div class="how-step reveal reveal-d1">
+        <div class="step-dot">2</div>
+        <h3 id="st2-h">نستلم منك</h3>
+        <p id="st2-p">فريق التشغيل يصل إلى موقعك في الوقت المحدد لاستلام الشحنة وفق نوع الخدمة.</p>
+      </div>
+      <div class="how-step reveal reveal-d2">
+        <div class="step-dot">3</div>
+        <h3 id="st3-h">تتبع مباشر</h3>
+        <p id="st3-p">متابعة حالة الشحنة لحظة بلحظة عبر النظام مع تحديثات فورية.</p>
+      </div>
+      <div class="how-step reveal reveal-d3">
+        <div class="step-dot">4</div>
+        <h3 id="st4-h">توصيل وتأكيد</h3>
+        <p id="st4-p">تسليم الشحنة للمستلم مع تأكيد إلكتروني وإثبات عملية التسليم.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════ CTA BAND ════════════════════ -->
+<section class="cta-band pencil-bg" id="sec-cta">
+
+  <!-- Large sketch truck silhouette as background art -->
+  <svg class="pencil-bg-svg" viewBox="0 0 1080 340" preserveAspectRatio="xMaxYMax slice" aria-hidden="true" style="opacity:.04">
+    <path style="fill:none;stroke:var(--pencil-stroke);stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round"
+      d="M100 240 L100 140 L380 138 L380 240 Z
+         M380 180 L460 170 L500 200 L500 240 L380 240 Z"/>
+    <circle style="fill:var(--surface2);stroke:var(--pencil-stroke);stroke-width:1.2" cx="150" cy="248" r="26"/>
+    <circle style="fill:var(--surface2);stroke:var(--pencil-stroke);stroke-width:1.2" cx="300" cy="248" r="26"/>
+    <circle style="fill:var(--surface2);stroke:var(--pencil-stroke);stroke-width:1.2" cx="462" cy="248" r="26"/>
+    <!-- BULKER lettering -->
+    <text x="240" y="195" text-anchor="middle" style="fill:var(--pencil-stroke);font-family:'IBM Plex Mono';font-size:20px;font-weight:500;letter-spacing:2px">BŬLKER</text>
+    <!-- Concentric circles right -->
+    <circle style="fill:none;stroke:var(--pencil-stroke);stroke-width:.8" cx="900" cy="170" r="80"/>
+    <circle style="fill:none;stroke:var(--pencil-stroke);stroke-width:.6" cx="900" cy="170" r="130"/>
+    <circle style="fill:none;stroke:var(--pencil-stroke);stroke-width:.5" cx="900" cy="170" r="185"/>
+  </svg>
+
+  <div class="wrap pencil-inner">
+    <div class="reveal" style="text-align:center">
+      <h2 id="cta-h">جاهز للشحن؟</h2>
+      <p id="cta-p">سجّل الآن وابدأ بإدارة عملياتك اللوجستية بكفاءة أعلى.</p>
+      <div class="cta-row">
+        <a class="cta-primary" onclick="openApp(event)" href="#" id="cta-app-btn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 2L12 16M12 2l-4 4M12 2l4 4"/>
+            <rect x="3" y="16" width="18" height="6" rx="2"/>
+          </svg>
+          <span id="cta-app-l">حمّل التطبيق</span>
+        </a>
+        <a class="cta-ghost" href="#" onclick="openContact(event)" id="cta-mail">تواصل مع الفريق</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════ FOOTER ════════════════════ -->
+</main>
+<!-- ════════ BOTTOM APP SECTION ════════ -->
+<section class="bottom-app-section" id="sec-download">
+  <div class="wrap bottom-app-inner">
+    <div class="bottom-app-text">
+      <div class="slabel" id="dl-label">حمّل التطبيق</div>
+      <h3 class="bottom-app-h" id="dl-h">ابدأ الشحن من هاتفك</h3>
+      <p class="bottom-app-p" id="dl-p">متاح على جميع المنصات — إدارة شحناتك في أي وقت ومن أي مكان.</p>
+    </div>
+    <div class="bottom-badges">
+      <a class="bottom-badge bb-web" href="https://app.bulker.sa" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+        <div><div class="bb-sub" id="dl-web-sub">افتح على المتصفح</div><div class="bb-name">Web App</div></div>
+      </a>
+      <a class="bottom-badge" onclick="openApp(event,'ios')" href="#">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+        <div><div class="bb-sub" id="dl-ios-sub">حمّل من</div><div class="bb-name">App Store</div></div>
+      </a>
+      <a class="bottom-badge" onclick="openApp(event,'android')" href="#">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.523 15.341c-.297.58-.596.976-1.003 1.26-.406.284-.971.426-1.697.426-.53 0-1.006-.126-1.424-.378a2.697 2.697 0 01-.97-1.054 2.97 2.97 0 01-.347-1.47c0-.553.116-1.05.347-1.49.23-.44.554-.785.97-1.04a2.72 2.72 0 011.424-.377c.726 0 1.291.143 1.697.43.406.286.706.683 1.003 1.19l-1.25.665c-.193-.348-.39-.596-.59-.742-.2-.147-.437-.22-.71-.22-.38 0-.7.134-.96.4-.26.265-.39.617-.39 1.053 0 .44.13.796.39 1.065.26.27.58.405.96.405.27 0 .51-.074.71-.22.2-.147.397-.396.59-.746l1.25.643zm-6.773.673c-.27.432-.636.76-1.097.982-.46.222-.985.334-1.573.334-.587 0-1.11-.112-1.57-.334-.46-.222-.826-.55-1.097-.982-.27-.432-.405-.94-.405-1.524 0-.583.135-1.09.405-1.52.271-.43.637-.757 1.097-.98.46-.222.983-.333 1.57-.333.588 0 1.113.11 1.573.333.461.223.827.55 1.097.98.27.43.405.937.405 1.52 0 .584-.135 1.092-.405 1.524zm-1.327-2.424c-.23-.268-.537-.4-.92-.4-.383 0-.69.132-.92.4-.23.267-.346.617-.346 1.05 0 .435.116.787.346 1.057.23.27.537.404.92.404.383 0 .69-.134.92-.404.23-.27.346-.622.346-1.057 0-.433-.116-.783-.346-1.05zM2 17h2V7H2v10zm1-11.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3zm17 0a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM18 7h2v10h-2V7z"/></svg>
+        <div><div class="bb-sub" id="dl-and-sub">حمّل من</div><div class="bb-name">Google Play</div></div>
+      </a>
+      <a class="bottom-badge" onclick="openApp(event,'huawei')" href="#">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        <div><div class="bb-sub" id="dl-hw-sub">حمّل من</div><div class="bb-name">AppGallery</div></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-l" id="foot-cr">© 2026 شركة بولكر</div>
+  <div class="foot-links">
+    <a href="mailto:info@bulker.sa">info@bulker.sa</a>
+    <a href="https://app.bulker.sa" id="foot-app-link">app.bulker.sa</a>
+    <a href="https://www.linkedin.com/company/bulker-cjsc" target="_blank" rel="noopener" id="foot-li">LinkedIn</a>
+    <a href="https://bulker.sa/privacy" id="foot-priv">الخصوصية</a>
+  </div>
+</footer>
+
+<script>
+
+/* ── CONTACT POPUP FUNCTIONS ──────────────────────── */
+function openContact(e){
+  if(e){ e.preventDefault(); e.stopPropagation(); }
+  var p = document.getElementById('contact-popup');
+  if(!p) return;
+  p.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeContact(){
+  var p = document.getElementById('contact-popup');
+  if(!p) return;
+  p.classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', function(ev){
+  if(ev.key === 'Escape') closeContact();
+});
+/* ── APP STORE ROUTING ─────────────────────────────── */
+function getDevice(){
+  var ua=navigator.userAgent||'';
+  if(/HuaweiTablet|HUAWEI|HMSCore/i.test(ua))return'huawei';
+  if(/Android/i.test(ua))return'android';
+  if(/iPhone|iPad|iPod/i.test(ua))return'ios';
+  return'web';
+}
+function openApp(e){if(e)e.preventDefault();window.open(APP_LINKS[getDevice()]||APP_LINKS.web,'_blank','noopener')}
+
+/* ── SCROLL REVEAL ─────────────────────────────────── */
+var io=new IntersectionObserver(function(entries){
+  entries.forEach(function(en){
+    if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}
+  });
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+
+/* ── LANGUAGE ──────────────────────────────────────── */
+var isAR=true;
+var S={
+  ar:{
+    lb:'EN',ab:'التطبيق',ey:'حلول لوجستية متكاملة من الألف إلى الياء',
+    h1:'شحنتك توصل بثقة<br><span class="hero-accent" id="hero-accent">في الوقت المحدد</span>',
+    hp:'نقل وتخزين وتخليص جمركي وشحن بحري وجوي وخدمات شحن بين الأفراد — جميع حلولك اللوجستية في مكانها.',
+    ca:'انضم إلينا',cc:'تواصل معنا',
+    sl1:'قدرة تخزينية',sl2:'مساحة تخزينية',sl3:'طبلية تم شحنها',sl4:'تغطية دول الخليج',
+    svl:'الخدمات',svt:'ماذا نوفر لك',
+    hwl:'آلية العمل',hwt:'أربع خطوات بسيطة',
+    srv:[
+      ['النقل الجزئي LTL','شحن طبلية واحدة أو أكثر ضمن شحنات مجمعة بين المدن، دون الحاجة إلى حجز شاحنة كاملة — حل اقتصادي للشحنات الصغيرة والمتوسطة.'],
+      ['التخزين 3PL','25,000 موقع طبلية في مستودعاتنا — إدارة مخزون احترافية مع نظام تتبع لحظي وتحكم كامل في العمليات اللوجستية.'],
+      ['لوجستيات المصانع SME','دمج شحنات المصانع الصغيرة والمتوسطة في شحنات موحدة لتقليل التكلفة وتحسين كفاءة النقل.'],
+      ['الشحن البحري','شحن LCL (جزئي) وFCL (كامل الحاوية) إلى جميع الموانئ المحلية والعالمية عبر شبكات شحن معتمدة.'],
+      ['الشحن الجوي','خدمات شحن جوي سريعة وموثوقة تناسب الشحنات العاجلة بجميع الأحجام والأوزان.'],
+      ['التخليص الجمركي','إدارة وإنهاء جميع الإجراءات الجمركية عبر منافذ المملكة بسرعة وامتثال كامل للأنظمة.'],
+      ['الشحن بين الأفراد C2C','خدمة شحن طرود شخصية من باب إلى باب بين أي مدينتين داخل المملكة مع تتبع كامل وأمان عالي.'],
+      ['خدمات القيمة المضافة','تغليف احترافي، تجهيز طلبات، إدارة المرتجعات، وخدمة الدفع عند الاستلام COD — حلول تشغيلية متكاملة.']
+    ],
+    steps:[
+      ['سجّل واطلب','أنشئ حسابك وأدخل تفاصيل الشحنة خلال أقل من دقيقة.'],
+      ['نستلم منك','فريق التشغيل يصل إلى موقعك في الوقت المحدد لاستلام الشحنة وفق نوع الخدمة.'],
+      ['تتبع مباشر','متابعة حالة الشحنة لحظة بلحظة عبر النظام مع تحديثات فورية.'],
+      ['توصيل وتأكيد','تسليم الشحنة للمستلم مع تأكيد إلكتروني وإثبات عملية التسليم.']
+    ],
+    ctah:'جاهز للشحن؟',ctap:'سجّل الآن وابدأ بإدارة عملياتك اللوجستية بكفاءة أعلى.',
+    ctaa:'حمّل التطبيق',ctam:'تواصل مع الفريق',
+    fc:'© 2026 شركة بولكر',fp:'الخصوصية',
+    dt:'بولكر | BŬLKER — منصة الشحن واللوجستيات في السعودية'
+  },
+  en:{
+    lb:'عربي',ab:'App',ey:'Full Logistics Solutions — A to Z',
+    h1:'Your freight arrives with confidence<br><span class="hero-accent" id="hero-accent">on time, every time</span>',
+    hp:'LTL shipping, 3PL warehousing, ocean & air freight, customs clearance, and C2C shipping — all logistics solutions in place.',
+    ca:'Join Us',cc:'Contact Us',
+    sl1:'Storage Capacity',sl2:'Storage Space',sl3:'Pallets Shipped',sl4:'GCC Coverage',
+    svl:'Services',svt:'What we offer',
+    hwl:'How it works',hwt:'Four simple steps',
+    srv:[
+      ['LTL Transport','Ship one or more pallets as part of consolidated freight between cities without booking a full truck — a cost-efficient solution for small and medium shipments.'],
+      ['3PL Warehousing','25,000 pallet positions — professional inventory management with real-time tracking and full operational control.'],
+      ['SME Factory Logistics','We consolidate small and medium factory shipments into unified loads to reduce cost and improve transport efficiency.'],
+      ['Ocean Freight','LCL (less than container load) and FCL (full container load) shipping to all local and global ports via certified shipping networks.'],
+      ['Air Freight','Fast and reliable air freight services suitable for urgent shipments of all sizes and weights.'],
+      ['Customs Clearance','Handling and completing all customs procedures across Saudi entry points with speed and full compliance.'],
+      ['C2C Shipping','Door-to-door personal parcel delivery between any two cities in the Kingdom with full tracking and high security.'],
+      ['Value-Added Services','Professional packing, order preparation, returns management, and COD collection — fully integrated operational services.']
+    ],
+    steps:[
+      ['Register & Request','Create your account and enter shipment details in under a minute.'],
+      ['We Pick Up','Our operations team arrives at your location on time to collect the shipment according to service type.'],
+      ['Live Tracking','Monitor shipment status in real time through the system with instant updates.'],
+      ['Delivery & Confirm','Delivery to the receiver with electronic confirmation and proof of delivery.']
+    ],
+    ctah:'Ready to ship?',ctap:'Sign up now and manage your logistics operations more efficiently.',
+    ctaa:'Download App',ctam:'Contact the team',
+    fc:'© 2026 Bulker Company',fp:'Privacy',
+    dt:'BŬLKER — Saudi Arabia Integrated Logistics Platform'
+  }
+};
+
+var srvK=['ltl','wh','sme','sea','air','cus','c2c','vas'];
+var stepK=['st1','st2','st3','st4'];
+
+function tx(id,v){var e=document.getElementById(id);if(e)e.textContent=v}
+function th(id,v){var e=document.getElementById(id);if(e)e.innerHTML=v}
+
+function applyLang(lang){
+  var s=S[lang],ar=lang==='ar';
+  document.documentElement.lang=lang;
+  document.documentElement.dir=ar?'rtl':'ltr';
+  document.title=s.dt;
+  tx('lang-label',s.lb);
+  tx('app-btn-label',s.ab);
+  tx('hero-eyebrow',s.ey);
+  th('hero-h1',s.h1);
+  tx('hero-p',s.hp);
+  tx('cta-app-label',s.ca);
+  th('hero-cta-contact',s.cc);
+  tx('sl1',s.sl1);tx('sl2',s.sl2);tx('sl3',s.sl3);tx('sl4',s.sl4);
+  tx('srv-label',s.svl);tx('srv-title',s.svt);
+  tx('how-label',s.hwl);tx('how-title',s.hwt);
+  for(var i=0;i<s.srv.length;i++){
+    th(srvK[i]+'-h',s.srv[i][0]);
+    tx(srvK[i]+'-p',s.srv[i][1]);
+
+  }
+  for(var j=0;j<s.steps.length;j++){
+    tx(stepK[j]+'-h',s.steps[j][0]);
+    tx(stepK[j]+'-p',s.steps[j][1]);
+  }
+  tx('cta-h',s.ctah);tx('cta-p',s.ctap);
+  tx('cta-app-l',s.ctaa);th('cta-mail',s.ctam);
+  tx('foot-cr',s.fc);tx('foot-priv',s.fp);
+}
+
+function toggleLang(){isAR=!isAR;applyLang(isAR?'ar':'en')}
+
+/* Auto-detect language */
+function detectLang(){
+  var bl=(navigator.language||navigator.userLanguage||'').toLowerCase();
+  if(bl.startsWith('ar'))return'ar';
+  var arCodes=['SA','AE','EG','QA','KW','BH','OM','JO','IQ','SY','LB','LY','DZ','MA','TN','YE','SD','SO','MR','DJ'];
+  if(window.fetch){
+    fetch('https://ipapi.co/json/',{signal:AbortSignal.timeout?AbortSignal.timeout(3000):undefined})
+      .then(function(r){return r.json()})
+      .then(function(d){if(arCodes.indexOf(d.country_code)!==-1){isAR=true;applyLang('ar')}})
+      .catch(function(){});
+  }
+  return'en';
+}
+
+var il=detectLang();
+isAR=(il==='ar');
+applyLang(il);
+
+/* Subtle parallax on truck */
+var truck=document.querySelector('.hero-truck');
+if(truck&&window.matchMedia('(pointer:fine)').matches){
+  window.addEventListener('mousemove',function(e){
+    var x=(e.clientX/window.innerWidth-.5)*10;
+    var y=(e.clientY/window.innerHeight-.5)*6;
+    truck.style.transform='translate('+x+'px,'+y+'px)';
+  },{passive:true});
+}
+</script>
+
+<!-- ════ TOOLTIP POPOVER ════ -->
+<div id="srv-tooltip" role="tooltip" aria-hidden="true">
+  <div class="tooltip-card">
+    <div class="tooltip-logo">BŬLKER</div>
+    <div class="tooltip-art" id="tip-art"></div>
+    <div class="tooltip-title" id="tip-title"></div>
+    <div class="tooltip-desc" id="tip-desc"></div>
+  </div>
+</div>
+
+<script>
+/* ═══════════════════════════════════════════════════════
+   TOOLTIP SYSTEM
+═══════════════════════════════════════════════════════ */
+
+/* Pencil-stroke style shorthand */
+var PS='fill:none;stroke:var(--pencil-stroke);stroke-width:1.3;stroke-linecap:round;stroke-linejoin:round';
+var PF='fill:var(--surface2);stroke:var(--pencil-stroke);stroke-width:1.3;stroke-linecap:round;stroke-linejoin:round';
+
+/* Each service gets a unique narrative illustration */
+var TIPS = {
+  ltl:{
+    ar:{t:'النقل الجزئي LTL',d:'خدمة تجميع الشحنات الصغيرة والمتوسطة ضمن شحنات مجدولة على نفس خط النقل لتقليل التكلفة وتحسين كفاءة التوصيل.'},
+    en:{t:'LTL Transport',d:'Consolidation of small and medium shipments into scheduled shared freight routes to reduce cost and improve delivery efficiency.'},
+    svg: function(){
+      return '<svg viewBox="0 0 200 110" xmlns="http://www.w3.org/2000/svg">'
+      /* Ground line */
+      +'<line x1="10" y1="95" x2="190" y2="95" style="'+PS+';opacity:.2"/>'
+      /* Truck body */
+      +'<rect x="90" y="38" width="90" height="52" rx="2" style="'+PF+'"/>'
+      /* Truck cab */
+      +'<path d="M180 55 L180 90 L195 90 L195 68 Q195 55 188 50 L180 48 Z" style="'+PF+'"/>'
+      /* Truck window */
+      +'<path d="M182 56 L188 58 L190 70 L182 70 Z" style="fill:var(--surface2);stroke:var(--pencil-stroke);stroke-width:1;opacity:.6"/>'
+      /* Truck wheels */
+      +'<circle cx="110" cy="95" r="9" style="'+PF+'"/><circle cx="110" cy="95" r="4" style="'+PF+'"/>'
+      +'<circle cx="145" cy="95" r="9" style="'+PF+'"/><circle cx="145" cy="95" r="4" style="'+PF+'"/>'
+      +'<circle cx="185" cy="95" r="9" style="'+PF+'"/><circle cx="185" cy="95" r="4" style="'+PF+'"/>'
+      /* BULKER logo on truck */
+      +'<rect x="95" y="50" width="80" height="22" rx="1.5" style="fill:var(--surface2);stroke:var(--pencil-stroke);stroke-width:.8;opacity:.6"/>'
+      +'<text x="135" y="65" text-anchor="middle" style="fill:var(--pencil-stroke);font-family:IBM Plex Mono;font-size:7px;font-weight:500;letter-spacing:.06em;opacity:.8">BŬLKER</text>'
+      /* Pallet being lifted — in air */
+      +'<rect x="30" y="28" width="46" height="20" rx="1.5" style="'+PF+'"/>'
+      /* Pallet slats */
+      +'<line x1="48" y1="28" x2="48" y2="48" style="'+PS+';opacity:.35"/>'
+      +'<line x1="58" y1="28" x2="58" y2="48" style="'+PS+';opacity:.35"/>'
+      +'<line x1="30" y1="38" x2="76" y2="38" style="'+PS+';opacity:.35"/>'
+      /* Boxes on pallet */
+      +'<rect x="33" y="14" width="17" height="15" rx="1" style="'+PF+'"/>'
+      +'<rect x="52" y="14" width="17" height="15" rx="1" style="'+PF+'"/>'
+      +'<line x1="33" y1="21" x2="50" y2="21" style="'+PS+';opacity:.3"/>'
+      +'<line x1="52" y1="21" x2="69" y2="21" style="'+PS+';opacity:.3"/>'
+      /* Forklift mast */
+      +'<rect x="10" y="30" width="5" height="62" rx="1" style="'+PF+'"/>'
+      /* Forklift forks */
+      +'<rect x="4" y="46" width="27" height="2.5" rx="1" style="'+PF+'"/>'
+      +'<rect x="4" y="52" width="27" height="2.5" rx="1" style="'+PF+'"/>'
+      /* Forklift body */
+      +'<rect x="15" y="58" width="25" height="34" rx="2" style="'+PF+'"/>'
+      /* Forklift cab */
+      +'<rect x="28" y="48" width="12" height="14" rx="1" style="'+PF+'"/>'
+      /* Forklift wheel */
+      +'<circle cx="22" cy="94" r="6" style="'+PF+'"/><circle cx="22" cy="94" r="2.5" style="'+PF+'"/>'
+      +'<circle cx="35" cy="94" r="6" style="'+PF+'"/><circle cx="35" cy="94" r="2.5" style="'+PF+'"/>'
+      /* Lift motion lines */
+      +'<line x1="76" y1="30" x2="85" y2="36" style="'+PS+';opacity:.25;stroke-dasharray:3 3"/>'
+      +'<line x1="76" y1="38" x2="88" y2="42" style="'+PS+';opacity:.2;stroke-dasharray:3 3"/>'
+      +'</svg>';
+    }
+  },
+  wh:{
+    ar:{t:'التخزين 3PL',d:'تشغيل كامل لسلسلة الإمداد داخل مستودعات مجهزة تشمل التخزين، إدارة المخزون، والتوزيع الفوري.'},
+    en:{t:'3PL Warehousing',d:'End-to-end supply chain operations in equipped warehouses including storage, inventory management, and distribution.'},
+    svg: function(){
+      return '<svg viewBox="0 0 200 110" xmlns="http://www.w3.org/2000/svg">'
+      +'<line x1="10" y1="100" x2="190" y2="100" style="'+PS+';opacity:.15"/>'
+      /* Warehouse outline */
+      +'<path d="M20 100 L20 42 L100 18 L180 42 L180 100" style="'+PS+'"/>'
+      +'<line x1="100" y1="18" x2="100" y2="42" style="'+PS+';opacity:.3"/>'
+      /* Left rack -->*/
+      +'<line x1="30" y1="50" x2="30" y2="98" style="'+PS+';stroke-width:.9;opacity:.5"/>'
+      +'<line x1="55" y1="50" x2="55" y2="98" style="'+PS+';stroke-width:.9;opacity:.5"/>'
+      +'<line x1="30" y1="62" x2="55" y2="62" style="'+PS+';stroke-width:.9;opacity:.4"/>'
+      +'<line x1="30" y1="76" x2="55" y2="76" style="'+PS+';stroke-width:.9;opacity:.4"/>'
+      /* Boxes on left rack */
+      +'<rect x="31" y="51" width="10" height="11" rx="1" style="'+PF+'"/>'
+      +'<rect x="43" y="51" width="10" height="11" rx="1" style="'+PF+'"/>'
+      +'<rect x="31" y="64" width="22" height="11" rx="1" style="'+PF+'"/>'
+      +'<rect x="31" y="78" width="10" height="11" rx="1" style="'+PF+'"/>'
+      /* Right rack */
+      +'<line x1="145" y1="50" x2="145" y2="98" style="'+PS+';stroke-width:.9;opacity:.5"/>'
+      +'<line x1="170" y1="50" x2="170" y2="98" style="'+PS+';stroke-width:.9;opacity:.5"/>'
+      +'<line x1="145" y1="62" x2="170" y2="62" style="'+PS+';stroke-width:.9;opacity:.4"/>'
+      +'<line x1="145" y1="76" x2="170" y2="76" style="'+PS+';stroke-width:.9;opacity:.4"/>'
+      +'<rect x="146" y="64" width="22" height="11" rx="1" style="'+PF+'"/>'
+      +'<rect x="146" y="78" width="10" height="11" rx="1" style="'+PF+'"/>'
+      +'<rect x="158" y="78" width="10" height="11" rx="1" style="'+PF+'"/>'
+      /* Forklift center aisle */
+      +'<rect x="72" y="70" width="14" height="28" rx="2" style="'+PF+'"/>'
+      +'<rect x="64" y="58" width="7" height="18" rx="1" style="'+PF+'"/>'
+      +'<rect x="59" y="72" width="7" height="2.2" rx="1" style="'+PF+'"/>'
+      +'<rect x="59" y="77" width="7" height="2.2" rx="1" style="'+PF+'"/>'
+      +'<circle cx="77" cy="99" r="5" style="'+PF+'"/><circle cx="77" cy="99" r="2" style="'+PF+'"/>'
+      +'<circle cx="88" cy="99" r="5" style="'+PF+'"/><circle cx="88" cy="99" r="2" style="'+PF+'"/>'
+      /* BULKER text on wall */
+      +'<text x="100" y="88" text-anchor="middle" style="fill:var(--pencil-stroke);font-family:IBM Plex Mono;font-size:6.5px;font-weight:500;letter-spacing:.06em;opacity:.35">BŬLKER</text>'
+      +'</svg>';
+    }
+  },
+  sme:{
+    ar:{t:'لوجستيات المصانع SME',d:'دمج شحنات متعددة من المصانع في شحنات موحدة لتقليل الهدر اللوجستي وخفض تكاليف النقل.'},
+    en:{t:'SME Factory Logistics',d:'Combining multiple factory shipments into unified loads to reduce logistics waste and lower transport costs.'},
+    svg: function(){
+      return '<svg viewBox="0 0 200 110" xmlns="http://www.w3.org/2000/svg">'
+      +'<line x1="10" y1="98" x2="190" y2="98" style="'+PS+';opacity:.15"/>'
+      /* Factory building */
+      +'<rect x="12" y="35" width="55" height="62" rx="2" style="'+PF+'"/>'
+      +'<rect x="25" y="22" width="18" height="15" rx="1" style="'+PF+'"/>'
+      /* Chimney */
+      +'<rect x="55" y="16" width="7" height="20" rx="1" style="'+PF+'"/>'
+      +'<path d="M54 16 Q58 10 62 8" style="'+PS+';opacity:.3"/>'
+      /* Windows */
+      +'<rect x="18" y="50" width="10" height="9" rx="1" style="fill:var(--surface2);stroke:var(--pencil-stroke);stroke-width:1;opacity:.6"/>'
+      +'<rect x="34" y="50" width="10" height="9" rx="1" style="fill:var(--surface2);stroke:var(--pencil-stroke);stroke-width:1;opacity:.6"/>'
+      +'<rect x="50" y="50" width="10" height="9" rx="1" style="fill:var(--surface2);stroke:var(--pencil-stroke);stroke-width:1;opacity:.6"/>'
+      /* Packages coming out */
+      +'<rect x="67" y="62" width="18" height="15" rx="1.5" style="'+PF+'"/>'
+      +'<rect x="67" y="48" width="15" height="14" rx="1.5" style="'+PF+'"/>'
+      +'<line x1="67" y1="69" x2="85" y2="69" style="'+PS+';opacity:.3;stroke-width:.9"/>'
+      +'<line x1="76" y1="62" x2="76" y2="77" style="'+PS+';opacity:.3;stroke-width:.9"/>'
+      /* Arrow merge */
+      +'<path d="M88 55 L95 64 L88 73" style="'+PS+';opacity:.45"/>'
+      +'<path d="M88 48 Q92 56 95 64" style="'+PS+';opacity:.35;stroke-dasharray:3 3"/>'
+      /* Truck */
+      +'<rect x="98" y="48" width="65" height="44" rx="2" style="'+PF+'"/>'
+      +'<path d="M163 60 L163 92 L176 92 L176 72 Q176 60 170 56 L163 55 Z" style="'+PF+'"/>'
+      /* Cab window */
+      +'<path d="M165 62 L170 64 L172 74 L165 74 Z" style="fill:var(--surface2);stroke:var(--pencil-stroke);stroke-width:.9;opacity:.6"/>'
+      +'<circle cx="116" cy="96" r="8" style="'+PF+'"/><circle cx="116" cy="96" r="3.5" style="'+PF+'"/>'
+      +'<circle cx="145" cy="96" r="8" style="'+PF+'"/><circle cx="145" cy="96" r="3.5" style="'+PF+'"/>'
+      +'<circle cx="168" cy="96" r="8" style="'+PF+'"/><circle cx="168" cy="96" r="3.5" style="'+PF+'"/>'
+      /* BULKER on truck */
+      +'<text x="130" y="72" text-anchor="middle" style="fill:var(--pencil-stroke);font-family:IBM Plex Mono;font-size:6.5px;font-weight:500;letter-spacing:.05em;opacity:.7">BŬLKER</text>'
+      +'</svg>';
+    }
+  },
+  sea:{
+    ar:{t:'الشحن البحري',d:'نقل البضائع عبر الحاويات البحرية باستخدام LCL أو FCL حسب حجم الشحنة إلى الوجهات العالمية.'},
+    en:{t:'Ocean Freight',d:'Transporting goods via sea containers using LCL or FCL depending on shipment size to global destinations.'},
+    svg: function(){
+      return '<svg viewBox="0 0 200 110" xmlns="http://www.w3.org/2000/svg">'
+      /* Sea waves */
+      +'<path d="M0 85 Q20 78 40 85 Q60 92 80 85 Q100 78 120 85 Q140 92 160 85 Q180 78 200 85" style="'+PS+';opacity:.3"/>'
+      +'<path d="M0 92 Q25 85 50 92 Q75 99 100 92 Q125 85 150 92 Q175 99 200 92" style="'+PS+';opacity:.2"/>'
+      /* Ship hull */
+      +'<path d="M25 70 Q28 84 100 88 Q172 84 175 70 L165 55 L35 55 Z" style="'+PF+'"/>'
+      /* Deck */
+      +'<rect x="40" y="35" width="120" height="22" rx="1.5" style="'+PF+'"/>'
+      /* Bridge -->*/
+      +'<rect x="75" y="18" width="50" height="19" rx="1.5" style="'+PF+'"/>'
+      /* Bridge windows */
+      +'<rect x="79" y="22" width="9" height="7" rx="1" style="fill:var(--surface2);stroke:var(--pencil-stroke);stroke-width:.9;opacity:.6"/>'
+      +'<rect x="92" y="22" width="9" height="7" rx="1" style="fill:var(--surface2);stroke:var(--pencil-stroke);stroke-width:.9;opacity:.6"/>'
+      +'<rect x="112" y="22" width="9" height="7" rx="1" style="fill:var(--surface2);stroke:var(--pencil-stroke);stroke-width:.9;opacity:.6"/>'
+      /* Funnel */
+      +'<rect x="96" y="6" width="8" height="14" rx="1.5" style="'+PF+'"/>'
+      +'<path d="M96 6 Q94 2 96 0" style="'+PS+';opacity:.3"/>'
+      +'<path d="M104 6 Q106 2 104 0" style="'+PS+';opacity:.2"/>'
+      /* Containers on deck */
+      +'<rect x="43" y="37" width="22" height="18" rx="1" style="'+PF+'"/>'
+      +'<rect x="67" y="37" width="22" height="18" rx="1" style="'+PF+'"/>'
+      +'<rect x="111" y="37" width="22" height="18" rx="1" style="'+PF+'"/>'
+      +'<rect x="135" y="37" width="22" height="18" rx="1" style="'+PF+'"/>'
+      /* Container lines */
+      +'<line x1="54" y1="37" x2="54" y2="55" style="'+PS+';opacity:.3;stroke-width:.8"/>'
+      +'<line x1="78" y1="37" x2="78" y2="55" style="'+PS+';opacity:.3;stroke-width:.8"/>'
+      +'<line x1="122" y1="37" x2="122" y2="55" style="'+PS+';opacity:.3;stroke-width:.8"/>'
+      +'<line x1="146" y1="37" x2="146" y2="55" style="'+PS+';opacity:.3;stroke-width:.8"/>'
+      /* BULKER on hull */
+      +'<text x="100" y="74" text-anchor="middle" style="fill:var(--pencil-stroke);font-family:IBM Plex Mono;font-size:7px;font-weight:500;letter-spacing:.05em;opacity:.5">BŬLKER</text>'
+      +'</svg>';
+    }
+  },
+  air:{
+    ar:{t:'الشحن الجوي',d:'شحن البضائع عبر الطائرات التجارية أو المخصصة للشحن لتقليل وقت التوصيل للشحنات العاجلة.'},
+    en:{t:'Air Freight',d:'Air transport via commercial or cargo aircraft to minimize delivery time for urgent shipments.'},
+    svg: function(){
+      return '<svg viewBox="0 0 200 110" xmlns="http://www.w3.org/2000/svg">'
+      /* Clouds */
+      +'<path d="M8 55 Q12 48 18 50 Q20 44 28 46 Q34 40 42 44 Q48 42 50 48 Q56 46 58 52 Q50 58 38 57 Q26 62 14 60 Z" style="fill:var(--surface2);stroke:var(--pencil-stroke);stroke-width:.9;opacity:.35"/>'
+      +'<path d="M148 30 Q152 24 158 26 Q162 20 170 23 Q176 18 182 22 Q188 20 190 26 Q196 24 198 30 Q190 36 178 35 Q166 40 154 38 Z" style="fill:var(--surface2);stroke:var(--pencil-stroke);stroke-width:.9;opacity:.3"/>'
+      /* Airplane fuselage */
+      +'<ellipse cx="105" cy="60" rx="72" ry="14" transform="rotate(-16 105 60)" style="'+PF+'"/>'
+      /* Main wing */
+      +'<path d="M82 68 L40 96 L65 90 L95 68 Z" style="'+PF+'"/>'
+      /* Rear wing */
+      +'<path d="M155 46 L170 28 L178 34 L162 52 Z" style="'+PF+'"/>'
+      /* Tail fin */
+      +'<path d="M158 50 L162 34 L168 40 L165 52 Z" style="'+PF+'"/>'
+      /* Engine pod 1 */
+      +'<ellipse cx="88" cy="72" rx="12" ry="5" transform="rotate(-16 88 72)" style="'+PF+'"/>'
+      /* Engine pod 2 */
+      +'<ellipse cx="70" cy="82" rx="10" ry="4" transform="rotate(-16 70 82)" style="'+PF+'"/>'
+      /* Cockpit windows */
+      +'<ellipse cx="48" cy="53" rx="6" ry="4" transform="rotate(-16 48 53)" style="fill:var(--surface2);stroke:var(--pencil-stroke);stroke-width:.9;opacity:.6"/>'
+      +'<ellipse cx="58" cy="50" rx="5" ry="3.5" transform="rotate(-16 58 50)" style="fill:var(--surface2);stroke:var(--pencil-stroke);stroke-width:.9;opacity:.5"/>'
+      /* Speed lines */
+      +'<line x1="20" y1="68" x2="34" y2="65" style="'+PS+';opacity:.2"/>'
+      +'<line x1="15" y1="74" x2="28" y2="71" style="'+PS+';opacity:.15"/>'
+      /* BULKER on fuselage */
+      +'<text x="108" y="59" text-anchor="middle" transform="rotate(-16 108 59)" style="fill:var(--pencil-stroke);font-family:IBM Plex Mono;font-size:6.5px;font-weight:500;letter-spacing:.04em;opacity:.6">BŬLKER</text>'
+      +'</svg>';
+    }
+  },
+  cus:{
+    ar:{t:'التخليص الجمركي',d:'تنفيذ إجراءات التخليص الجمركي نيابة عن العميل لضمان دخول وخروج الشحنات بسلاسة.'},
+    en:{t:'Customs Clearance',d:'Handling customs clearance procedures on behalf of the client to ensure smooth import and export flow.'},
+    svg: function(){
+      return '<svg viewBox="0 0 200 110" xmlns="http://www.w3.org/2000/svg">'
+      /* Desk */
+      +'<rect x="60" y="80" width="115" height="8" rx="2" style="'+PF+'"/>'
+      +'<rect x="68" y="88" width="6" height="18" rx="1" style="'+PF+'"/>'
+      +'<rect x="163" y="88" width="6" height="18" rx="1" style="'+PF+'"/>'
+      /* Document stack */
+      +'<rect x="90" y="52" width="50" height="30" rx="2" style="'+PF+'"/>'
+      +'<rect x="93" y="49" width="50" height="30" rx="2" style="'+PF+'"/>'
+      +'<rect x="96" y="46" width="50" height="30" rx="2" style="'+PF+'"/>'
+      /* Document lines */
+      +'<line x1="100" y1="58" x2="142" y2="58" style="'+PS+';stroke-width:.8;opacity:.4"/>'
+      +'<line x1="100" y1="64" x2="138" y2="64" style="'+PS+';stroke-width:.8;opacity:.4"/>'
+      +'<line x1="100" y1="70" x2="142" y2="70" style="'+PS+';stroke-width:.8;opacity:.4"/>'
+      /* Big official stamp */
+      +'<circle cx="130" cy="60" r="18" style="'+PF+'"/>'
+      +'<circle cx="130" cy="60" r="13" style="fill:none;stroke:var(--pencil-stroke);stroke-width:.9;stroke-dasharray:3 2;opacity:.5"/>'
+      +'<path d="M122 60 L127 66 L138 52" style="'+PS+';stroke-width:2;opacity:.85"/>'
+      /* Stamp handle */
+      +'<rect x="124" y="36" width="12" height="22" rx="2" style="'+PF+'"/>'
+      +'<rect x="120" y="34" width="20" height="8" rx="2" style="'+PF+'"/>'
+      /* Person arm */
+      +'<path d="M76 50 Q85 55 92 58" style="'+PS+';stroke-width:1.6;opacity:.5"/>'
+      +'<circle cx="68" cy="38" r="12" style="'+PF+'"/>'
+      /* Body -->*/
+      +'<path d="M56 80 Q56 62 68 58 Q80 62 80 80" style="'+PF+'"/>'
+      /* Hat -->*/
+      +'<rect x="58" y="27" width="22" height="5" rx="1.5" style="'+PF+'"/>'
+      +'<rect x="61" y="18" width="16" height="10" rx="2" style="'+PF+'"/>'
+      /* BULKER stamp ring text */
+      +'<text x="130" y="82" text-anchor="middle" style="fill:var(--pencil-stroke);font-family:IBM Plex Mono;font-size:5.5px;letter-spacing:.1em;opacity:.35">BŬLKER CUSTOMS</text>'
+      +'</svg>';
+    }
+  },
+  c2c:{
+    ar:{t:'الشحن بين الأفراد C2C',d:'شبكة توصيل مخصصة للأفراد تتيح نقل الطرود الشخصية بين المدن بخدمة باب لباب.'},
+    en:{t:'C2C Shipping',d:'Dedicated peer-to-peer delivery network enabling door-to-door parcel transport between cities.'},
+    svg: function(){
+      return '<svg viewBox="0 0 200 110" xmlns="http://www.w3.org/2000/svg">'
+      +'<line x1="10" y1="98" x2="190" y2="98" style="'+PS+';opacity:.12"/>'
+      /* House A — left */
+      +'<path d="M15 98 L15 58 L38 40 L60 58 L60 98" style="'+PF+'"/>'
+      +'<line x1="38" y1="40" x2="38" y2="58" style="'+PS+';opacity:.3"/>'
+      +'<rect x="42" y="72" width="12" height="26" rx="1" style="'+PF+'"/>'
+      +'<rect x="20" y="65" width="11" height="10" rx="1" style="'+PF+';opacity:.6"/>'
+      /* House B — right */
+      +'<path d="M140 98 L140 58 L162 40 L184 58 L184 98" style="'+PF+'"/>'
+      +'<line x1="162" y1="40" x2="162" y2="58" style="'+PS+';opacity:.3"/>'
+      +'<rect x="146" y="72" width="12" height="26" rx="1" style="'+PF+'"/>'
+      +'<rect x="166" y="65" width="11" height="10" rx="1" style="'+PF+';opacity:.6"/>'
+      /* Courier person */
+      +'<circle cx="100" cy="38" r="10" style="'+PF+'"/>'
+      +'<path d="M90 98 Q90 68 100 60 Q110 68 110 98" style="'+PF+'"/>'
+      /* Backpack / parcel on back */
+      +'<rect x="108" y="62" width="14" height="18" rx="2" style="'+PF+'"/>'
+      +'<line x1="108" y1="71" x2="122" y2="71" style="'+PS+';stroke-width:.8;opacity:.4"/>'
+      /* BULKER vest text */
+      +'<text x="100" y="82" text-anchor="middle" style="fill:var(--pencil-stroke);font-family:IBM Plex Mono;font-size:5.5px;font-weight:500;letter-spacing:.05em;opacity:.55">BŬLKER</text>'
+      /* Road dashes */
+      +'<line x1="62" y1="94" x2="138" y2="94" style="fill:none;stroke:var(--pencil-stroke);stroke-width:1;stroke-dasharray:8 6;opacity:.2"/>'
+      /* Arrow direction */
+      +'<path d="M64 86 L72 82 L68 90" style="'+PS+';opacity:.3"/>'
+      +'<path d="M136 86 L128 82 L132 90" style="'+PS+';opacity:.3"/>'
+      +'</svg>';
+    }
+  },
+  vas:{
+    ar:{t:'خدمات القيمة المضافة',d:'خدمات تشغيلية داعمة تشمل التعبئة، التوسيم، التجهيز، وإدارة المرتجعات لتحسين كفاءة سلسلة الإمداد.'},
+    en:{t:'Value-Added Services',d:'Operational support services including packing, labeling, kitting, and returns management to improve supply chain efficiency.'},
+    svg: function(){
+      return '<svg viewBox="0 0 200 110" xmlns="http://www.w3.org/2000/svg">'
+      /* Work table */
+      +'<rect x="20" y="82" width="160" height="6" rx="2" style="'+PF+'"/>'
+      +'<rect x="25" y="88" width="5" height="16" rx="1" style="'+PF+'"/>'
+      +'<rect x="170" y="88" width="5" height="16" rx="1" style="'+PF+'"/>'
+      /* Main box being packed */
+      +'<rect x="70" y="46" width="60" height="38" rx="2.5" style="'+PF+'"/>'
+      /* Open flaps */
+      +'<path d="M70 46 L82 28 L100 26 L100 46" style="'+PF+'"/>'
+      +'<path d="M130 46 L118 28 L100 26 L100 46" style="'+PF+'"/>'
+      /* Tape dispenser */
+      +'<circle cx="50" cy="70" r="12" style="'+PF+'"/>'
+      +'<circle cx="50" cy="70" r="6" style="fill:var(--surface2);stroke:var(--pencil-stroke);stroke-width:.9"/>'
+      +'<rect x="58" y="67" width="20" height="4" rx="1" style="'+PF+'"/>'
+      +'<path d="M78 67 Q82 62 88 58" style="'+PS+';opacity:.45"/>'
+      /* Label printer */
+      +'<rect x="140" y="52" width="32" height="22" rx="2" style="'+PF+'"/>'
+      +'<rect x="143" y="55" width="26" height="3" rx="1" style="fill:var(--surface2);stroke:var(--pencil-stroke);stroke-width:.7;opacity:.5"/>'
+      +'<rect x="143" y="64" width="26" height="6" rx="1" style="'+PF+';opacity:.6"/>'
+      /* Label coming out */
+      +'<rect x="148" y="72" width="18" height="14" rx="1" style="'+PF+'"/>'
+      +'<line x1="150" y1="76" x2="164" y2="76" style="'+PS+';stroke-width:.7;opacity:.4"/>'
+      +'<line x1="150" y1="80" x2="160" y2="80" style="'+PS+';stroke-width:.7;opacity:.4"/>'
+      /* BULKER label */
+      +'<text x="157" y="82" text-anchor="middle" style="fill:var(--pencil-stroke);font-family:IBM Plex Mono;font-size:4.5px;letter-spacing:.08em;opacity:.55">BŬLKER</text>'
+      /* Stars / polish marks */
+      +'<line x1="28" y1="38" x2="28" y2="46" style="'+PS+';opacity:.3"/>'
+      +'<line x1="24" y1="42" x2="32" y2="42" style="'+PS+';opacity:.3"/>'
+      +'<line x1="36" y1="28" x2="36" y2="36" style="'+PS+';opacity:.2"/>'
+      +'<line x1="32" y1="32" x2="40" y2="32" style="'+PS+';opacity:.2"/>'
+      +'</svg>';
+    }
+  }
+};
+
+var tip = document.getElementById('srv-tooltip');
+var tipArt = document.getElementById('tip-art');
+var tipTitle = document.getElementById('tip-title');
+var tipDesc = document.getElementById('tip-desc');
+var currentSrv = null;
+var mx = 0, my = 0;
+var raf = null;
+var isAR_tooltip = true; // shared with lang system
+
+function showTip(key, x, y){
+  var data = TIPS[key];
+  if(!data) return;
+  var lang = document.documentElement.lang || 'ar';
+  var t = lang === 'ar' ? data.ar : data.en;
+  tipArt.innerHTML = data.svg();
+  tipTitle.textContent = t.t;
+  tipDesc.textContent = t.d;
+  positionTip(x, y);
+  tip.classList.add('visible');
+  tip.setAttribute('aria-hidden','false');
+}
+
+function hideTip(){
+  tip.classList.remove('visible');
+  tip.setAttribute('aria-hidden','true');
+  currentSrv = null;
+}
+
+function positionTip(x, y){
+  /* Offset: appear just above cursor, centered horizontally */
+  var offY = 18; /* gap above cursor */
+  var tx = x;
+  var ty = y - offY;
+  /* Clamp to viewport */
+  var w = 220;
+  if(tx - w/2 < 8) tx = w/2 + 8;
+  if(tx + w/2 > window.innerWidth - 8) tx = window.innerWidth - 8 - w/2;
+  tip.style.left = tx + 'px';
+  tip.style.top = ty + 'px';
+}
+
+/* Delegate from service grid */
+document.addEventListener('mousemove', function(e){
+  mx = e.clientX; my = e.clientY;
+  var el = e.target.closest ? e.target.closest('[data-tip]') : null;
+  if(el){
+    var key = el.getAttribute('data-tip');
+    if(key !== currentSrv){
+      currentSrv = key;
+      showTip(key, mx, my);
+    } else {
+      positionTip(mx, my);
+    }
+  } else if(currentSrv){
+    hideTip();
+  }
+}, {passive:true});
+
+document.addEventListener('mouseleave', hideTip, {passive:true});
+
+/* Touch devices — no tooltip */
+document.addEventListener('touchstart', function(){ tip.style.display='none'; }, {once:true});
+
+/* ── READ PROGRESS BAR ────────────────────────────────── */
+var prog = document.getElementById('read-progress');
+function updateProgress(){
+  var st = window.scrollY || document.documentElement.scrollTop;
+  var sh = document.documentElement.scrollHeight - window.innerHeight;
+  var pct = sh > 0 ? (st / sh * 100) : 0;
+  if(prog) prog.style.width = pct.toFixed(1) + '%';
+}
+window.addEventListener('scroll', updateProgress, {passive:true});
+
+/* ── BACK TO TOP & WA FLOAT ────────────────────────────── */
+var backTop = document.getElementById('back-top');
+var waBtn   = document.getElementById('wa-btn');
+function checkFloats(){
+  var show = (window.scrollY || window.pageYOffset) > 420;
+  if(backTop){ backTop.classList.toggle('show', show); }
+  if(waBtn){   waBtn.classList.toggle('show', show);   }
+}
+window.addEventListener('scroll', checkFloats, {passive:true});
+
+/* ── ANIMATED STAT COUNTERS ────────────────────────────── */
+function animateCounter(el, target, duration, suffix, prefix){
+  var start = 0;
+  var startTime = null;
+  var isFloat = target !== Math.floor(target);
+  function step(ts){
+    if(!startTime) startTime = ts;
+    var progress = Math.min((ts - startTime) / duration, 1);
+    /* Ease out cubic */
+    var ease = 1 - Math.pow(1 - progress, 3);
+    var val = ease * target;
+    if(isFloat){
+      el.textContent = (prefix||'') + val.toLocaleString('en-SA',{minimumFractionDigits:1,maximumFractionDigits:1}) + (suffix||'');
+    } else {
+      el.textContent = (prefix||'') + Math.round(val).toLocaleString('en') + (suffix||'');
+    }
+    if(progress < 1) requestAnimationFrame(step);
+    else el.textContent = (prefix||'') + target.toLocaleString('en') + (suffix||'');
+  }
+  requestAnimationFrame(step);
+}
+
+var statsAnimated = false;
+var statsObserver = new IntersectionObserver(function(entries){
+  if(entries[0].isIntersecting && !statsAnimated){
+    statsAnimated = true;
+    var s1 = document.getElementById('s1');
+    var s2 = document.getElementById('s2');
+    var s3 = document.getElementById('s3');
+    if(s1) animateCounter(s1, 25000, 1400);
+    if(s2) animateCounter(s2, 13830, 1600);
+    if(s3) animateCounter(s3, 5400,  1200);
+    statsObserver.disconnect();
+  }
+},{threshold:.3});
+var statsEl = document.querySelector('.stats-row');
+if(statsEl) statsObserver.observe(statsEl);
+
+/* ── HOW-STEPS CONNECTOR ANIMATION ────────────────────── */
+var howGrid = document.querySelector('.how-grid');
+var howObs = new IntersectionObserver(function(entries){
+  if(entries[0].isIntersecting){
+    if(howGrid) howGrid.classList.add('animated');
+    howObs.disconnect();
+  }
+},{threshold:.4});
+if(howGrid) howObs.observe(howGrid);
+
+/* ── FOOTER LINE ANIMATION ─────────────────────────────── */
+var footerEl = document.querySelector('footer');
+var footObs = new IntersectionObserver(function(entries){
+  if(entries[0].isIntersecting){
+    if(footerEl) footerEl.classList.add('in-view');
+    footObs.disconnect();
+  }
+},{threshold:.1});
+if(footerEl) footObs.observe(footerEl);
+
+/* ── VH UNIT FIX — mobile browsers ───────────────────── */
+function setVH(){
+  var vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', vh + 'px');
+}
+setVH();
+window.addEventListener('resize', setVH, {passive:true});
+
+/* ── HERO H1 WORD STAGGER ───────────────────────────────── */
+(function(){
+  var h1 = document.getElementById('hero-h1');
+  if(!h1) return;
+  var text = h1.innerHTML;
+  /* Split by <br> first */
+  var parts = text.split('<br>');
+  var newParts = parts.map(function(part, pi){
+    var words = part.trim().split(/\s+/);
+    return words.map(function(w, wi){
+      var delay = (pi * words.length + wi) * 0.06;
+      return '<span class="word" style="animation-delay:' + (0.2 + delay).toFixed(2) + 's">' + w + '</span>';
+    }).join(' ');
+  });
+  h1.innerHTML = newParts.join('<br>');
+})();
+
+/* ── SCROLL NAV SHADOW ─────────────────────────────────── */
+var navEl = document.querySelector('nav');
+window.addEventListener('scroll', function(){
+  if(navEl) navEl.classList.toggle('scrolled', window.scrollY > 10);
+},{passive:true});
+
+/* ── STORE BADGES — extended openApp ──────────────────── */
+function openApp(e, forcePlatform){
+  if(e) e.preventDefault();
+  var platform = forcePlatform || getDevice();
+  window.open(APP_LINKS[platform] || APP_LINKS.web, '_blank', 'noopener');
+}
+
+/* ── KEYBOARD TRAP — tooltip closes on ESC ─────────────── */
+document.addEventListener('keydown', function(e){
+  if(e.key === 'Escape') hideTip && hideTip();
+});
+
+/* ── LANG: extend applyLang for new elements ──────────── */
+var _origApply = typeof applyLang === 'function' ? applyLang : null;
+applyLang = function(lang){
+  if(_origApply) _origApply(lang);
+  var ar = lang === 'ar';
+  /* Trust strip */
+  var trTexts = ar
+    ? ['مرخص من الهيئة العامة للنقل','مسجل لدى هيئة الزكاة والضريبة والجمارك','خدمة 24/7','تتبع مباشر للشحنات']
+    : ['Licensed by Transport Authority','Registered with ZATCA','24/7 Service','Live shipment tracking'];
+  for(var i=1;i<=4;i++){
+    var el=document.getElementById('tr'+i);
+    if(el) el.textContent = trTexts[i-1];
+  }
+  /* Store badges */
+  var badgeWeb=document.getElementById('badge-web-l');
+  if(badgeWeb) badgeWeb.textContent = ar ? 'تطبيق الويب' : 'Web App';
+  /* WA label */
+  var waL=document.getElementById('wa-label');
+  if(waL) waL.textContent = ar ? 'واتساب' : 'WhatsApp';
+  /* Nav Sign In / Up labels */
+  var signinEl=document.getElementById('signin-label');
+  var signupEl=document.getElementById('signup-label');
+  if(signinEl) signinEl.textContent = ar ? 'تسجيل الدخول' : 'Sign In';
+  if(signupEl) signupEl.textContent = ar ? 'إنشاء حساب' : 'Sign Up';
+  /* Nav menu links */
+  var nmData=[
+    {ar:'الأرقام',en:'Numbers',id:'nm1-t'},
+    {ar:'الخدمات',en:'Services',id:'nm2-t'},
+    {ar:'كيف يعمل',en:'How It Works',id:'nm3-t'},
+    {ar:'ابدأ الآن',en:'Get Started',id:'nm4-t'}
+  ];
+  nmData.forEach(function(d){var e=document.getElementById(d.id);if(e)e.textContent=ar?d.ar:d.en});
+  /* Bottom app section */
+  var dlLabel=document.getElementById('dl-label');
+  var dlH=document.getElementById('dl-h');
+  var dlP=document.getElementById('dl-p');
+  var dlWebSub=document.getElementById('dl-web-sub');
+  if(dlLabel) dlLabel.textContent=ar?'حمّل التطبيق':'Download the App';
+  if(dlH) dlH.textContent=ar?'ابدأ الشحن من هاتفك':'Start shipping from your phone';
+  if(dlP) dlP.textContent=ar?'متاح على جميع المنصات — إدارة شحناتك في أي وقت ومن أي مكان.':'Available on all platforms — manage your shipments anytime, anywhere.';
+  if(dlWebSub) dlWebSub.textContent=ar?'افتح على المتصفح':'Open in browser';
+  ['dl-ios-sub','dl-and-sub'].forEach(function(id){
+    var e=document.getElementById(id);
+    if(e) e.textContent=ar?'حمّل من':'Download on';
+  });
+  /* Contact popup */
+  var cpTitle=document.getElementById('cp-title-text');
+  var cpSub=document.getElementById('cp-sub-txt');
+  if(cpTitle) cpTitle.textContent=ar?'تواصل معنا':'Contact Us';
+  if(cpSub) cpSub.textContent=ar?'اختر طريقة التواصل المناسبة لك':'Choose your preferred way to reach us';
+  var cElbl=document.getElementById('cp-lbl-email');
+  var cPlbl=document.getElementById('cp-lbl-phone');
+  var cWlbl=document.getElementById('cp-lbl-wa');
+  var cLlbl=document.getElementById('cp-lbl-li');
+  var cFoot=document.getElementById('cp-footer-txt');
+  if(cElbl) cElbl.textContent=ar?'البريد الإلكتروني':'Email Us';
+  if(cPlbl) cPlbl.textContent=ar?'اتصل بنا':'Call Us';
+  if(cWlbl) cWlbl.textContent=ar?'واتساب':'WhatsApp';
+  if(cLlbl) cLlbl.textContent=ar?'تواصل عبر LinkedIn':'LinkedIn';
+  if(cFoot) cFoot.textContent=ar?'نرحب بجميع استفساراتك':'We welcome all your inquiries';
+
+};
+/* Re-apply to current lang */
+applyLang(document.documentElement.lang || 'ar');
+
+/* ── PASSIVE PERF: defer non-critical images ──────────── */
+if('loading' in HTMLImageElement.prototype){
+  document.querySelectorAll('img[data-src]').forEach(function(img){
+    img.src = img.dataset.src;
+  });
+}
+
+/* ── PREFERS-COLOR-SCHEME: update theme-color meta ─────── */
+(function(){
+  var meta = document.querySelector('meta[name="theme-color"]');
+  if(!meta) return;
+  var mq = window.matchMedia('(prefers-color-scheme:dark)');
+  function update(e){ meta.content = e.matches ? '#111009' : '#f8f7f4'; }
+  mq.addEventListener ? mq.addEventListener('change', update) : mq.addListener(update);
+  update(mq);
+})();
+
+
+/* ── BULKER ROAD RUN GAME — lazy load on click ─────── */
+(function(){
+  var shell = document.getElementById('game-shell');
+  var ph    = document.getElementById('game-placeholder');
+  if(!shell) return;
+
+  function loadGame(){
+    ph.style.display = 'none';
+    shell.removeAttribute('role');
+    shell.removeAttribute('tabindex');
+    shell.removeAttribute('aria-label');
+    shell.style.cursor = 'default';
+
+    var INK='#18160f', PAPER='#f8f7f4', SURF='#ede9e0', SURF2='#ddd9d0', INK2='#3e3b32', INK3='#7c796e';
+
+    // Build game DOM
+    shell.innerHTML = [
+      '<div id="gme" style="position:relative;width:100%;font-family:IBM Plex Mono,monospace;background:'+PAPER+'">',
+        '<div style="display:flex;justify-content:space-between;align-items:center;padding:6px 14px;border-bottom:1px dashed rgba(24,22,15,.18);font-size:11px;color:'+INK2+';letter-spacing:.07em">',
+          '<span style="letter-spacing:.12em;font-weight:600">BŬLKER</span>',
+          '<span>DIST: <span id="gsc" style="font-weight:600;color:'+INK+'">0m</span></span>',
+          '<span>BEST: <span id="ghi" style="font-weight:600">0m</span></span>',
+        '</div>',
+        '<canvas id="gcv" style="display:block;width:100%;image-rendering:pixelated"></canvas>',
+        '<div id="gov" style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;background:rgba(248,247,244,.93)">',
+          '<canvas id="gtc" width="110" height="52" style="opacity:.9"></canvas>',
+          '<div style="font-size:18px;font-weight:600;color:'+INK+';letter-spacing:-.02em;text-align:center;line-height:1.2" id="govt">BŬLKER<br>ROAD RUN</div>',
+          '<div style="font-size:11px;color:'+INK3+';letter-spacing:.07em;text-align:center" id="govs">AVOID OBSTACLES · SURVIVE</div>',
+          '<button id="gpb" style="background:'+INK+';color:'+PAPER+';border:none;padding:9px 26px;border-radius:6px;font-size:12px;font-family:IBM Plex Mono,monospace;letter-spacing:.08em;cursor:pointer;font-weight:600">▶ PLAY</button>',
+          '<div id="ghs" style="font-size:10px;color:'+INK3+';letter-spacing:.05em"></div>',
+        '</div>',
+      '</div>'
+    ].join('');
+
+    var cv   = document.getElementById('gcv');
+    var ctx  = cv.getContext('2d');
+    var gme  = document.getElementById('gme');
+    var gov  = document.getElementById('gov');
+    var gpb  = document.getElementById('gpb');
+    var gscEl= document.getElementById('gsc');
+    var ghiEl= document.getElementById('ghi');
+    var ghs  = document.getElementById('ghs');
+    var govtEl=document.getElementById('govt');
+    var govsEl=document.getElementById('govs');
+
+    var W,H,DPR,GND;
+    var state='idle', score=0, hiScore=0, frames=0, raf=null;
+    var truck={x:0,y:0,vy:0,jumping:false};
+    var TW=52, TH=26;  // truck dimensions — smaller
+    var obstacles=[], particles=[], bgX=0, roadX=0;
+
+    function resize(){
+      var rect = gme.getBoundingClientRect();
+      DPR = Math.min(window.devicePixelRatio||1, 2);
+      W   = Math.round(rect.width);
+      H   = Math.min(Math.round(W * 0.42), 230);
+      cv.width  = W*DPR; cv.height = H*DPR;
+      cv.style.width = W+'px'; cv.style.height = H+'px';
+      ctx.setTransform(DPR,0,0,DPR,0,0);
+      GND = H - 36;
+      truck.x = Math.round(W * 0.16);
+      if(state==='idle') truck.y = GND - TH;
+      drawBG();
+      if(state==='idle') drawTruck(truck.x, truck.y, 0);
+    }
+
+    function drawBG(){
+      // Sky
+      ctx.fillStyle = PAPER;
+      ctx.fillRect(0, 0, W, GND);
+      // Faint grid lines (pencil paper feel)
+      ctx.save();
+      ctx.strokeStyle = INK; ctx.lineWidth = 0.3; ctx.globalAlpha = 0.07;
+      for(var i=24; i<GND; i+=18){
+        ctx.beginPath(); ctx.moveTo(0,i); ctx.lineTo(W,i); ctx.stroke();
+      }
+      ctx.restore();
+      // Road
+      ctx.fillStyle = '#ede9e0';
+      ctx.fillRect(0, GND, W, H-GND);
+      ctx.strokeStyle = INK; ctx.lineWidth = 1;
+      ctx.beginPath(); ctx.moveTo(0,GND); ctx.lineTo(W,GND); ctx.stroke();
+      ctx.strokeStyle = INK; ctx.lineWidth = 0.5;
+      ctx.beginPath(); ctx.moveTo(0,H-7); ctx.lineTo(W,H-7); ctx.stroke();
+      // Dashed lane markings
+      ctx.save();
+      ctx.strokeStyle = INK; ctx.lineWidth = 1.2; ctx.globalAlpha = 0.22;
+      ctx.setLineDash([20,16]); ctx.lineDashOffset = -(roadX % 36);
+      ctx.beginPath(); ctx.moveTo(0,GND+14); ctx.lineTo(W,GND+14); ctx.stroke();
+      ctx.setLineDash([]); ctx.restore();
+    }
+
+    function drawTruck(tx, ty, bounce){
+      var by = ty + Math.sin(bounce || 0) * 0.9;
+      ctx.save();
+      ctx.strokeStyle = INK; ctx.lineWidth = 1.15; ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+
+      // Trailer body
+      ctx.fillStyle = SURF;
+      ctx.beginPath(); ctx.roundRect(tx, by, TW*0.65, TH-8, 2);
+      ctx.fill(); ctx.stroke();
+
+      // Trailer ribs (light sketch lines)
+      ctx.lineWidth = 0.5; ctx.globalAlpha = 0.28;
+      for(var r=1;r<3;r++){
+        ctx.beginPath();
+        ctx.moveTo(tx + TW*0.65/3*r, by+2);
+        ctx.lineTo(tx + TW*0.65/3*r, by+TH-10);
+        ctx.stroke();
+      }
+      ctx.globalAlpha = 1; ctx.lineWidth = 1.15;
+
+      // BŬLKER label panel
+      ctx.fillStyle = '#f4f2ed';
+      ctx.fillRect(tx+3, by+TH*0.24, TW*0.55, TH*0.38);
+      ctx.strokeRect(tx+3, by+TH*0.24, TW*0.55, TH*0.38);
+      ctx.fillStyle = INK;
+      ctx.font = '600 6.5px "IBM Plex Mono",monospace';
+      ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+      ctx.fillText('BŬLKER', tx + TW*0.305, by + TH*0.43);
+
+      // Cab
+      ctx.fillStyle = SURF2;
+      ctx.beginPath();
+      ctx.moveTo(tx+TW*0.65, by+TH-8);
+      ctx.lineTo(tx+TW*0.65, by+6);
+      ctx.lineTo(tx+TW*0.82, by+1);
+      ctx.lineTo(tx+TW, by+TH*0.42);
+      ctx.lineTo(tx+TW, by+TH-8);
+      ctx.closePath(); ctx.fill(); ctx.stroke();
+
+      // Cab window
+      ctx.fillStyle = '#b8c0cc';
+      ctx.beginPath();
+      ctx.moveTo(tx+TW*0.67, by+8);
+      ctx.lineTo(tx+TW*0.80, by+3);
+      ctx.lineTo(tx+TW*0.97, by+TH*0.38);
+      ctx.lineTo(tx+TW*0.67, by+TH*0.38);
+      ctx.closePath(); ctx.fill();
+      ctx.strokeStyle = INK; ctx.lineWidth = 0.8; ctx.stroke();
+      ctx.lineWidth = 1.15;
+
+      // Wheels — 4 small
+      ctx.lineWidth = 0.9;
+      var wy = by + TH - 5;
+      [[tx+TW*0.08, wy],[tx+TW*0.31, wy],[tx+TW*0.72, wy],[tx+TW*0.92, wy]].forEach(function(pt){
+        ctx.fillStyle = '#1e1c17';
+        ctx.beginPath(); ctx.arc(pt[0],pt[1],5.5,0,Math.PI*2); ctx.fill();
+        ctx.fillStyle = '#777';
+        ctx.beginPath(); ctx.arc(pt[0],pt[1],2.5,0,Math.PI*2); ctx.fill();
+        ctx.strokeStyle = INK; ctx.lineWidth = 0.8;
+        ctx.beginPath(); ctx.arc(pt[0],pt[1],5.5,0,Math.PI*2); ctx.stroke();
+      });
+      ctx.restore();
+    }
+
+    function drawObstacle(ob){
+      ctx.save();
+      ctx.strokeStyle = INK; ctx.lineWidth = 1.1; ctx.lineCap='round'; ctx.lineJoin='round';
+
+      if(ob.type==='cone'){
+        ctx.fillStyle = SURF;
+        ctx.beginPath();
+        ctx.moveTo(ob.x+ob.w/2, ob.y);
+        ctx.lineTo(ob.x+ob.w, ob.y+ob.h);
+        ctx.lineTo(ob.x, ob.y+ob.h);
+        ctx.closePath(); ctx.fill(); ctx.stroke();
+        // Stripe
+        ctx.lineWidth = 0.6; ctx.globalAlpha = 0.45;
+        ctx.beginPath(); ctx.moveTo(ob.x+ob.w*0.28,ob.y+ob.h*0.45); ctx.lineTo(ob.x+ob.w*0.72,ob.y+ob.h*0.45); ctx.stroke();
+        ctx.globalAlpha = 1;
+
+      } else if(ob.type==='barrel'){
+        ctx.fillStyle = '#e0ddd5';
+        ctx.beginPath(); ctx.ellipse(ob.x+ob.w/2,ob.y+3,ob.w/2,3,0,0,Math.PI*2);
+        ctx.fill(); ctx.stroke();
+        ctx.fillRect(ob.x, ob.y+3, ob.w, ob.h-6);
+        ctx.strokeRect(ob.x, ob.y+3, ob.w, ob.h-6);
+        ctx.lineWidth=0.7; ctx.globalAlpha=0.4;
+        [0.35,0.65].forEach(function(t){
+          ctx.beginPath(); ctx.moveTo(ob.x,ob.y+3+ob.h*t); ctx.lineTo(ob.x+ob.w,ob.y+3+ob.h*t); ctx.stroke();
+        });
+        ctx.globalAlpha=1;
+
+      } else if(ob.type==='block'){
+        ctx.fillStyle = SURF;
+        ctx.fillRect(ob.x,ob.y,ob.w,ob.h); ctx.strokeRect(ob.x,ob.y,ob.w,ob.h);
+        ctx.lineWidth=1.3; ctx.globalAlpha=0.5;
+        ctx.beginPath(); ctx.moveTo(ob.x+4,ob.y+4); ctx.lineTo(ob.x+ob.w-4,ob.y+ob.h-4); ctx.stroke();
+        ctx.beginPath(); ctx.moveTo(ob.x+ob.w-4,ob.y+4); ctx.lineTo(ob.x+4,ob.y+ob.h-4); ctx.stroke();
+        ctx.globalAlpha=1;
+        ctx.fillStyle=INK; ctx.font='bold 7px monospace'; ctx.textAlign='center'; ctx.textBaseline='middle';
+        ctx.fillText('!',ob.x+ob.w/2,ob.y+ob.h/2);
+      }
+      ctx.restore();
+    }
+
+    function drawParticles(){
+      particles = particles.filter(function(p){
+        p.x+=p.vx; p.y+=p.vy; p.life--;
+        if(p.life<=0) return false;
+        ctx.fillStyle=INK; ctx.globalAlpha=p.life/p.ml*0.45;
+        ctx.beginPath(); ctx.arc(p.x,p.y,Math.max(p.r*0.88,0.5),0,Math.PI*2); ctx.fill();
+        ctx.globalAlpha=1; p.r*=0.9; return true;
+      });
+    }
+
+    function spawnParticles(x,y,n){
+      for(var i=0;i<n;i++){
+        var a=Math.random()*Math.PI*2, v=1+Math.random()*2.5;
+        particles.push({x:x,y:y,vx:Math.cos(a)*v,vy:Math.sin(a)*v-1.2,r:2+Math.random()*2.5,life:22,ml:22});
+      }
+    }
+
+    function beep(freq,dur){
+      try{
+        var ac=new(window.AudioContext||window.webkitAudioContext)();
+        var o=ac.createOscillator(),g=ac.createGain();
+        o.connect(g); g.connect(ac.destination);
+        o.frequency.value=freq; o.type='square';
+        g.gain.setValueAtTime(0.07,ac.currentTime);
+        g.gain.exponentialRampToValueAtTime(0.001,ac.currentTime+dur/1000);
+        o.start(); o.stop(ac.currentTime+dur/1000);
+      }catch(e){}
+    }
+
+    function jump(){
+      if(!truck.jumping && state==='running'){
+        truck.vy = -13.5;  // High jump
+        truck.jumping = true;
+        beep(220,70);
+      }
+    }
+
+    var lastObs = 0, obsInterval = 95;
+
+    function spawnObs(){
+      var types=['cone','cone','barrel','barrel','block'];
+      var t = types[Math.floor(Math.random()*types.length)];
+      var w,h;
+      if(t==='cone')  { w=16; h=24; }
+      else if(t==='barrel') { w=18; h=22; }
+      else { w=28; h=20; }
+      obstacles.push({type:t, x:W+10, y:GND-h, w:w, h:h});
+    }
+
+    function hitTest(){
+      // Smaller hitbox than visual (forgiving)
+      var tx=truck.x+8, ty=truck.y+4, tw=TW-16, th=TH-8;
+      for(var i=0;i<obstacles.length;i++){
+        var o=obstacles[i];
+        if(tx<o.x+o.w-5 && tx+tw>o.x+5 && ty<o.y+o.h-3 && ty+th>o.y+2) return true;
+      }
+      return false;
+    }
+
+    function loop(){
+      if(state!=='running') return;
+      frames++;
+      score = Math.floor(frames/3);
+      gscEl.textContent = score+'m';
+
+      var spd = Math.min(3 + frames*0.003, 8.5);
+      bgX += spd*0.3; roadX += spd;
+
+      // Gravity
+      truck.vy += 0.65;
+      truck.y  += truck.vy;
+      if(truck.y >= GND-TH){ truck.y=GND-TH; truck.vy=0; truck.jumping=false; }
+
+      // Obstacle spawn
+      obsInterval = Math.max(55, 95 - frames*0.035);
+      if(frames-lastObs > obsInterval){ lastObs=frames; spawnObs(); }
+
+      // Move obstacles
+      obstacles.forEach(function(o){ o.x -= spd; });
+      obstacles = obstacles.filter(function(o){ return o.x > -80; });
+
+      // Draw
+      ctx.clearRect(0,0,W,H);
+      drawBG();
+      obstacles.forEach(drawObstacle);
+      drawTruck(truck.x, truck.y, frames*0.2);
+      drawParticles();
+
+      if(hitTest()){ gameOver(); return; }
+      raf = requestAnimationFrame(loop);
+    }
+
+    function gameOver(){
+      state = 'over';
+      spawnParticles(truck.x+TW/2, truck.y+TH/2, 16);
+      // Draw one last frame
+      ctx.clearRect(0,0,W,H);
+      drawBG(); obstacles.forEach(drawObstacle);
+      drawTruck(truck.x,truck.y,0); drawParticles();
+      beep(80,500);
+      if(score>hiScore){ hiScore=score; ghiEl.textContent=hiScore+'m'; }
+      setTimeout(function(){
+        govtEl.innerHTML='GAME OVER';
+        govsEl.textContent='SCORE: '+score+'m';
+        ghs.textContent='BEST: '+hiScore+'m';
+        gpb.textContent='▶ RETRY';
+        gov.style.display='flex';
+      },350);
+    }
+
+    function startGame(){
+      gov.style.display='none';
+      state='running'; frames=0; score=0;
+      obstacles=[]; particles=[]; lastObs=0;
+      truck.y=GND-TH; truck.vy=0; truck.jumping=false;
+      bgX=0; roadX=0;
+      if(raf) cancelAnimationFrame(raf);
+      raf=requestAnimationFrame(loop);
+      beep(440,55); setTimeout(function(){ beep(660,55); },80);
+    }
+
+    // Draw logo truck on overlay canvas
+    function drawLogoTruck(){
+      var lc=document.getElementById('gtc'); if(!lc) return;
+      var lx=lc.getContext('2d');
+      lx.clearRect(0,0,110,52);
+      lx.strokeStyle=INK; lx.lineWidth=1.1; lx.lineCap='round'; lx.lineJoin='round';
+      lx.fillStyle=SURF;
+      lx.beginPath(); lx.roundRect(2,10,64,28,2); lx.fill(); lx.stroke();
+      lx.beginPath();
+      lx.moveTo(66,10); lx.lineTo(66,38); lx.lineTo(86,38); lx.lineTo(86,24); lx.lineTo(78,10); lx.closePath();
+      lx.fill(); lx.stroke();
+      lx.fillStyle='#f4f2ed'; lx.fillRect(5,16,54,14); lx.strokeRect(5,16,54,14);
+      lx.fillStyle=INK; lx.font='600 6.5px monospace'; lx.textAlign='center'; lx.textBaseline='middle';
+      lx.fillText('BŬLKER',32,23);
+      [[14,44],[38,44],[68,44],[80,44]].forEach(function(pt){
+        lx.fillStyle='#1e1c17'; lx.beginPath(); lx.arc(pt[0],pt[1],5,0,Math.PI*2); lx.fill();
+        lx.fillStyle='#888'; lx.beginPath(); lx.arc(pt[0],pt[1],2.2,0,Math.PI*2); lx.fill();
+        lx.strokeStyle=INK; lx.lineWidth=0.8; lx.beginPath(); lx.arc(pt[0],pt[1],5,0,Math.PI*2); lx.stroke();
+      });
+    }
+
+    // Events
+    gpb.addEventListener('click', startGame);
+    document.addEventListener('keydown', function(e){
+      if(e.code==='Space'||e.code==='ArrowUp'){
+        e.preventDefault();
+        if(state==='running') jump();
+        else if(state==='idle') startGame();
+      }
+    });
+    cv.addEventListener('click', function(){ if(state==='running') jump(); });
+    cv.addEventListener('touchstart', function(e){
+      e.preventDefault();
+      if(state==='running') jump();
+      else if(state==='idle') startGame();
+    },{passive:false});
+
+    window.addEventListener('resize', resize);
+    resize();
+    drawLogoTruck();
+  }
+
+  // Lazy-load game on first click/tap
+  shell.addEventListener('click', function init(){
+    shell.removeEventListener('click', init);
+    loadGame();
+  }, {once: true});
+  shell.addEventListener('keydown', function(e){
+    if(e.code==='Enter'||e.code==='Space') shell.click();
+  });
+})();
+
+</script>
+
+
+>
+
+
+</body>
+</html>
+<!-- ════ CONTACT POPUP — redesigned ════ -->
+<div id="contact-popup" role="dialog" aria-modal="true" aria-labelledby="cp-title-text">
+  <div id="cp-overlay" onclick="closeContact()"></div>
+  <div id="cp-card">
+
+    <!-- Pencil sketch art header -->
+    <div class="cp-art">
+      <svg viewBox="0 0 400 100" aria-hidden="true" preserveAspectRatio="xMidYMid slice" style="position:absolute;inset:0;width:100%;height:100%">
+        <line x1="0" y1="25" x2="400" y2="25" stroke="currentColor" stroke-width=".4" stroke-dasharray="5 10" opacity=".18" fill="none"/>
+        <line x1="0" y1="50" x2="400" y2="50" stroke="currentColor" stroke-width=".4" stroke-dasharray="5 10" opacity=".15" fill="none"/>
+        <line x1="0" y1="75" x2="400" y2="75" stroke="currentColor" stroke-width=".35" stroke-dasharray="4 12" opacity=".12" fill="none"/>
+        <!-- Envelope sketch left -->
+        <rect x="22" y="26" width="62" height="44" rx="3" fill="none" stroke="currentColor" stroke-width=".9" opacity=".22"/>
+        <polyline points="22,26 53,50 84,26" fill="none" stroke="currentColor" stroke-width=".85" opacity=".22"/>
+        <!-- Phone sketch -->
+        <rect x="180" y="18" width="30" height="54" rx="5" fill="none" stroke="currentColor" stroke-width=".9" opacity=".18"/>
+        <line x1="189" y1="66" x2="201" y2="66" stroke="currentColor" stroke-width=".8" opacity=".18" fill="none"/>
+        <!-- WhatsApp bubble -->
+        <path d="M280 28 Q280 22 286 22 L314 22 Q320 22 320 28 L320 52 Q320 58 314 58 L298 58 L290 66 L290 58 L286 58 Q280 58 280 52 Z" fill="none" stroke="currentColor" stroke-width=".9" opacity=".2"/>
+        <!-- LinkedIn box -->
+        <rect x="346" y="28" width="36" height="36" rx="4" fill="none" stroke="currentColor" stroke-width=".85" opacity=".18"/>
+        <line x1="354" y1="37" x2="354" y2="54" stroke="currentColor" stroke-width="1.1" opacity=".18" fill="none"/>
+        <circle cx="354" cy="34" r="1.4" fill="currentColor" opacity=".18"/>
+        <!-- Concentric circles center-right -->
+        <circle cx="130" cy="50" r="18" fill="none" stroke="currentColor" stroke-width=".5" opacity=".1"/>
+        <circle cx="130" cy="50" r="30" fill="none" stroke="currentColor" stroke-width=".4" opacity=".07"/>
+      </svg>
+      <span class="cp-logo" aria-hidden="true" style="position:relative;z-index:1;font-family:'IBM Plex Mono',monospace;font-size:.95rem;font-weight:500;letter-spacing:.1em;opacity:.5">BŬLKER</span>
+    </div>
+
+    <div class="cp-body">
+      <div class="cp-head">
+        <div>
+          <div class="cp-title" id="cp-title-text">تواصل معنا</div>
+          <div class="cp-sub" id="cp-sub-txt">اختر طريقة التواصل المناسبة لك</div>
+        </div>
+        <button class="cp-close" onclick="closeContact()" aria-label="إغلاق" type="button">×</button>
+      </div>
+
+      <div class="cp-opts">
+
+        <!-- Email -->
+        <a class="cp-opt" href="mailto:info@bulker.sa">
+          <div class="cp-opt-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true">
+              <rect x="2" y="4" width="20" height="16" rx="2"/>
+              <polyline points="2,4 12,13 22,4"/>
+            </svg>
+          </div>
+          <div class="cp-opt-txt">
+            <div class="cp-opt-lbl" id="cp-lbl-email">البريد الإلكتروني</div>
+            <div class="cp-opt-val">info@bulker.sa</div>
+          </div>
+        </a>
+
+        <!-- Phone -->
+        <a class="cp-opt" href="tel:+966538324645">
+          <div class="cp-opt-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+            </svg>
+          </div>
+          <div class="cp-opt-txt">
+            <div class="cp-opt-lbl" id="cp-lbl-phone">اتصل بنا</div>
+            <div class="cp-opt-val" dir="ltr">+966 53 832 4645</div>
+          </div>
+        </a>
+
+        <!-- WhatsApp -->
+        <a class="cp-opt" href="https://wa.me/966538324645" target="_blank" rel="noopener">
+          <div class="cp-opt-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true">
+              <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/>
+            </svg>
+          </div>
+          <div class="cp-opt-txt">
+            <div class="cp-opt-lbl" id="cp-lbl-wa">واتساب</div>
+            <div class="cp-opt-val" dir="ltr">+966 53 832 4645</div>
+          </div>
+        </a>
+
+        <!-- LinkedIn -->
+        <a class="cp-opt" href="https://www.linkedin.com/company/bulker-cjsc" target="_blank" rel="noopener">
+          <div class="cp-opt-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
+              <circle cx="4" cy="4" r="2"/>
+            </svg>
+          </div>
+          <div class="cp-opt-txt">
+            <div class="cp-opt-lbl" id="cp-lbl-li">LinkedIn</div>
+            <div class="cp-opt-val">BŬLKER</div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+    <div class="cp-footer" id="cp-footer-txt">نرحب بجميع استفساراتك</div>
+  </div>
+</div>
+
+</body>
