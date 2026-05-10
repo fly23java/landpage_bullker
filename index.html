@@ -284,11 +284,11 @@ nav{
 /* ─── STATS ──────────────────────────────────────────────── */
 .stats-row{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+  grid-template-columns:repeat(4,minmax(0,1fr));
   border-top:1px solid var(--line);
   border-bottom:1px solid var(--line);
 }
-.stat{padding:1.75rem 1rem;text-align:center;position:relative}
+.stat{padding:.95rem .35rem;text-align:center;position:relative;min-width:0}
 .stat+.stat::before{
   content:'';position:absolute;
   inset-block:20%;inset-inline-start:0;
@@ -296,10 +296,10 @@ nav{
 }
 .stat-n{
   display:block;
-  font-family:var(--mono);font-size:1.85rem;font-weight:500;
+  font-family:var(--mono);font-size:clamp(.95rem,2.6vw,1.4rem);font-weight:500;
   letter-spacing:-.03em;line-height:1;color:var(--ink);
 }
-.stat-l{font-size:.80rem;color:var(--ink2);margin-top:.3rem;letter-spacing:.02em;font-weight:400}
+.stat-l{font-size:.72rem;color:var(--ink2);margin-top:.25rem;letter-spacing:.02em;font-weight:400}
 
 /* ─── SERVICES ───────────────────────────────────────────── */
 .section-services{padding:clamp(3.5rem,7vw,6rem) 0}
@@ -432,15 +432,17 @@ footer{
 .stat-map{padding:0 !important}
 .gcc-map-wrap{
   width:100%;display:flex;align-items:center;justify-content:center;
-  padding:.5rem 0 .2rem;
+  padding:.25rem 0 .1rem;
 }
 .gcc-map{
-  width:clamp(80px,14vw,130px);height:auto;
+  display:block;width:clamp(40px,7.5vw,64px);height:auto;
+  max-width:100%;
+  object-fit:contain;
   opacity:.75;
   transition:opacity .2s;
 }
 .stat-map:hover .gcc-map{opacity:1}
-.stat-map .stat-l{padding-bottom:.6rem;font-size:.73rem}
+.stat-map .stat-l{padding-bottom:.45rem;font-size:.68rem}
 
 /* ─── HOVER TOOLTIP / POPOVER ────────────────────────────── */
 #srv-tooltip{
@@ -978,8 +980,8 @@ nav-menu a.nav-link:hover .nl-icon{opacity:1;transform:scale(1.1)}
 
 /* ── STAT — GCC label bilingual ────────────────────── */
 .stat-l-en{
-  display:block;font-family:var(--mono);font-size:.65rem;
-  color:var(--ink3);margin-top:.1rem;letter-spacing:.04em;
+  display:block;font-family:var(--mono);font-size:.58rem;
+  color:var(--ink3);margin-top:.08rem;letter-spacing:.04em;
 }
 
 /* ── BOTTOM APP SECTION ─────────────────────────────── */
@@ -1153,7 +1155,7 @@ nav-menu a.nav-link:hover .nl-icon{opacity:1;transform:scale(1.1)}
 </button>
 
 <!-- WhatsApp float -->
-<a id="wa-btn" href="https://wa.me/966500000000" target="_blank" rel="noopener" aria-label="تواصل عبر واتساب">
+<a id="wa-btn" href="https://wa.me/966538324645" target="_blank" rel="noopener" aria-label="تواصل عبر واتساب">
   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
     <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/>
   </svg>
@@ -1294,10 +1296,10 @@ nav-menu a.nav-link:hover .nl-icon{opacity:1;transform:scale(1.1)}
         <p class="hero-eyebrow" id="hero-eyebrow">حلول لوجستية متكاملة من الألف إلى الياء</p>
         <h1 id="hero-h1">
           شحنتك توصل بثقة<br>
-          <span class="hero-accent" id="hero-accent">في الوقت المحدد</span>
+          <span class="hero-accent">في الوقت المحدد</span>
         </h1>
         <p class="hero-p" id="hero-p">
-          نقل وتخزين وتخليص جمركي وشحن بحري وجوي وخدمات شحن بين الأفراد — جميع حلولك اللوجستية في مكانها.
+          نقل وتخزين وتخليص جمركي وشحن بحري وجوي وخدمات شحن بين الأفراد — جميع حلولك اللوجستية في مكان واحد.
         </p>
         <div class="hero-cta">
           <a class="cta-primary" onclick="openApp(event)" href="#" id="hero-cta-app">
@@ -1466,72 +1468,7 @@ nav-menu a.nav-link:hover .nl-icon{opacity:1;transform:scale(1.1)}
   <!-- GCC Map stat -->
   <div class="stat stat-map">
     <div class="gcc-map-wrap">
-      <svg class="gcc-map" viewBox="0 0 220 230" aria-label="خريطة المملكة العربية السعودية ودول الخليج" role="img">
-<title>GCC Map</title>
-<defs>
-  <style>
-    .dp{fill:var(--pencil-stroke)}
-    .dl{fill:var(--pencil-stroke);opacity:.3}
-    .dv{fill:var(--pencil-stroke);opacity:.55}
-  </style>
-</defs>
-<!-- Saudi Arabia dot-matrix — traced from uploaded image
-     Coordinate system: 220×230 viewBox
-     Shape: wide at top (Kuwait border), narrows at Red Sea SW,
-     extends to Oman/UAE NE, Yemen coast bottom -->
-<g opacity="0.72">
-<!-- Row 1 — northern border ~y=20 -->
-<circle class="dv" cx="55" cy="20" r="2.1"/><circle class="dv" cx="63" cy="20" r="2.1"/><circle class="dv" cx="71" cy="20" r="2.1"/><circle class="dv" cx="79" cy="20" r="2.1"/><circle class="dv" cx="87" cy="20" r="2.1"/><circle class="dv" cx="95" cy="20" r="2.1"/><circle class="dv" cx="103" cy="20" r="2.1"/><circle class="dv" cx="111" cy="20" r="2.1"/><circle class="dv" cx="119" cy="20" r="2.1"/><circle class="dv" cx="127" cy="20" r="2.1"/><circle class="dv" cx="135" cy="20" r="2.1"/>
-<!-- Row 2 y=28 -->
-<circle class="dv" cx="51" cy="28" r="2.1"/><circle class="dv" cx="59" cy="28" r="2.1"/><circle class="dv" cx="67" cy="28" r="2.1"/><circle class="dv" cx="75" cy="28" r="2.1"/><circle class="dv" cx="83" cy="28" r="2.1"/><circle class="dv" cx="91" cy="28" r="2.1"/><circle class="dv" cx="99" cy="28" r="2.1"/><circle class="dv" cx="107" cy="28" r="2.1"/><circle class="dv" cx="115" cy="28" r="2.1"/><circle class="dv" cx="123" cy="28" r="2.1"/><circle class="dv" cx="131" cy="28" r="2.1"/><circle class="dv" cx="139" cy="28" r="2.1"/><circle class="dv" cx="147" cy="28" r="2.1"/>
-<!-- Row 3 y=36 — Kuwait notch NE top -->
-<circle class="dv" cx="47" cy="36" r="2.1"/><circle class="dv" cx="55" cy="36" r="2.1"/><circle class="dv" cx="63" cy="36" r="2.1"/><circle class="dv" cx="71" cy="36" r="2.1"/><circle class="dv" cx="79" cy="36" r="2.1"/><circle class="dv" cx="87" cy="36" r="2.1"/><circle class="dv" cx="95" cy="36" r="2.1"/><circle class="dv" cx="103" cy="36" r="2.1"/><circle class="dv" cx="111" cy="36" r="2.1"/><circle class="dv" cx="119" cy="36" r="2.1"/><circle class="dv" cx="127" cy="36" r="2.1"/><circle class="dv" cx="135" cy="36" r="2.1"/><circle class="dv" cx="143" cy="36" r="2.1"/><circle class="dv" cx="151" cy="36" r="2.1"/>
-<!-- Row 4 y=44 -->
-<circle class="dv" cx="43" cy="44" r="2.1"/><circle class="dv" cx="51" cy="44" r="2.1"/><circle class="dv" cx="59" cy="44" r="2.1"/><circle class="dv" cx="67" cy="44" r="2.1"/><circle class="dv" cx="75" cy="44" r="2.1"/><circle class="dv" cx="83" cy="44" r="2.1"/><circle class="dv" cx="91" cy="44" r="2.1"/><circle class="dv" cx="99" cy="44" r="2.1"/><circle class="dv" cx="107" cy="44" r="2.1"/><circle class="dv" cx="115" cy="44" r="2.1"/><circle class="dv" cx="123" cy="44" r="2.1"/><circle class="dv" cx="131" cy="44" r="2.1"/><circle class="dv" cx="139" cy="44" r="2.1"/><circle class="dv" cx="147" cy="44" r="2.1"/><circle class="dv" cx="155" cy="44" r="2.1"/>
-<!-- Row 5 y=52 — Arabian Gulf coast right side -->
-<circle class="dv" cx="39" cy="52" r="2.1"/><circle class="dv" cx="47" cy="52" r="2.1"/><circle class="dv" cx="55" cy="52" r="2.1"/><circle class="dv" cx="63" cy="52" r="2.1"/><circle class="dv" cx="71" cy="52" r="2.1"/><circle class="dv" cx="79" cy="52" r="2.1"/><circle class="dv" cx="87" cy="52" r="2.1"/><circle class="dv" cx="95" cy="52" r="2.1"/><circle class="dv" cx="103" cy="52" r="2.1"/><circle class="dv" cx="111" cy="52" r="2.1"/><circle class="dv" cx="119" cy="52" r="2.1"/><circle class="dv" cx="127" cy="52" r="2.1"/><circle class="dv" cx="135" cy="52" r="2.1"/><circle class="dv" cx="143" cy="52" r="2.1"/><circle class="dv" cx="151" cy="52" r="2.1"/><circle class="dv" cx="159" cy="52" r="2.1"/>
-<!-- Row 6 y=60 -->
-<circle class="dv" cx="37" cy="60" r="2.1"/><circle class="dv" cx="45" cy="60" r="2.1"/><circle class="dv" cx="53" cy="60" r="2.1"/><circle class="dv" cx="61" cy="60" r="2.1"/><circle class="dv" cx="69" cy="60" r="2.1"/><circle class="dv" cx="77" cy="60" r="2.1"/><circle class="dv" cx="85" cy="60" r="2.1"/><circle class="dv" cx="93" cy="60" r="2.1"/><circle class="dv" cx="101" cy="60" r="2.1"/><circle class="dv" cx="109" cy="60" r="2.1"/><circle class="dv" cx="117" cy="60" r="2.1"/><circle class="dv" cx="125" cy="60" r="2.1"/><circle class="dv" cx="133" cy="60" r="2.1"/><circle class="dv" cx="141" cy="60" r="2.1"/><circle class="dv" cx="149" cy="60" r="2.1"/><circle class="dv" cx="157" cy="60" r="2.1"/>
-<!-- Row 7 y=68 — Qatar peninsula stub right -->
-<circle class="dv" cx="35" cy="68" r="2.1"/><circle class="dv" cx="43" cy="68" r="2.1"/><circle class="dv" cx="51" cy="68" r="2.1"/><circle class="dv" cx="59" cy="68" r="2.1"/><circle class="dv" cx="67" cy="68" r="2.1"/><circle class="dv" cx="75" cy="68" r="2.1"/><circle class="dv" cx="83" cy="68" r="2.1"/><circle class="dv" cx="91" cy="68" r="2.1"/><circle class="dv" cx="99" cy="68" r="2.1"/><circle class="dv" cx="107" cy="68" r="2.1"/><circle class="dv" cx="115" cy="68" r="2.1"/><circle class="dv" cx="123" cy="68" r="2.1"/><circle class="dv" cx="131" cy="68" r="2.1"/><circle class="dv" cx="139" cy="68" r="2.1"/><circle class="dv" cx="147" cy="68" r="2.1"/><circle class="dv" cx="155" cy="68" r="2.1"/>
-<!-- Qatar peninsula — small stub at top right -->
-<circle class="dl" cx="163" cy="52" r="1.8"/><circle class="dl" cx="163" cy="60" r="1.8"/><circle class="dl" cx="167" cy="56" r="1.8"/>
-<!-- Row 8 y=76 -->
-<circle class="dv" cx="33" cy="76" r="2.1"/><circle class="dv" cx="41" cy="76" r="2.1"/><circle class="dv" cx="49" cy="76" r="2.1"/><circle class="dv" cx="57" cy="76" r="2.1"/><circle class="dv" cx="65" cy="76" r="2.1"/><circle class="dv" cx="73" cy="76" r="2.1"/><circle class="dv" cx="81" cy="76" r="2.1"/><circle class="dv" cx="89" cy="76" r="2.1"/><circle class="dv" cx="97" cy="76" r="2.1"/><circle class="dv" cx="105" cy="76" r="2.1"/><circle class="dv" cx="113" cy="76" r="2.1"/><circle class="dv" cx="121" cy="76" r="2.1"/><circle class="dv" cx="129" cy="76" r="2.1"/><circle class="dv" cx="137" cy="76" r="2.1"/><circle class="dv" cx="145" cy="76" r="2.1"/><circle class="dv" cx="153" cy="76" r="2.1"/>
-<!-- Row 9 y=84 -->
-<circle class="dv" cx="31" cy="84" r="2.1"/><circle class="dv" cx="39" cy="84" r="2.1"/><circle class="dv" cx="47" cy="84" r="2.1"/><circle class="dv" cx="55" cy="84" r="2.1"/><circle class="dv" cx="63" cy="84" r="2.1"/><circle class="dv" cx="71" cy="84" r="2.1"/><circle class="dv" cx="79" cy="84" r="2.1"/><circle class="dv" cx="87" cy="84" r="2.1"/><circle class="dv" cx="95" cy="84" r="2.1"/><circle class="dv" cx="103" cy="84" r="2.1"/><circle class="dv" cx="111" cy="84" r="2.1"/><circle class="dv" cx="119" cy="84" r="2.1"/><circle class="dv" cx="127" cy="84" r="2.1"/><circle class="dv" cx="135" cy="84" r="2.1"/><circle class="dv" cx="143" cy="84" r="2.1"/><circle class="dv" cx="151" cy="84" r="2.1"/>
-<!-- Row 10 y=92 — UAE corner -->
-<circle class="dv" cx="31" cy="92" r="2.1"/><circle class="dv" cx="39" cy="92" r="2.1"/><circle class="dv" cx="47" cy="92" r="2.1"/><circle class="dv" cx="55" cy="92" r="2.1"/><circle class="dv" cx="63" cy="92" r="2.1"/><circle class="dv" cx="71" cy="92" r="2.1"/><circle class="dv" cx="79" cy="92" r="2.1"/><circle class="dv" cx="87" cy="92" r="2.1"/><circle class="dv" cx="95" cy="92" r="2.1"/><circle class="dv" cx="103" cy="92" r="2.1"/><circle class="dv" cx="111" cy="92" r="2.1"/><circle class="dv" cx="119" cy="92" r="2.1"/><circle class="dv" cx="127" cy="92" r="2.1"/><circle class="dv" cx="135" cy="92" r="2.1"/><circle class="dv" cx="143" cy="92" r="2.1"/><circle class="dv" cx="151" cy="92" r="2.1"/>
-<!-- Row 11 y=100 -->
-<circle class="dv" cx="31" cy="100" r="2.1"/><circle class="dv" cx="39" cy="100" r="2.1"/><circle class="dv" cx="47" cy="100" r="2.1"/><circle class="dv" cx="55" cy="100" r="2.1"/><circle class="dv" cx="63" cy="100" r="2.1"/><circle class="dv" cx="71" cy="100" r="2.1"/><circle class="dv" cx="79" cy="100" r="2.1"/><circle class="dv" cx="87" cy="100" r="2.1"/><circle class="dv" cx="95" cy="100" r="2.1"/><circle class="dv" cx="103" cy="100" r="2.1"/><circle class="dv" cx="111" cy="100" r="2.1"/><circle class="dv" cx="119" cy="100" r="2.1"/><circle class="dv" cx="127" cy="100" r="2.1"/><circle class="dv" cx="135" cy="100" r="2.1"/><circle class="dv" cx="143" cy="100" r="2.1"/><circle class="dv" cx="151" cy="100" r="2.1"/>
-<!-- Row 12 y=108 — body narrows right (Oman) -->
-<circle class="dv" cx="33" cy="108" r="2.1"/><circle class="dv" cx="41" cy="108" r="2.1"/><circle class="dv" cx="49" cy="108" r="2.1"/><circle class="dv" cx="57" cy="108" r="2.1"/><circle class="dv" cx="65" cy="108" r="2.1"/><circle class="dv" cx="73" cy="108" r="2.1"/><circle class="dv" cx="81" cy="108" r="2.1"/><circle class="dv" cx="89" cy="108" r="2.1"/><circle class="dv" cx="97" cy="108" r="2.1"/><circle class="dv" cx="105" cy="108" r="2.1"/><circle class="dv" cx="113" cy="108" r="2.1"/><circle class="dv" cx="121" cy="108" r="2.1"/><circle class="dv" cx="129" cy="108" r="2.1"/><circle class="dv" cx="137" cy="108" r="2.1"/><circle class="dv" cx="145" cy="108" r="2.1"/>
-<!-- Row 13 y=116 -->
-<circle class="dv" cx="35" cy="116" r="2.1"/><circle class="dv" cx="43" cy="116" r="2.1"/><circle class="dv" cx="51" cy="116" r="2.1"/><circle class="dv" cx="59" cy="116" r="2.1"/><circle class="dv" cx="67" cy="116" r="2.1"/><circle class="dv" cx="75" cy="116" r="2.1"/><circle class="dv" cx="83" cy="116" r="2.1"/><circle class="dv" cx="91" cy="116" r="2.1"/><circle class="dv" cx="99" cy="116" r="2.1"/><circle class="dv" cx="107" cy="116" r="2.1"/><circle class="dv" cx="115" cy="116" r="2.1"/><circle class="dv" cx="123" cy="116" r="2.1"/><circle class="dv" cx="131" cy="116" r="2.1"/><circle class="dv" cx="139" cy="116" r="2.1"/>
-<!-- Row 14 y=124 -->
-<circle class="dv" cx="37" cy="124" r="2.1"/><circle class="dv" cx="45" cy="124" r="2.1"/><circle class="dv" cx="53" cy="124" r="2.1"/><circle class="dv" cx="61" cy="124" r="2.1"/><circle class="dv" cx="69" cy="124" r="2.1"/><circle class="dv" cx="77" cy="124" r="2.1"/><circle class="dv" cx="85" cy="124" r="2.1"/><circle class="dv" cx="93" cy="124" r="2.1"/><circle class="dv" cx="101" cy="124" r="2.1"/><circle class="dv" cx="109" cy="124" r="2.1"/><circle class="dv" cx="117" cy="124" r="2.1"/><circle class="dv" cx="125" cy="124" r="2.1"/><circle class="dv" cx="133" cy="124" r="2.1"/>
-<!-- Row 15 y=132 -->
-<circle class="dv" cx="39" cy="132" r="2.1"/><circle class="dv" cx="47" cy="132" r="2.1"/><circle class="dv" cx="55" cy="132" r="2.1"/><circle class="dv" cx="63" cy="132" r="2.1"/><circle class="dv" cx="71" cy="132" r="2.1"/><circle class="dv" cx="79" cy="132" r="2.1"/><circle class="dv" cx="87" cy="132" r="2.1"/><circle class="dv" cx="95" cy="132" r="2.1"/><circle class="dv" cx="103" cy="132" r="2.1"/><circle class="dv" cx="111" cy="132" r="2.1"/><circle class="dv" cx="119" cy="132" r="2.1"/><circle class="dv" cx="127" cy="132" r="2.1"/>
-<!-- Row 16 y=140 — body narrows further SW -->
-<circle class="dv" cx="41" cy="140" r="2.1"/><circle class="dv" cx="49" cy="140" r="2.1"/><circle class="dv" cx="57" cy="140" r="2.1"/><circle class="dv" cx="65" cy="140" r="2.1"/><circle class="dv" cx="73" cy="140" r="2.1"/><circle class="dv" cx="81" cy="140" r="2.1"/><circle class="dv" cx="89" cy="140" r="2.1"/><circle class="dv" cx="97" cy="140" r="2.1"/><circle class="dv" cx="105" cy="140" r="2.1"/><circle class="dv" cx="113" cy="140" r="2.1"/><circle class="dv" cx="121" cy="140" r="2.1"/>
-<!-- Row 17 y=148 -->
-<circle class="dv" cx="44" cy="148" r="2.1"/><circle class="dv" cx="52" cy="148" r="2.1"/><circle class="dv" cx="60" cy="148" r="2.1"/><circle class="dv" cx="68" cy="148" r="2.1"/><circle class="dv" cx="76" cy="148" r="2.1"/><circle class="dv" cx="84" cy="148" r="2.1"/><circle class="dv" cx="92" cy="148" r="2.1"/><circle class="dv" cx="100" cy="148" r="2.1"/><circle class="dv" cx="108" cy="148" r="2.1"/><circle class="dv" cx="116" cy="148" r="2.1"/>
-<!-- Row 18 y=156 — Yemen border, narrows left now -->
-<circle class="dv" cx="47" cy="156" r="2.1"/><circle class="dv" cx="55" cy="156" r="2.1"/><circle class="dv" cx="63" cy="156" r="2.1"/><circle class="dv" cx="71" cy="156" r="2.1"/><circle class="dv" cx="79" cy="156" r="2.1"/><circle class="dv" cx="87" cy="156" r="2.1"/><circle class="dv" cx="95" cy="156" r="2.1"/><circle class="dv" cx="103" cy="156" r="2.1"/><circle class="dv" cx="111" cy="156" r="2.1"/>
-<!-- Row 19 y=164 -->
-<circle class="dv" cx="51" cy="164" r="2.1"/><circle class="dv" cx="59" cy="164" r="2.1"/><circle class="dv" cx="67" cy="164" r="2.1"/><circle class="dv" cx="75" cy="164" r="2.1"/><circle class="dv" cx="83" cy="164" r="2.1"/><circle class="dv" cx="91" cy="164" r="2.1"/><circle class="dv" cx="99" cy="164" r="2.1"/><circle class="dv" cx="107" cy="164" r="2.1"/>
-<!-- Row 20 y=172 -->
-<circle class="dv" cx="56" cy="172" r="2.1"/><circle class="dv" cx="64" cy="172" r="2.1"/><circle class="dv" cx="72" cy="172" r="2.1"/><circle class="dv" cx="80" cy="172" r="2.1"/><circle class="dv" cx="88" cy="172" r="2.1"/><circle class="dv" cx="96" cy="172" r="2.1"/><circle class="dv" cx="104" cy="172" r="2.1"/>
-<!-- Row 21 y=180 — approaching SW tip -->
-<circle class="dv" cx="61" cy="180" r="2.1"/><circle class="dv" cx="69" cy="180" r="2.1"/><circle class="dv" cx="77" cy="180" r="2.1"/><circle class="dv" cx="85" cy="180" r="2.1"/><circle class="dv" cx="93" cy="180" r="2.1"/><circle class="dv" cx="101" cy="180" r="2.1"/>
-<!-- Row 22 y=188 -->
-<circle class="dl" cx="67" cy="188" r="1.9"/><circle class="dv" cx="75" cy="188" r="1.9"/><circle class="dv" cx="83" cy="188" r="1.9"/><circle class="dv" cx="91" cy="188" r="1.9"/><circle class="dl" cx="99" cy="188" r="1.9"/>
-<!-- Row 23 y=196 — SW tip Red Sea coast -->
-<circle class="dl" cx="73" cy="196" r="1.8"/><circle class="dl" cx="81" cy="196" r="1.8"/><circle class="dl" cx="89" cy="196" r="1.8"/>
-<!-- Row 24 — tip -->
-<circle class="dl" cx="79" cy="204" r="1.7"/><circle class="dl" cx="87" cy="204" r="1.7"/>
-</g>
-</svg>
+      <img class="gcc-map" src="images/gcc-coverage-map.png" width="220" height="230" alt="GCC region map — Arabian Peninsula" loading="lazy" decoding="async" />
     </div>
     <div class="stat-l" id="sl4">تغطية دول الخليج<br><span class="stat-l-en">GCC Coverage</span></div>
   </div>
@@ -1953,8 +1890,8 @@ var isAR=true;
 var S={
   ar:{
     lb:'EN',ab:'التطبيق',ey:'حلول لوجستية متكاملة من الألف إلى الياء',
-    h1:'شحنتك توصل بثقة<br><span class="hero-accent" id="hero-accent">في الوقت المحدد</span>',
-    hp:'نقل وتخزين وتخليص جمركي وشحن بحري وجوي وخدمات شحن بين الأفراد — جميع حلولك اللوجستية في مكانها.',
+    h1:'شحنتك توصل بثقة<br><span class="hero-accent">في الوقت المحدد</span>',
+    hp:'نقل وتخزين وتخليص جمركي وشحن بحري وجوي وخدمات شحن بين الأفراد — جميع حلولك اللوجستية في مكان واحد.',
     ca:'انضم إلينا',cc:'تواصل معنا',
     sl1:'قدرة تخزينية',sl2:'مساحة تخزينية',sl3:'طبلية تم شحنها',sl4:'تغطية دول الخليج',
     svl:'الخدمات',svt:'ماذا نوفر لك',
@@ -1982,8 +1919,8 @@ var S={
   },
   en:{
     lb:'عربي',ab:'App',ey:'Full Logistics Solutions — A to Z',
-    h1:'Your freight arrives with confidence<br><span class="hero-accent" id="hero-accent">on time, every time</span>',
-    hp:'LTL shipping, 3PL warehousing, ocean & air freight, customs clearance, and C2C shipping — all logistics solutions in place.',
+    h1:'Your freight arrives with confidence<br><span class="hero-accent">on time, every time</span>',
+    hp:'LTL shipping, 3PL warehousing, ocean & air freight, customs clearance, and C2C shipping — all logistics solutions in one place.',
     ca:'Join Us',cc:'Contact Us',
     sl1:'Storage Capacity',sl2:'Storage Space',sl3:'Pallets Shipped',sl4:'GCC Coverage',
     svl:'Services',svt:'What we offer',
@@ -3038,12 +2975,6 @@ if('loading' in HTMLImageElement.prototype){
 
 </script>
 
-
->
-
-
-</body>
-</html>
 <!-- ════ CONTACT POPUP — redesigned ════ -->
 <div id="contact-popup" role="dialog" aria-modal="true" aria-labelledby="cp-title-text">
   <div id="cp-overlay" onclick="closeContact()"></div>
@@ -3147,3 +3078,4 @@ if('loading' in HTMLImageElement.prototype){
 </div>
 
 </body>
+</html>
