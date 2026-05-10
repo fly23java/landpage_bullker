@@ -268,9 +268,10 @@ nav{
 
 /* Hero truck illustration */
 .hero-truck{
-  width:clamp(200px,32vw,340px);
+  width:clamp(280px,46vw,560px);
   flex-shrink:0;
   opacity:.9;
+  align-self:start;
 }
 @media(max-width:680px){.hero-truck{display:none}}
 
@@ -279,7 +280,10 @@ nav{
   0%,100%{transform:translateY(0)}
   50%{transform:translateY(-5px)}
 }
-.hero-truck svg{animation:truckRoll 4s ease-in-out infinite}
+.hero-truck svg{
+  width:100%;height:auto;display:block;
+  animation:truckRoll 4s ease-in-out infinite;
+}
 
 /* ─── STATS ──────────────────────────────────────────────── */
 .stats-row{
